@@ -1,6 +1,6 @@
 ;(function( $ ){
 	var 
-	$map = $('#gmap'),
+	$map = $('.map'),
 	$main = $('.main'),
 	$winHeight = $(window).height();
 	$winWidth = $(window).height();

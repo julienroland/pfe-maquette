@@ -14,6 +14,9 @@ $gout: $gutter;
   @return ($nNumber / $col * 100%) - ($gout / $mw * 100% );
 
 }
+@function queries($width){
+@return $width / $fsn+em;
+}
 @function gutter(){
 
   @return ($gout / $mw * 100%) ;

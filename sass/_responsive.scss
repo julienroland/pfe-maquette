@@ -1,5 +1,5 @@
 @import "variables";
-@media screen and (min-width: $mw / 2){
+@media screen and (min-width:queries($nMw/2)){
   /* HOME */
   .home{
     .onePeople{
@@ -8,7 +8,7 @@
   }
   /* END HOME */
 }
-@media screen and (min-width: 800px){
+@media screen and (min-width: queries(800)){
   /* HOME */
   /* BANNER */
   .addInfos{
@@ -49,7 +49,7 @@
   /* END INFOS */
   /* END HOME */
 }
-@media screen and (min-width: ( $mw / 4) * 3){
+@media screen and (min-width: queries(( $nMw / 4) * 3)){
    /* HOME */
    .home{
     .onePeople{
@@ -59,7 +59,7 @@
   /* END HOME */
 
 }
-@media screen and (min-width: $mw){
+@media screen and (min-width: queries($nMw)){
  /* HOME */
  .home{
   .onePeople{
@@ -68,6 +68,6 @@
 }
   /* END HOME */
 }
-@media screen and (max-width: $mw){
+@media screen and (max-width: queries($nMw)){
 
 }

@@ -1,6 +1,7 @@
 @import "compass";
 
 $h-m: 50px; //TOP BAR CONTENTS HEIGHT SIZE
+
 $hm: 70px; //TOP BAR HEIGHT SIZE
 
 $black:rgb(100,100,100);
@@ -37,7 +38,9 @@ $ff: helvetica, 'Helvetica Neue', Arial, sans-serif;
 
 $ffi: FontAwesome;
 
-$fs:15px; //font-size
+$fs:17px; //font-size
+
+$fsn:17; //font-size
 
 $lh:1.5; //line-height
 
@@ -66,7 +69,7 @@ $m2:1200px;
 
 /*COLOR*/
 //$mc: #2e70ea; //main color
-$mc: #805ba2;
+$mc: #0595DC;
 //7661b0;
 
 $mcc: darken($mc,20%);

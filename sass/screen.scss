@@ -22,7 +22,7 @@
 body {
   background-color: rgb(255, 255, 255);
   font-family: $ff;
-  font-size: 17px;
+  font-size: $fs;
   font-weight: normal;
   line-height: 1.5;
   color: $tc;
@@ -63,10 +63,12 @@ a{
 /* TOP BAR */
 .addInfos{
   height:30px;
+  line-height:30px;
   padding:0 $pd;
   background-color: $greyL;
   color:$tc;
   text-align: center;
+  font-size: 0.9em;
   a{
     @include a(0,none);
     color:$tc;
@@ -83,7 +85,7 @@ a{
         &:after{
           $coe: 6;
           $bh:( $h-m / $coe ) * 1.5;
-          background: lighten($mc,20%);
+          background: $greyD;
           content: " ";
           display: block;
           height: $bh;
@@ -174,7 +176,7 @@ a{
         &:after{
           $coe: 6;
           $bh:( $h-m / $coe ) * 2;
-          background: lighten($mc,20%);
+          background: $greyD;
           content: " ";
           display: block;
           height: $bh;
@@ -225,9 +227,23 @@ a{
 }
 /* END TOOLS BAR*/
 /* GMAP */
+.map{
+position:relative;
+height:70%;
+ &:after{
+  content:"";
+  background-image: image-url('framework/pattern/grid.png');
+  @include abs();
+  pointer-events:none;
+  height:100%;
+  width:100%;
+  z-index: 99;
+}
+}
 #gmap{
   @include c(12); 
-  height:80%;
+  height:100%;
+
 }
 .goTo{
   @include a(0,none);
@@ -241,6 +257,7 @@ a{
   background-image: image-url('framework/pattern/noise-1.png');
   background-color: white;
   font-size: 1.618em;
+  z-index: 2;
 
   &:hover,&:focus,&:active{
     .fa{
@@ -314,6 +331,55 @@ a{
       }
     }
   }
+  /* ADVERTS */
+.kots{
+  @include c(12);
+  .kot{
+    @include c(12);
+    height:250px;
+    .mainInfos{
+      height:90%;
+    }
+  }
+}
+/* END ADVERTS */
 }
 /* END INFOS */
+
+/* LOADING MAP */
+.loading{
+  @include abs();
+  z-index: 1;
+  background-color: $mc;
+}
+.item {
+  @include abs();
+  width: 80px;
+  height: 80px;
+  background-color: #FFF;
+
+  margin: 100px auto;
+  -webkit-animation: rotateplane 1.2s infinite ease-in-out;
+  animation: rotateplane 1.2s infinite ease-in-out;
+}
+
+@-webkit-keyframes rotateplane {
+  0% { -webkit-transform: perspective(120px) }
+  50% { -webkit-transform: perspective(120px) rotateY(180deg) }
+  100% { -webkit-transform: perspective(120px) rotateY(180deg)  rotateX(180deg) }
+}
+
+@keyframes rotateplane {
+  0% { 
+    transform: perspective(120px) rotateX(0deg) rotateY(0deg);
+    -webkit-transform: perspective(120px) rotateX(0deg) rotateY(0deg) 
+  } 50% { 
+    transform: perspective(120px) rotateX(-180.1deg) rotateY(0deg);
+    -webkit-transform: perspective(120px) rotateX(-180.1deg) rotateY(0deg) 
+  } 100% { 
+    transform: perspective(120px) rotateX(-180deg) rotateY(-179.9deg);
+    -webkit-transform: perspective(120px) rotateX(-180deg) rotateY(-179.9deg);
+  }
+}
+/* END LOADING MAP */
 @import "responsive";

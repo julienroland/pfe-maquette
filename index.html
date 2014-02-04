@@ -90,122 +90,165 @@
     </section>
     <section class="main">
      <h2 class="section" role="heading" aria-level="2">Qu'est-ce que Akoter et comment vous pouvez contribuer à l'avancement du site</h2>
-     <section id="gmap">
+     <section class="map">
          <div class="wrapper">
+
              <h3 aria-level="3" role="heading" class="section">Carte</h3>
          </div>
-         <div class="loading"></div>
+         <div class="loading">
+             <div class="item"></div>
+         </div>
+
+         <div id="gmap">
+
+         </div>
      </section>
      <div class="home">
          <a href="#informations" class="goTo" ><span class="fa fa-angle-double-down"></span></a>
          <div class="wrapper">
-             <h3 aria-level="3" role="heading" class="mainTitle">Les dernières annonces</h3>
-             <section id="informations">
-                 
-             </section>
-         </div>
-         <div class="wrapper">
-             <h3 aria-level="3" role="heading" class="section">Informations sur Akoter</h3>
+             <section class="kots" id="informations">
+                <h3 aria-level="3" role="heading" class="mainTitle">Les dernières annonces</h3>
+                <div class="kot" itemscope itemtype="http://schema.org/Residence">
+                    <div class="mainInfos">
+                        <div class="photo">
+                            <img src="./img/photo2.png" alt="Photo du logement de XXX">
+                        </div>
+                        <div class="content">
+                            <h4 aria-level="4" role="heading">Titre de l'annonce qui peut être long ou court</h4>
+                            <p>
+                                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Velit, nulla quia quas dolorum fugiat odio illum quo quae vero necessitatibus placeat recusandae pariatur veritatis voluptas labore est aliquid sed nobis.
+                            </p>
 
-             <section class="contrib infos">
-                 <h4 aria-level="4" role="heading" class="titleText"><span class="fa fa-star"></span>Contribuez à l'avancement</h4>
-                 <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vero, ipsam, odio, odit facilis eveniet modi ipsum incidunt mollitia exercitationem tempora inventore quis illum molestias fugiat quibusdam ex officiis quia ea!</p>
+                        </div>
+                        <div class="special">
+                            <div class="wifi">Wifi</div>
+                            <div class="bathroom">Salle de Bain</div>
+                            <div class="kitchen">Cuisine</div>
+                            <div class="washbasin">Lavabo</div>
+                        </div>
+                    </div>
+                    <div class="addInfos">
+                    <div class="star">
+                        <span class="fa fa-start">1 étoile</span>
+                        <span class="fa fa-start">2 étoile</span>
+                        <span class="fa fa-start">3 étoile</span>
+                        <span class="fa fa-start">4 étoile</span>
+                        <span class="fa fa-start">5 étoile</span>
+                    </div>
+                    <div class="locateBy">
+                        <span>
+                            Louez par Jean-Marc
+                        </span>
+                    </div>
+                    <div class="howMuch">
+                        <span>1000 <span class="fa fa-users"></span></span>
+                    </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+        <div class="wrapper">
+         <h3 aria-level="3" role="heading" class="section">Informations sur Akoter</h3>
 
-             </section>
-             <section class="whyus infos">
-              <h4 aria-level="4" role="heading" class="titleText"><span class="fa fa-star"></span>Pourquoi choisir Akoter&nbsp;?</h4>
-              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Deserunt, deleniti repellendus veniam. Accusamus eum libero fugit quam autem nostrum porro eos velit earum. Ducimus, blanditiis saepe eius rem perspiciatis consequuntur.</p>
-          </section>
+         <section class="contrib infos">
+             <h4 aria-level="4" role="heading" class="titleText"><span class="fa fa-star"></span>Contribuez à l'avancement</h4>
+             <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vero, ipsam, odio, odit facilis eveniet modi ipsum incidunt mollitia exercitationem tempora inventore quis illum molestias fugiat quibusdam ex officiis quia ea!</p>
 
-          <section class="data infos">
-              <h4 aria-level="4" role="heading" class="titleText"><span class="fa fa-star"></span>Akoter en chiffre ça donne quoi&nbsp;?</h4>
-              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsum, itaque, nemo mollitia rem corporis magnam iure consectetur doloribus in sed quasi enim cupiditate molestias atque rerum harum voluptatem magni tempora.</p>
-          </section>
+         </section>
+         <section class="whyus infos">
+          <h4 aria-level="4" role="heading" class="titleText"><span class="fa fa-star"></span>Pourquoi choisir Akoter&nbsp;?</h4>
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Deserunt, deleniti repellendus veniam. Accusamus eum libero fugit quam autem nostrum porro eos velit earum. Ducimus, blanditiis saepe eius rem perspiciatis consequuntur.</p>
+      </section>
+
+      <section class="data infos">
+          <h4 aria-level="4" role="heading" class="titleText"><span class="fa fa-star"></span>Akoter en chiffre ça donne quoi&nbsp;?</h4>
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsum, itaque, nemo mollitia rem corporis magnam iure consectetur doloribus in sed quasi enim cupiditate molestias atque rerum harum voluptatem magni tempora.</p>
+      </section>
+  </div>
+  <div class="wrapper">
+      <h3 aria-level="3" role="heading" class="mainTitle">Que pensent-ils d'Akoter?</h3>
+      <div class="onePeople" itemscope itemtype="http://schema.org/Person">
+          <div class="vcard">
+              <div class="photo" >
+                  <img itemprop="image" src="./img/photo.jpg" alt="Photo de XXX">
+              </div>
+              <div class="infos">
+                  <meta itemprop="nationality" content="Belgian">
+                  <span class="name" itemprop="name">Jeanne Dupont</span>
+                  <div itemscope class="address" itemtype="http://schema.org/PostalAddress" itemprop="address">
+                      <span itemprop="addressRegion">de Bouge</span>
+                      <meta itemprop="postalCode" content="4000">
+                  </div>
+              </div>
+          </div>
+          <div class="text">
+              <p>
+                  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repellat, eligendi, optio, assumenda quis natus nobis quod minus aliquid minima aliquam quia sapiente iste eius eos quidem odit nihil quo distinctio.
+              </p>
+          </div>
+      </div> 
+      <div class="onePeople" itemscope itemtype="http://schema.org/Person">
+          <div class="vcard">
+              <div class="photo" >
+                  <img itemprop="image" src="./img/photo.jpg" alt="Photo de XXX">
+              </div>
+              <div class="infos">
+                  <meta itemprop="nationality" content="Belgian">
+                  <span class="name" itemprop="name">Jeanne Dupont</span>
+                  <div itemscope class="address" itemtype="http://schema.org/PostalAddress" itemprop="address">
+                      <span itemprop="addressRegion">de Bouge</span>
+                      <meta itemprop="postalCode" content="4000">
+                  </div>
+              </div>
+          </div>
+          <div class="text">
+              <p>
+                  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repellat, eligendi, optio, assumenda quis natus nobis quod minus aliquid minima aliquam quia sapiente iste eius eos quidem odit nihil quo distinctio.
+              </p>
+          </div>
       </div>
-      <div class="wrapper">
-          <h3 aria-level="3" role="heading" class="mainTitle">Que pensent-ils d'Akoter?</h3>
-          <div class="onePeople" itemscope itemtype="http://schema.org/Person">
-              <div class="vcard">
-                  <div class="photo" >
-                      <img itemprop="image" src="./img/photo.jpg" alt="Photo de XXX">
-                  </div>
-                  <div class="infos">
-                      <meta itemprop="nationality" content="Belgian">
-                      <span class="name" itemprop="name">Jeanne Dupont</span>
-                      <div itemscope class="address" itemtype="http://schema.org/PostalAddress" itemprop="address">
-                          <span itemprop="addressRegion">de Bouge</span>
-                          <meta itemprop="postalCode" content="4000">
-                      </div>
-                  </div>
+      <div class="onePeople" itemscope itemtype="http://schema.org/Person">
+          <div class="vcard">
+              <div class="photo" >
+                  <img itemprop="image" src="./img/photo.jpg" alt="Photo de XXX">
               </div>
-              <div class="text">
-                  <p>
-                      Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repellat, eligendi, optio, assumenda quis natus nobis quod minus aliquid minima aliquam quia sapiente iste eius eos quidem odit nihil quo distinctio.
-                  </p>
-              </div>
-          </div> 
-          <div class="onePeople" itemscope itemtype="http://schema.org/Person">
-              <div class="vcard">
-                  <div class="photo" >
-                      <img itemprop="image" src="./img/photo.jpg" alt="Photo de XXX">
+              <div class="infos">
+                  <meta itemprop="nationality" content="Belgian">
+                  <span class="name" itemprop="name">Jeanne Dupont</span>
+                  <div itemscope class="address" itemtype="http://schema.org/PostalAddress" itemprop="address">
+                      <span itemprop="addressRegion">de Bouge</span>
+                      <meta itemprop="postalCode" content="4000">
                   </div>
-                  <div class="infos">
-                      <meta itemprop="nationality" content="Belgian">
-                      <span class="name" itemprop="name">Jeanne Dupont</span>
-                      <div itemscope class="address" itemtype="http://schema.org/PostalAddress" itemprop="address">
-                          <span itemprop="addressRegion">de Bouge</span>
-                          <meta itemprop="postalCode" content="4000">
-                      </div>
-                  </div>
-              </div>
-              <div class="text">
-                  <p>
-                      Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repellat, eligendi, optio, assumenda quis natus nobis quod minus aliquid minima aliquam quia sapiente iste eius eos quidem odit nihil quo distinctio.
-                  </p>
               </div>
           </div>
-          <div class="onePeople" itemscope itemtype="http://schema.org/Person">
-              <div class="vcard">
-                  <div class="photo" >
-                      <img itemprop="image" src="./img/photo.jpg" alt="Photo de XXX">
-                  </div>
-                  <div class="infos">
-                      <meta itemprop="nationality" content="Belgian">
-                      <span class="name" itemprop="name">Jeanne Dupont</span>
-                      <div itemscope class="address" itemtype="http://schema.org/PostalAddress" itemprop="address">
-                          <span itemprop="addressRegion">de Bouge</span>
-                          <meta itemprop="postalCode" content="4000">
-                      </div>
-                  </div>
+          <div class="text">
+              <p>
+                  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repellat, eligendi, optio, assumenda quis natus nobis quod minus aliquid minima aliquam quia sapiente iste eius eos quidem odit nihil quo distinctio.
+              </p>
+          </div>
+      </div>
+      <div class="onePeople" itemscope itemtype="http://schema.org/Person">
+          <div class="vcard">
+              <div class="photo" >
+                  <img itemprop="image" src="./img/photo.jpg" alt="Photo de XXX">
               </div>
-              <div class="text">
-                  <p>
-                      Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repellat, eligendi, optio, assumenda quis natus nobis quod minus aliquid minima aliquam quia sapiente iste eius eos quidem odit nihil quo distinctio.
-                  </p>
+              <div class="infos">
+                  <meta itemprop="nationality" content="Belgian">
+                  <span class="name" itemprop="name">Jeanne Dupont</span>
+                  <div itemscope class="address" itemtype="http://schema.org/PostalAddress" itemprop="address">
+                      <span itemprop="addressRegion">de Bouge</span>
+                      <meta itemprop="postalCode" content="4000">
+                  </div>
               </div>
           </div>
-          <div class="onePeople" itemscope itemtype="http://schema.org/Person">
-              <div class="vcard">
-                  <div class="photo" >
-                      <img itemprop="image" src="./img/photo.jpg" alt="Photo de XXX">
-                  </div>
-                  <div class="infos">
-                      <meta itemprop="nationality" content="Belgian">
-                      <span class="name" itemprop="name">Jeanne Dupont</span>
-                      <div itemscope class="address" itemtype="http://schema.org/PostalAddress" itemprop="address">
-                          <span itemprop="addressRegion">de Bouge</span>
-                          <meta itemprop="postalCode" content="4000">
-                      </div>
-                  </div>
-              </div>
-              <div class="text">
-                  <p>
-                      Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repellat, eligendi, optio, assumenda quis natus nobis quod minus aliquid minima aliquam quia sapiente iste eius eos quidem odit nihil quo distinctio.
-                  </p>
-              </div>
+          <div class="text">
+              <p>
+                  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repellat, eligendi, optio, assumenda quis natus nobis quod minus aliquid minima aliquam quia sapiente iste eius eos quidem odit nihil quo distinctio.
+              </p>
           </div>
       </div>
   </div>
+</div>
 </section>
 <footer class="foot" role="contentinfo">
  <h2 class="section" role="heading" aria-level="2">Informations additionelles à la page</h2>

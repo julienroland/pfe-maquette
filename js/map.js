@@ -27,22 +27,30 @@
   gMarker = new google.maps.Marker,
   //gSpherical = google.maps.geometry.spherical,
   input = document.getElementById('map'),
-  gPlaceAutoComplete;
+  gPlaceAutoComplete,
+  //SELECTOR
+  $loading = $('.loading');
   
   $(function(){
-   // ajaxAllEcole();
-    //ajaxAllKot();
-
-    actionChangeType();
+    
     $('#rapide input').on("click", actionChangeType);
     var options = {
       types: ['(cities)'],
       componentRestrictions: {country:"be"}
     };
+  });
+  var initialize = function(){
+// ajaxAllEcole();
+    //ajaxAllKot();
+
+    actionChangeType();
+
     //gPlaceAutoComplete = new google.maps.places.Autocomplete(input,options);
 
     displayGoogleMap();
-  });
+    $('.loading').fadeOut();
+
+  };
   var eventInput = function()
   {
 
@@ -93,7 +101,7 @@
      {
       actionEcoleClick( nDistanceValueOk );
     }
-     else
+    else
     {
       getCity( sCityValue , nDistanceValueOk );
     }
@@ -292,13 +300,24 @@ var showGoogleMap = function(){
   $('.mapInfo').css({height:"auto",marginLeft:0,float:"left"});
 }
 var displayGoogleMap = function (){
-
+  var akoter = [ {
+    "featureType": "administrative.country",
+    "elementType": "geometry.stroke",
+    "stylers": [
+    { "color": "#00006f" },
+    { "lightness": -5 },
+    { "visibility": "on" },
+    { "weight": 3 },
+    { "hue": "#ff0091" }
+    ]
+  },{"featureType":"all","elementType":"all","stylers":[{"invert_lightness":true},{"saturation":0},{"lightness":25},{"gamma":0.6},{"hue":"#435158"}]}];
   var aMapOptions = {
     disableDefaultUI:true,
     scrollwheel:false,
     zoom: 7,
     mapTypeId: google.maps.MapTypeId.ROADMAP,
-    center:new google.maps.LatLng(50.5,4.6)
+    center:new google.maps.LatLng(50.5,4.6),
+    styles: akoter,
   }
   gMap = new google.maps.Map(document.getElementById('gmap'),aMapOptions);
 
@@ -374,5 +393,5 @@ var getCity = function(sPosition,sDistance){
   })
 }
 }
-
+google.maps.event.addDomListener(window, 'load', initialize);
 }).call(this,jQuery);
