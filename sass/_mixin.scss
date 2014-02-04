@@ -1,0 +1,423 @@
+@import "functions";
+@mixin wrapper() {
+  .wrapper {
+    max-width: $mw;
+    overflow: hidden;
+    margin: auto;
+    height: auto;
+    box-sizing: border-box;
+    @include c(12);
+    //margin-bottom: 1em;
+    &:after {
+      @include clear();
+    }
+  }
+}
+@mixin a( $color:$tc, $none:"" ){
+
+
+  @if($none!="none"){
+    border-bottom: 1px dotted #{$color};
+    position: relative;
+    overflow:visible;
+    text-decoration: none;
+    display: inline-block;
+    @include transition(all 0.3s ease);
+    &:after{
+      content:"";
+      @include opacity(0);
+      @include abs-right();
+      @include box-sizing(border-box);
+      right: -5px;
+      border-right: 1px solid #{$color};
+      @include transition(all 0.3s ease);
+    }
+    &:before{
+      content:"";
+      @include abs-left();
+      @include opacity(0);
+      @include box-sizing(border-box);
+      left: -5px;
+      border-left: 1px solid #{$color};
+      @include transition(all 0.3s ease);
+    }
+    &:hover,&:focus,&:active{
+      text-decoration: none;
+      border-bottom: 1px dotted transparent;
+      &:after{
+        @include opacity(1);
+        @include transition(all 0.3s ease);
+      }
+      &:before{
+       @include opacity(1);
+
+       @include transition(all 0.3s ease);
+     }
+
+   }
+ }@else{
+  border-bottom:0;
+  &:before{
+    border-left: 0;
+    left:auto;
+    @include opacity(1);
+  }
+  &:after{
+    content:none;
+    border-right: 0;
+    right:auto;
+    @include opacity(1);
+  }
+  &:hover,&:focus,&:active{
+    border-bottom: 0;
+  }
+}
+}
+@mixin body() {
+  body {
+    font-family: $ff;
+    font-size: $fs;
+    line-height: $lh;
+    color: $tc;
+    min-height: 100%;
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+  }
+  em {
+    font-style: italic;
+  }
+  b{
+    font-weight: bold;
+  }
+  html {
+    height: 100%;
+    min-height: 100%;
+  }
+  p {
+    margin:0 0 1em 0;
+    line-height: 1.5;
+    font-family: $ff;
+  }
+}
+
+@mixin btn(){
+  .btn{
+    color:white;
+    padding:5px 10px;
+    display:inline-block;
+    text-decoration: none;
+    @include border-radius(5% 5%);
+
+    &:hover,&:focus,&:active{
+      @include box-shadow(rgba(0,0,0,0.2)0 0 6px 2px);
+      .no-boxshadow &{
+        background-color: darken($gMain,10%);
+      }
+
+    }
+  }
+
+}
+@mixin mhb-p($height, $item) {
+  background-color: $grey;
+  background: linear-gradient(to bottom, #efefef 0, #cdcdcd 100%);
+  color: white;
+  position: fixed;
+  width: 100%;
+  @include box-sizing(border-box);
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+  height: $height+px;
+  outline: 1px solid $grey;
+  ul {
+    width: 100%;
+    height: $height+px;
+    text-align: center;
+    padding: 0;
+    margin: auto;
+    li, ol {
+      width: (100% / $item) - 2%;
+      display: inline-block;
+      height: 100%;
+      vertical-align: baseline;
+      border-left: 1px solid $grey;
+
+      //position:relative;
+      a {
+        display: block;
+        //height:100%;
+        //padding-top:8px;
+        height: auto;
+        text-decoration: none;
+        color: white;
+        font-weight: bold;
+        @include box-sizing(border-box);
+        border-top: 5px solid #efefef;
+        &:hover, &:focus {
+          // background-color: darken($greyDH,2%);
+          @include box-sizing(border-box);
+          border-top: 5px solid darken($greyDH, 20%);
+          outline: none;
+        }
+      }
+    }
+    li:first-child, ol:first-child {
+      border-left: 0;
+    }
+    li + li, ol + ol {
+      //margin-left: 1%;
+    }
+  }
+}
+@mixin form(){
+  .errors{
+    display:block;
+    background-color: $errorBackground;
+    padding:1em;
+    border:1px solid red;
+    margin:1em;
+  }
+  .informations{
+    display:block;
+    box-sizing:border-box;
+    font-size: 0.8em;
+    background-color: $infosBackground;
+    padding:1em;
+    @include c(12);
+    border:1px solid darken(yellow,10%);
+    margin-bottom: 0.5em;
+  } 
+  .success{
+    display:block;
+    font-size: 0.8em;
+    background-color: $succesBackground;
+    padding:1em;
+    border:1px solid green;
+    margin:1em;
+  }
+}
+@mixin section() {
+  .section {
+    display: inline-block;
+    position: absolute;
+    height: 0!important;
+    background-color: white;
+    color:$tc!important;
+    text-indent: -99999999px!important;
+    border: 0!important;
+    padding: 0!important;
+    margin: 0!important;
+  }
+  .reader {
+    display: inline-block;
+    position: absolute;
+    height: 0!important;
+    background-color: white;
+    color:$tc!important;
+    text-indent: -99999999px!important;
+    border: 0!important;
+  }
+  a.reader{
+    color:$tc!important;
+  }
+
+  .hide {
+    display: none !important;
+  }
+}
+@mixin abs() {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+}
+
+@mixin abs-left($left:0) {
+  position: absolute;
+  left: $left;
+  //right:0;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+}
+
+@mixin abs-top() {
+  position: absolute;
+  left: 0;
+  right:0;
+  top: 0;
+  //bottom: 0;
+  margin: auto;
+}
+
+@mixin abs-right() {
+  position: absolute;
+  //left:0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+}
+
+@mixin abs-top-left() {
+  position: absolute;
+  left: 0;
+  //right:0;
+  top: 0;
+  //bottom:0;
+  margin: auto;
+}
+@mixin abs-top-right() {
+  position: absolute;
+  //left: 0;
+  right:0;
+  top: 0;
+  //bottom:0;
+  margin: auto;
+}
+
+@mixin abs-bot() {
+  position: absolute;
+  left: 0;
+  right: 0;
+  //top:0;
+  bottom: 0;
+  margin: auto;
+}
+@mixin clear() {
+  content: "";
+  display: block;
+  height: 0;
+  clear: both;
+  visibility: hidden;
+}
+
+@mixin c($nNumber) {
+
+  width: colAlone($nNumber);
+  margin: auto;
+  //margin-left: 0;
+  display: block;
+  float: none;
+  @include box-sizing(border-box);
+
+  &:after {
+    @include clear();
+  }
+}
+
+@mixin cf($nNumber) {
+
+  width: colf($nNumber);
+  display: block;
+  float: none;
+  @include box-sizing(border-box);
+  margin: 0;
+  &:after {
+    @include clear();
+  }
+}
+
+@mixin cl($nNumber) {
+
+  width: col($nNumber);
+  margin-left: gutter() / 2;
+  margin-right: gutter() / 2;
+  float: left;
+  display: block;
+  @include box-sizing(border-box);
+  &:after {
+    @include clear();
+  }
+}
+
+@mixin cl-nm($nNumber) {
+
+  width: colAlone($nNumber);
+  float: left;
+  display: block;
+  @include box-sizing(border-box);
+  &:after {
+    @include clear();
+  }
+}
+
+@mixin offsetL($nNumber) {
+
+  margin-left: colAlone($nNumber);
+}
+
+@mixin offsetR($nNumber) {
+
+  margin-right: col($nNumber);
+}
+
+@mixin cfl($nNumber) {
+
+  width: colf($nNumber);
+  float: left;
+  margin-left:0;
+  margin-right: gutter()/2;
+  display: block;
+  @include box-sizing(border-box);
+  //margin-top:0; 
+  margin-bottom: gutter() * 2;
+  &:after {
+    @include clear();
+  }
+}
+
+@mixin cfl-nm($nNumber) {
+
+  width: colAlone($nNumber);
+  float: left;
+  display: block;
+  @include box-sizing(border-box);
+  margin-top: 0;
+  margin-bottom: 0;
+  &:after {
+    @include clear();
+  }
+}
+
+@mixin cr($nNumber) {
+
+  width: col($nNumber);
+  margin-left: gutter();
+  float: right;
+  display: block;
+  @include box-sizing(border-box);
+  &:after {
+    @include clear();
+  }
+}
+
+@mixin cfr($nNumber) {
+
+  width: colf($nNumber);
+  float: right;
+  margin-left: gutter();
+  margin-right: gutter();
+  display: block;
+  @include box-sizing(border-box);
+  &:after {
+    @include clear();
+  }
+}
+
+@mixin cc($nNumber) {
+  display: block;
+  width: col($nNumber);
+  margin: auto;
+  text-align: center;
+  float: none;
+  @include box-sizing(border-box);
+  &:after {
+    @include clear();
+  }
+}
+/*l * 100 / 1024*/

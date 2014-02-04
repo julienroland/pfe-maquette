@@ -1,0 +1,319 @@
+/* Welcome to Compass.
+ * In this file you should write your main styles. (or centralize your imports)
+ * Import this file using the following HTML or equivalent:
+ * <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css" /> */
+ @import "compass/reset";
+ @import "compass";
+ @import "compass/css3";
+ @import "variables";  
+ @import "flags";  
+ @import "mixin";
+
+
+//@import url("http://fonts.googleapis.com/css?family=Lora:400,700,400italic");
+@include body();
+@include wrapper();
+@include form();
+@include btn();
+@include section();
+
+
+
+body {
+  background-color: rgb(255, 255, 255);
+  font-family: $ff;
+  font-size: 17px;
+  font-weight: normal;
+  line-height: 1.5;
+  color: $tc;
+  margin:0;
+  font-smoothing: antialiased;
+  height: 100%;
+  //background-color: $greyL2;
+  text-rendering: optimizeLegibility;
+}
+.main{
+  height:100%;
+
+
+}
+.mainTitle{
+  font-size: 1.272em;
+  font-weight: bold;
+  color:$tc;
+  line-height: 1;
+  margin-right: gutter() / 2;
+  margin-left: gutter() / 2;
+  margin-bottom: $gutter;
+}
+.titleText{
+  font-size: 1.128em;
+  color:$mc;
+  margin-bottom: $pd;
+  font-weight: bold;
+  line-height: 1;
+  .fa{
+    margin-right: $pd;
+  }
+}
+a{
+  color:white;
+  @include a($tc);
+}
+/* TOP BAR */
+.addInfos{
+  height:30px;
+  padding:0 $pd;
+  background-color: $greyL;
+  color:$tc;
+  text-align: center;
+  a{
+    @include a(0,none);
+    color:$tc;
+  }
+  .topInfos{
+    @include c(12);
+    width:auto;
+    display:inline-block;
+    li{
+      float:left;
+      overflow:visible;
+      a{
+        padding:0 $hm - $h-m;
+        &:after{
+          $coe: 6;
+          $bh:( $h-m / $coe ) * 1.5;
+          background: lighten($mc,20%);
+          content: " ";
+          display: block;
+          height: $bh;
+          position: absolute;
+          right: 0;
+          top: (( $h-m - $bh ) / $coe) / 2;
+          width: 1px;
+        }
+        &:hover,&:focus,&:active{
+          color:$mc;
+          text-decoration: underline;
+        }
+
+      }
+      &:last-child a{
+        padding-right: 0;
+        &:after{
+          display:none;
+        }
+      }
+    }
+  }
+  .topLinks{
+    @extend .topInfos;
+    float:left;
+    display:none;
+  }
+  .otherLanguages{
+    @include c(12);
+    display:none;
+  }
+}
+/* END TOP BAR */
+/* TOOLS BAR */
+
+.banner{
+  @include c(12);
+  min-height: $hm;
+  padding:0 $pd;
+  position:relative;
+  background-color: white;
+  border-bottom: 1px solid $greyD;
+  color:white;
+  //@include box-shadow($greyD2 0 10px 2px 0);
+  &:after{
+    //background-image: image-url('framework/pattern/grid.png');
+    width: 100%;
+    height: 100%;
+    display: block;
+    pointer-events:none;
+    position: absolute;
+    top: 0;
+    visibility: visible;
+    left: 0;
+    z-index: 99;
+  }
+  .fa{
+    margin-right: 5px;
+  }
+  a{
+    color:$tc;
+    @include a(0,none);
+  }
+  .nav{
+    @include c(12);
+    min-height:$hm;
+    padding-top: $hm - $h-m;
+    .elem{
+
+    }
+  }
+}
+.profilItem{
+  @include c(12);
+  height:$h-m;
+  text-align: center;
+  ul{
+    display:inline-block;
+    height:100%;
+    li{
+      float:left;
+      height:100%;
+      line-height:$h-m; 
+      position:relative;
+      a{
+        padding:0 $hm - $h-m;
+        position:relative;
+        &:after{
+          $coe: 6;
+          $bh:( $h-m / $coe ) * 2;
+          background: lighten($mc,20%);
+          content: " ";
+          display: block;
+          height: $bh;
+          position: absolute;
+          right: 0;
+          top: ( $h-m - $bh ) / $coe;
+          width: 1px;
+        }
+        &:hover,&:focus,&:active{
+          color:$mc;
+          text-decoration: underline;
+        }
+      }
+      &:last-child a{
+        padding-right: 0;
+        &:after{
+          display:none;
+        }
+      }
+    }
+  }
+}
+.logo{
+  width:115px;
+  height:$h-m; 
+  margin: auto;
+  display:block;
+  a{
+   background-image: image-url('logo/logo-smooth.png'); 
+   width:111px;
+   height:$h-m;
+   text-indent: -9999px;
+   position:absolute;
+   &:hover,&:focus,&:active{
+
+   }
+
+ }
+}
+.whatWeDo{
+  color:$tc;
+  display:block;
+  margin: auto;
+  text-align: center;
+  line-height: 0;
+  margin-bottom: $pd;
+  font-size: 0.8em;
+}
+/* END TOOLS BAR*/
+/* GMAP */
+#gmap{
+  @include c(12); 
+  height:80%;
+}
+.goTo{
+  @include a(0,none);
+  color:$tc;
+  @include abs-top();
+  text-align: center;
+  width:90px;
+  @include border-radius(50%);
+  top:-30px;
+  height:70px;
+  background-image: image-url('framework/pattern/noise-1.png');
+  background-color: white;
+  font-size: 1.618em;
+
+  &:hover,&:focus,&:active{
+    .fa{
+      @include translateY(5px);
+      @include transition(all 0.3s ease);
+    }
+  }
+  .fa{
+    @include transition(all 0.3s ease);
+  }
+}
+
+/* END GMAP */
+/* INFOS */
+.home{
+  @include c(12);
+  height:80%;
+  border-top:1px solid $greyD;
+  padding:3em $pd;
+  background-color: white;
+  position:relative;
+  margin:0 auto;
+  background-image: image-url('framework/pattern/noise-1.png');
+
+
+  .infos{
+    @include c(12);
+  }
+  .wrapper{
+    margin-bottom: 1em;
+  }
+  .onePeople{
+    @include c(12);
+    max-width: $mw / 4;
+    margin:$pd auto;
+    .vcard{
+      margin-bottom: $pd;
+    }
+    .photo{
+      overflow:hidden;
+      position:relative;
+      margin-bottom: $pd;
+      &:after{
+        content:"";
+        background-image: image-url('framework/pattern/grid.png');
+        @include abs();
+        height:100%;
+        width:100%;
+      }
+      img{
+        @include border-radius(50%);
+        display:block;
+        margin: auto;
+
+
+      }    
+
+    }
+    .infos{
+      @include c(12);
+      text-align: center;
+
+      .name{
+        font-weight: bold;
+        color:$mc;
+      }
+      .address{
+        font-style: italic;
+        line-height: 1;
+        font-size: 0.9em;
+      }
+    }
+  }
+}
+/* END INFOS */
+@import "responsive";

@@ -1,0 +1,73 @@
+@import "variables";
+@media screen and (min-width: $mw / 2){
+  /* HOME */
+  .home{
+    .onePeople{
+      @include cl(6);
+    }
+  }
+  /* END HOME */
+}
+@media screen and (min-width: 800px){
+  /* HOME */
+  /* BANNER */
+  .addInfos{
+    .topInfos{
+      float:right;
+    }
+    .topLinks{
+      display:block;
+      float:left;
+    }
+  }
+  .logo{
+    float:left;
+  }
+  .whatWeDo{
+    line-height: 1;
+    display:inline-block;
+    margin: auto;
+    height:$h-m;
+    line-height: $h-m;
+    font-size: 1em;
+    font-style: italic;
+    margin:0 3em;
+    float:left;
+
+  }
+  .profilItem{
+    width:auto;
+    float:right;
+  }
+  /* END BANNER */
+  /* INFOS */
+  .home{
+    .infos{
+      @include cl(4);
+    }
+  }
+  /* END INFOS */
+  /* END HOME */
+}
+@media screen and (min-width: ( $mw / 4) * 3){
+   /* HOME */
+   .home{
+    .onePeople{
+      @include cl(4);
+    }
+  }
+  /* END HOME */
+
+}
+@media screen and (min-width: $mw){
+ /* HOME */
+ .home{
+  .onePeople{
+    @include cl(3);
+  }
+}
+  /* END HOME */
+}
+@media screen and (max-width: $mw){
+
+}
