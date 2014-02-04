@@ -13,11 +13,11 @@
     }
   }
 }
-@mixin a( $color:$tc, $none:"" ){
+@mixin a( $color:$tc, $type: dotted, $none:"" ){
 
 
   @if($none!="none"){
-    border-bottom: 1px dotted #{$color};
+    border-bottom: 1px $type #{$color};
     position: relative;
     overflow:visible;
     text-decoration: none;
@@ -43,7 +43,7 @@
     }
     &:hover,&:focus,&:active{
       text-decoration: none;
-      border-bottom: 1px dotted transparent;
+      border-bottom: 1px $type transparent;
       &:after{
         @include opacity(1);
         @include transition(all 0.3s ease);
@@ -361,11 +361,10 @@
   width: colf($nNumber);
   float: left;
   margin-left:0;
-  margin-right: gutter()/2;
+  margin-right: gutter();
   display: block;
   @include box-sizing(border-box);
   //margin-top:0; 
-  margin-bottom: gutter() * 2;
   &:after {
     @include clear();
   }

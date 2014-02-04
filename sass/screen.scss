@@ -56,6 +56,18 @@ body {
     margin-right: $pd;
   }
 }
+.titleKot{
+  white-space: nowrap;
+  overflow:hidden;
+  text-overflow:ellipsis;
+  a{
+    @include a($mc,solid);
+    
+    display:inline;
+
+    @extend .titleText;
+  }
+}
 a{
   color:white;
   @include a($tc);
@@ -70,7 +82,7 @@ a{
   text-align: center;
   font-size: 0.9em;
   a{
-    @include a(0,none);
+    @include a(0,0,none);
     color:$tc;
   }
   .topInfos{
@@ -154,7 +166,9 @@ a{
     min-height:$hm;
     padding-top: $hm - $h-m;
     .elem{
-
+      a{
+        @include a(0,0,none);
+      }
     }
   }
 }
@@ -205,16 +219,17 @@ a{
   margin: auto;
   display:block;
   a{
-   background-image: image-url('logo/logo-smooth.png'); 
-   width:111px;
-   height:$h-m;
-   text-indent: -9999px;
-   position:absolute;
-   &:hover,&:focus,&:active{
+    @include a(0,0,none);
+    background-image: image-url('logo/logo-smooth.png'); 
+    width:111px;
+    height:$h-m;
+    text-indent: -9999px;
+    position:absolute;
+    &:hover,&:focus,&:active{
 
-   }
+    }
 
- }
+  }
 }
 .whatWeDo{
   color:$tc;
@@ -228,17 +243,17 @@ a{
 /* END TOOLS BAR*/
 /* GMAP */
 .map{
-position:relative;
-height:70%;
- &:after{
-  content:"";
-  background-image: image-url('framework/pattern/grid.png');
-  @include abs();
-  pointer-events:none;
-  height:100%;
-  width:100%;
-  z-index: 99;
-}
+  position:relative;
+  height:70%;
+  &:after{
+    content:"";
+    background-image: image-url('framework/pattern/grid.png');
+    @include abs();
+    pointer-events:none;
+    height:100%;
+    width:100%;
+    z-index: 99;
+  }
 }
 #gmap{
   @include c(12); 
@@ -246,7 +261,7 @@ height:70%;
 
 }
 .goTo{
-  @include a(0,none);
+  @include a(0,0,none);
   color:$tc;
   @include abs-top();
   text-align: center;
@@ -332,16 +347,41 @@ height:70%;
     }
   }
   /* ADVERTS */
-.kots{
-  @include c(12);
-  .kot{
+  .kots{
     @include c(12);
-    height:250px;
-    .mainInfos{
-      height:90%;
+    .kot{
+      @include c(12);
+      height:250px;
+      .mainInfos{
+        @include c(12);
+        height:80%;
+        .photo{
+          @include cl(4);
+          img{
+            display:block;
+            width:100%;
+          }
+        }
+        .content{
+          @include cl(6);
+          max-height: 80%;
+          overflow:hidden;
+          &:after{
+            content:"";
+            white-space: nowrap;
+          }
+          p{
+
+            
+          }
+        }
+      }
+      .special{
+        @include c(12);
+        height:20%;
+      }
     }
   }
-}
 /* END ADVERTS */
 }
 /* END INFOS */

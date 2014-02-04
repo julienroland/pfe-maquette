@@ -10,6 +10,7 @@
 			heightMap();
 			
 		}
+		$('.kot .content').ellipsis();
 		$('.goTo').on('click',function( e ){
 			e.preventDefault();
 			goTo( $(this) );
