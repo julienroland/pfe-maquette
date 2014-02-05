@@ -304,7 +304,6 @@
   //margin-left: 0;
   display: block;
   float: none;
-  margin-bottom: gutter() / 2;
   @include box-sizing(border-box);
 
   &:after {

@@ -178,12 +178,30 @@ a{
     @include c(12);
     min-height:$hm;
     padding-top: $hm - $h-m;
+    margin-bottom: 0;
     .elem{
-      a{
-        @include a(0,0,none);
+      li{
+       &:after{
+        content:"";
+        height:100%;
+        width:1px;
+        background-color: $greyL2;
+        @include abs-right();
+        visibility:visible;
+      }
+      &:last-child{
+        &:after{
+          display:none;
+        }
       }
     }
+
+    a{
+      @include a(0,0,none);
+      display:block;
+    }
   }
+}
 }
 .profilItem{
   @include c(12);
