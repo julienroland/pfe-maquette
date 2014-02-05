@@ -1,12 +1,78 @@
 @import "variables";
-@media screen and (min-width:queries($nMw/2)){
+@media screen and (min-width:queries($nMw / 2)){
+  /* GENERAL */
+  .titleKot{
+    text-align: left;
+  }
+  /* END GENERAL */
   /* HOME */
   .home{
     .onePeople{
       @include cl(6);
     }
-  }
+      /* KOTS */
+      .kots{
+
+        .kot{
+          height:200px;
+          .mainInfos{
+            .photo{
+              @include cl(4);
+              height:auto;
+            }
+            .content{
+              @include cl(6);
+              .typeAndLocation{
+                text-align: left;
+              }
+              p{
+                font-size: 0.9em;
+              }
+            }
+            .special{
+              @include cl(2);
+              .spe{
+                float:left;
+                margin:0;
+                &:before{
+                  font-size: 1.435em;
+                }
+              }
+            }
+          }
+          .addInfos{
+            .star{
+              @include cl(3);
+              &:after{
+                display:block;
+                height:100%;
+                visibility:visible;
+              }
+            }
+            .howMuch{
+             @include cl(3);
+             &:after{
+               content:"";
+               height:100%;
+               width:1px;
+               background-color: $greyL2;
+               @include abs-right();
+               visibility:visible;
+             } 
+           }
+           .locateBy{
+            @include cl(6); 
+            border-top: 0;
+          }
+
+        }
+
+      }
+    }
+  /* END KOTS */
+}
   /* END HOME */
+
 }
 @media screen and (min-width: queries(800)){
   /* HOME */

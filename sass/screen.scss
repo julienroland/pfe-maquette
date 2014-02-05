@@ -3,11 +3,13 @@
  * Import this file using the following HTML or equivalent:
  * <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css" /> */
  @import "compass/reset";
+ @import "icons";
  @import "compass";
  @import "compass/css3";
  @import "variables";  
  @import "flags";  
  @import "mixin";
+ 
 
 
 //@import url("http://fonts.googleapis.com/css?family=Lora:400,700,400italic");
@@ -31,6 +33,9 @@ body {
   height: 100%;
   //background-color: $greyL2;
   text-rendering: optimizeLegibility;
+}
+i{
+  font-style: italic;
 }
 .main{
   height:100%;
@@ -60,9 +65,16 @@ body {
   white-space: nowrap;
   overflow:hidden;
   text-overflow:ellipsis;
+  text-align: center;
+  position:relative;
+  &:hover{
+    overflow:visible;
+    white-space: normal;
+  }
   a{
-    @include a($mc,solid);
-    
+    @include a(0,0,none);
+    color:$tc;
+    text-decoration: underline;
     display:inline;
 
     @extend .titleText;
@@ -140,6 +152,7 @@ a{
   position:relative;
   background-color: white;
   border-bottom: 1px solid $greyD;
+  margin-bottom: 0;
   color:white;
   //@include box-shadow($greyD2 0 10px 2px 0);
   &:after{
@@ -275,12 +288,13 @@ a{
   z-index: 2;
 
   &:hover,&:focus,&:active{
-    .fa{
+    .icon:before{
       @include translateY(5px);
       @include transition(all 0.3s ease);
     }
   }
-  .fa{
+  .icon:before{
+    font-size: 1.618em;
     @include transition(all 0.3s ease);
   }
 }
@@ -346,43 +360,208 @@ a{
       }
     }
   }
-  /* ADVERTS */
+  /* KOT */
   .kots{
     @include c(12);
+    margin:3em 0;
     .kot{
       @include c(12);
-      height:250px;
+      height:450px;
+      max-width: $mw / 2 ;
+      background-color: lighten($greyL,5%);
+      border:2px solid $greyL2;
+      padding:$gutter / 2;
+      overflow:hidden;
+      margin-bottom: $gutter;
+      &.prenium{
+        border:2px solid $mc;
+      }
       .mainInfos{
         @include c(12);
-        height:80%;
-        .photo{
-          @include cl(4);
+        height:auto;
+        overflow:hidden;
+        .photo{ 
+          @include c(12);
+          position:relative;
+          height: 150px;
+          margin-bottom: gutter() / 2;
           img{
             display:block;
             width:100%;
+            max-height: 100%;
+          }
+          &:after{
+            content:"";
+            background-image: image-url('framework/pattern/grid.png');
+            width: 100%;
+            height: 100%;
+            display: block;
+            pointer-events:none;
+            position: absolute;
+            top: 0;
+            visibility: visible;
+            left: 0;
+            z-index: 99;
+            @include box-shadow( black 0 0 10px 0 inset);
           }
         }
         .content{
-          @include cl(6);
+          @include c(12);
           max-height: 80%;
           overflow:hidden;
+          height:100px;
+          .typeAndLocation{
+            color:$mc;
+            display: block;
+            font-weight: bold;
+            text-align: center;
+          }
           &:after{
             content:"";
             white-space: nowrap;
           }
           p{
 
-            
+
+          }
+        }
+        .special{
+          @include c(12);
+          height:100%;
+          text-align: center;
+          .spe{
+            font-family: $ffi;
+            @include cl(6);
+            display:inline-block;
+            float:none;
+            width: 30px;
+            height:30px;
+            &:before{
+              font-size: 1.618em;
+            }
+          }
+          .wifi{
+            &:before{
+              content:"\e00e";    
+
+            }
+          }
+          .bathroom{
+            &:before{
+              content:"\e000";    
+
+            }
+          }
+          .kitchen{
+            &:before{
+              content:"\e004";    
+
+            }
+          }
+          .washbasin{
+            &:before{
+              content:"\e00c";    
+
+            }
           }
         }
       }
-      .special{
+      .addInfos{
         @include c(12);
-        height:20%;
+        padding:0;
+        height:auto;
+        background-color: transparent;
+        line-height: 1.5;
+        .star{
+          @include cl(6);
+          text-align: center;
+          height:100%;
+          position:relative;
+          &:after{
+            content:"";
+            height:100%;
+            width:1px;
+            background-color: $greyL2;
+            @include abs-right();
+            visibility:visible;
+          }
+          .icons{
+            @include c(12);
+            .icon{
+              font-family: $ffi;
+              &:before{
+                margin:0;
+                font-size: $fs;
+                min-width: $fs;
+
+
+                color:$mc;
+              } 
+            }
+            .one{
+              &:before{
+                content:"\e001";
+
+              }
+            }
+            .half-one{
+              &:before{
+                content:"\e008";
+
+              }
+            }
+            .no-one{
+              &:before{
+                content:"";
+
+              }
+            }
+
+          }
+          .number{
+            @include c(12);
+
+          }
+        }
+        .locateBy{
+          @include cl(12);
+          position:relative;
+          height:100%;
+          border-top:1px solid $greyL2;
+          font-size: 1em;
+          line-height: 52px;
+          span{
+            vertical-align: middle;
+          }
+          &:after{
+            content:"";
+            height:100%;
+            width:1px;
+            display:none;
+            background-color: $greyL2;
+            @include abs-right();
+            visibility:visible;
+          }
+          a{
+            @include a($mc,solid);
+          }
+        }
+        .howMuch{
+          @include cl(6);
+          position:relative;
+          .icon{
+            @include c(12);
+            color:$mc;
+          }
+          .peoples{
+            @include c(12);
+          }
+        }
       }
+
     }
   }
-/* END ADVERTS */
+/* END KOT */
 }
 /* END INFOS */
 

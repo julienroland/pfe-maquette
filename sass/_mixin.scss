@@ -13,22 +13,23 @@
     }
   }
 }
-@mixin a( $color:$tc, $type: dotted, $none:"" ){
+@mixin a( $color:$mc, $type: dotted, $none:"" ){
 
 
   @if($none!="none"){
-    border-bottom: 1px $type #{$color};
+    border-bottom: 1px #{$type} #{$color};
     position: relative;
     overflow:visible;
+    color: #{$color};
     text-decoration: none;
-    display: inline-block;
+    display: inline;
     @include transition(all 0.3s ease);
     &:after{
       content:"";
       @include opacity(0);
       @include abs-right();
       @include box-sizing(border-box);
-      right: -5px;
+      right: -2px;
       border-right: 1px solid #{$color};
       @include transition(all 0.3s ease);
     }
@@ -37,13 +38,13 @@
       @include abs-left();
       @include opacity(0);
       @include box-sizing(border-box);
-      left: -5px;
+      left: -2px;
       border-left: 1px solid #{$color};
       @include transition(all 0.3s ease);
     }
     &:hover,&:focus,&:active{
       text-decoration: none;
-      border-bottom: 1px $type transparent;
+      border-bottom: 1px #{$type} transparent;
       &:after{
         @include opacity(1);
         @include transition(all 0.3s ease);
@@ -211,10 +212,10 @@
     margin: 0!important;
   }
   .reader {
-    display: inline-block;
-    position: absolute;
+    display: inline-block!important;
+    position: absolute!important;
     height: 0!important;
-    background-color: white;
+    background-color: transparent!important;
     color:$tc!important;
     text-indent: -99999999px!important;
     border: 0!important;
@@ -303,6 +304,7 @@
   //margin-left: 0;
   display: block;
   float: none;
+  margin-bottom: gutter() / 2;
   @include box-sizing(border-box);
 
   &:after {

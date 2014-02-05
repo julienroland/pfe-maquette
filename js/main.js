@@ -10,12 +10,16 @@
 			heightMap();
 			
 		}
-		$('.kot .content').ellipsis();
+		$(window).resize(ellips);
+		ellips();
 		$('.goTo').on('click',function( e ){
 			e.preventDefault();
 			goTo( $(this) );
 		})
 	});
+	var ellips = function(){
+		$('.kot .content').ellipsis();
+	};
 	var heightMap = function( ){
 		
 		nHeight = toPercent($winHeight , 90) -( $('.banner').height() + $('.addInfos').height());
