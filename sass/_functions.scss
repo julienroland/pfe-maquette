@@ -15,7 +15,9 @@ $gout: $gutter;
 
 }
 @function queries($width){
+
 @return $width / $fsn+em;
+
 }
 @function gutter(){
 

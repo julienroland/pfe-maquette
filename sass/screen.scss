@@ -22,7 +22,7 @@
 
 
 body {
-  background-color: rgb(255, 255, 255);
+  background-color: $greyL;
   font-family: $ff;
   font-size: $fs;
   font-weight: normal;
@@ -144,13 +144,15 @@ a{
   min-height: $hm;
   padding:0 $pd;
   position:relative;
-  background-color: white;
+  background-color: $mc;
+  @include mb();
   border-bottom: 1px solid $greyD;
   margin-bottom: 0;
   color:white;
-  //@include box-shadow($greyD2 0 10px 2px 0);
+  z-index: 1000;
+  @include box-shadow(rgba(black,0.3) 0 3px 3px 0);
   &:after{
-    //background-image: image-url('framework/pattern/grid.png');
+    background-image: image-url('framework/pattern/noise-1.png');
     width: 100%;
     height: 100%;
     display: block;
@@ -161,31 +163,45 @@ a{
     left: 0;
     z-index: 99;
   }
+  .wrapper{
+    position:relative;
+    z-index: 1;
+  }
   .fa{
     margin-right: 5px;
   }
   a{
-    color:$tc;
+    color:white;
     @include a(0,none);
   }
   .nav{
     @include c(12);
     min-height:$hm;
-    padding-top: $hm - $h-m;
     margin-bottom: 0;
     .elem{
       li{
-       &:after{
+
+     /*   &:after{
         content:"";
         height:100%;
         width:1px;
         background-color: $greyL2;
         @include abs-right();
         visibility:visible;
-      }
+      } */
       &:last-child{
         &:after{
           display:none;
+        }
+      }
+      a{
+        background-color: white;
+        color:$mc;
+        height:35px;
+        @include border-radius($hm/2);
+        &:hover,&:focus,&:active{
+          background-color: $greyD;
+          color:white;
         }
       }
     }
@@ -204,15 +220,18 @@ a{
   ul{
     display:inline-block;
     height:100%;
+    line-height: 50px;
     li{
-      float:left;
-      height:100%;
-      line-height:$h-m; 
+      height:35px;
+      display:inline-block;
+      vertical-align: middle;
+      @include box-sizing(border-box);
+      line-height:35px; 
       position:relative;
       a{
         padding:0 $hm - $h-m;
         position:relative;
-        &:after{
+       /*  &:after{
           $coe: 6;
           $bh:( $h-m / $coe ) * 2;
           background: $greyD;
@@ -223,14 +242,13 @@ a{
           right: 0;
           top: ( $h-m - $bh ) / $coe;
           width: 1px;
-        }
+        } */
         &:hover,&:focus,&:active{
           color:$mc;
           text-decoration: underline;
         }
       }
       &:last-child a{
-        padding-right: 0;
         &:after{
           display:none;
         }
@@ -245,8 +263,8 @@ a{
   display:block;
   a{
     @include a(0,0,none);
-    background-image: image-url('logo/logo-smooth.png'); 
-    width:111px;
+    background-image: image-url('logo/logo-white-smooth.png'); 
+    width:113px;
     height:$h-m;
     text-indent: -9999px;
     position:absolute;
@@ -257,7 +275,7 @@ a{
   }
 }
 .whatWeDo{
-  color:$tc;
+  color:white;
   display:block;
   margin: auto;
   text-align: center;
@@ -295,7 +313,7 @@ a{
   top:-30px;
   height:70px;
   background-image: image-url('framework/pattern/noise-1.png');
-  background-color: white;
+  background-color: $greyL;
   font-size: 1.618em;
   z-index: 2;
 
@@ -318,65 +336,76 @@ a{
   height:80%;
   border-top:1px solid $greyD;
   padding:3em $pd;
-  background-color: white;
+  //background-color: white;
   position:relative;
   margin:0 auto;
   background-image: image-url('framework/pattern/noise-1.png');
 
-
+  .informationsSupp{
+    @include c(12);
+    padding:$pd 1em;
+    background-color: white;
+    @include boxShadow();
+  }
   .infos{
     @include c(12);
   }
   .wrapper{
-    margin-bottom: 1em;
+    margin-bottom: 3em;
   }
-  .onePeople{
+  .callback{
+   @include c(12);
+   padding:$pd 1em;
+   background-color: white;
+   @include boxShadow();
+ }
+ .onePeople{
+  @include c(12);
+  max-width: $mw / 4;
+  margin:$pd auto;
+  .vcard{
+    margin-bottom: $pd;
+  }
+  .photo{
+    overflow:hidden;
+    position:relative;
+    margin-bottom: $pd;
+    &:after{
+      content:"";
+      background-image: image-url('framework/pattern/grid.png');
+      @include abs();
+      height:100%;
+      width:100%;
+      visibility:visible!important;
+    }
+    img{
+      @include border-radius(50%);
+      display:block;
+      margin: auto;
+
+
+    }    
+
+  }
+  .infos{
     @include c(12);
-    max-width: $mw / 4;
-    margin:$pd auto;
-    .vcard{
-      margin-bottom: $pd;
+    text-align: center;
+
+    .name{
+      font-weight: bold;
+      color:$mc;
     }
-    .photo{
-      overflow:hidden;
-      position:relative;
-      margin-bottom: $pd;
-      &:after{
-        content:"";
-        background-image: image-url('framework/pattern/grid.png');
-        @include abs();
-        height:100%;
-        width:100%;
-        visibility:visible!important;
-      }
-      img{
-        @include border-radius(50%);
-        display:block;
-        margin: auto;
-
-
-      }    
-
-    }
-    .infos{
-      @include c(12);
-      text-align: center;
-
-      .name{
-        font-weight: bold;
-        color:$mc;
-      }
-      .address{
-        font-style: italic;
-        line-height: 1;
-        font-size: 0.9em;
-      }
+    .address{
+      font-style: italic;
+      line-height: 1;
+      font-size: 0.9em;
     }
   }
+}
   /* KOT */
   .kots{
     @include c(12);
-    margin:3em 0;
+    @include boxShadow();
     .kot{
       @include c(12);
       height:450px;
@@ -402,6 +431,7 @@ a{
         @include c(12);
         height:auto;
         overflow:hidden;
+        margin-bottom: $gutter;
         .photo{ 
           @include c(12);
           position:relative;
@@ -433,13 +463,13 @@ a{
           @include c(12);
           max-height: 80%;
           overflow:hidden;
-          height:100px;
+          height:150px;
           .typeAndLocation{
             color:$mc;
             display: inline-block;
             max-width: 100%;
             font-weight: bold;
-            text-align: center;
+            text-align: left;
             font-size: 0.9em;
             line-height: 1;
           }
@@ -456,6 +486,7 @@ a{
           @include c(12);
           height:100%;
           text-align: center;
+
           .spe{
             font-family: $ffi;
             @include cl(6);
@@ -591,7 +622,60 @@ a{
 /* END KOT */
 }
 /* END INFOS */
-
+/* CITIES */
+.kotsByCities{
+  @include cl(4);
+  @include boxShadow();
+  display:none;
+  .city{
+    @include c(12);
+    margin-bottom: $gutter;
+    position:relative;
+    a{
+      display:block;
+      width:100%;
+      height:100%;
+      @include a(0,0,none);
+    }
+    .photo{
+      max-height:180px;
+      position:relative;
+      overflow:hidden;
+      img{
+        max-width: 100%;
+        height:100%;
+      }
+      &:after{
+        content:"";
+        background-image: image-url('framework/pattern/grid.png');
+        @include abs();
+        height:100%;
+        width:100%;
+        visibility:visible!important;
+        @include box-shadow( $greyD 0 0 5px 0 inset);
+      }
+    }
+    .overImage{
+      @include abs-top();
+      width:80%;
+      @include box-shadow( $greyL2 0 0 3px 0);
+      height:40%;
+      top:10%;
+      padding: $pd 1em;
+      @include box-sizing(border-box);
+      background-color: rgba(white,0.7);
+      text-align: center;
+      .titleCities{
+        font-size: 1.272em;
+        color:$tc;
+        line-height: 1;
+        
+        font-weight: bold;
+      }
+    }
+  }
+}
+/* END CITIES */
 /* LOADING MAP */
 .loading{
   @include abs();

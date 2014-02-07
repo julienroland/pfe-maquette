@@ -1,5 +1,5 @@
 @import "variables";
-@media screen and (min-width:queries($nMw / 2)){
+@media screen and (min-width:queries($nMw / 2)){ //512px
   /* GENERAL */
   .titleKot{
     text-align: left;
@@ -16,12 +16,14 @@
         .kot{
           height:200px;
           .mainInfos{
+            margin-bottom: 0;
             .photo{
               @include cl(4);
               height:auto;
             }
             .content{
               @include cl(6);
+              height:100px;
               .typeAndLocation{
                 text-align: left;
               }
@@ -89,6 +91,9 @@
   .logo{
     float:left;
   }
+  .nav{
+    padding-top: $hm - $h-m;  
+  }
   .whatWeDo{
     line-height: 1;
     display:inline-block;
@@ -97,7 +102,7 @@
     line-height: $h-m;
     font-size: 1em;
     font-style: italic;
-    margin:0 3em;
+    margin:0 $pd;
     float:left;
 
   }
@@ -125,6 +130,18 @@
   /* END HOME */
 
 }
+@media screen and (min-width: queries(900)){
+  /* HOME */
+  .home{
+    .kots{
+      @include cl(8);
+    }
+    .kotsByCities{
+      display:block;
+    }
+  }
+  /* END HOME */
+}
 @media screen and (min-width: queries($nMw)){
  /* HOME */
  .home{
@@ -132,6 +149,14 @@
     @include cl(3);
   }
 }
+.kotsByCities{
+      display:block;
+      .city{
+        .photo{
+          max-height: 200px;
+        }
+      }
+    }
   /* END HOME */
 }
 @media screen and (max-width: queries($nMw)){

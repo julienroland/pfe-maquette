@@ -75,12 +75,12 @@
                     <ul class="menu elem">
                         <li>
                             <a href="">
-                                <span class="icon-lock24"></span>Connexion
+                                <span class="icon icon-lock24"></span>Connexion
                             </a>
                         </li>
                         <li>
                             <a href="">
-                                <span class="icon-create1"></span>Inscription 
+                                <span class="icon icon-create1"></span>Inscription 
                             </a>
                         </li>
                     </ul>
@@ -123,7 +123,7 @@
                                 <div class="content">
                                     <h4 aria-level="4" itemprop="name" role="heading" class="titleKot">Titre de l'annonce qui peut être long ou court
                                     </h4>
-                                    <span class="typeAndLocation">Studio | <span itemprop="address" itemscope itemtype="PostalAddress"><span itemprop="addressRegion">Namur</span>, <span itemprop="streetAddress">Rue marchal le grand méchant loup</span>
+                                    <span class="typeAndLocation">Studio | <span itemprop="address" itemscope itemtype="PostalAddress"><span itemprop="addressRegion">Namur</span><span class="section" itemprop="streetAddress">Rue marchal le grand méchant loup</span>
                                     <meta content="4000" itemprop="postal">
                                     <meta content="BE" itemprop="addressCountry">
                                 </span></span>
@@ -221,105 +221,134 @@
     </a>
 </div>
 </section>
+<section class="kotsByCities">
+    <h3 aria-level="3" role="heading" class="mainTitle section">Sélection de villes aléatoire avec le nombre de logement</h3>
+    <div class="city">
+        <a href="" title="Voir les kots de XXX">
+            <div class="photo">
+                <img src="./img/cities/namur.jpg" alt="Photo de la ville de XXX">
+            </div>
+            <div class="overImage">
+                <h4 aria-level="4" itemprop="name" role="heading" class="titleCities">Namur</h4>
+                <span>1.422 logements</span>
+            </div>
+        </a>
+    </div>
+    <div class="city">
+        <a href="" title="Voir les kots de XXX">
+            <div class="photo">
+                <img src="./img/cities/namur.jpg" alt="Photo de la ville de XXX">
+            </div>
+            <div class="overImage">
+                <h4 aria-level="4" itemprop="name" role="heading" class="titleCities">Namur</h4>
+                <span>1.422 logements</span>
+            </div>
+        </a>
+    </div>
+</section>
 </div>
 <div class="wrapper">
- <h3 aria-level="3" role="heading" class="section">Informations sur Akoter</h3>
+    <div class="informationsSupp">
+     <h3 aria-level="3" role="heading" class="section">Informations sur Akoter</h3>
 
- <section class="contrib infos">
-     <h4 aria-level="4" role="heading" class="titleText"><span class="fa fa-star"></span>Contribuez à l'avancement</h4>
-     <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vero, ipsam, odio, odit facilis eveniet modi ipsum incidunt mollitia exercitationem tempora inventore quis illum molestias fugiat quibusdam ex officiis quia ea!</p>
+     <section class="contrib infos">
+         <h4 aria-level="4" role="heading" class="titleText"><span class="fa fa-star"></span>Contribuez à l'avancement</h4>
+         <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vero, ipsam, odio, odit facilis eveniet modi ipsum incidunt mollitia exercitationem tempora inventore quis illum molestias fugiat quibusdam ex officiis quia ea!</p>
 
- </section>
- <section class="whyus infos">
-  <h4 aria-level="4" role="heading" class="titleText"><span class="fa fa-star"></span>Pourquoi choisir Akoter&nbsp;?</h4>
-  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Deserunt, deleniti repellendus veniam. Accusamus eum libero fugit quam autem nostrum porro eos velit earum. Ducimus, blanditiis saepe eius rem perspiciatis consequuntur.</p>
-</section>
+     </section>
+     <section class="whyus infos">
+      <h4 aria-level="4" role="heading" class="titleText"><span class="fa fa-star"></span>Pourquoi choisir Akoter&nbsp;?</h4>
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Deserunt, deleniti repellendus veniam. Accusamus eum libero fugit quam autem nostrum porro eos velit earum. Ducimus, blanditiis saepe eius rem perspiciatis consequuntur.</p>
+  </section>
 
-<section class="data infos">
-  <h4 aria-level="4" role="heading" class="titleText"><span class="fa fa-star"></span>Akoter en chiffre ça donne quoi&nbsp;?</h4>
-  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsum, itaque, nemo mollitia rem corporis magnam iure consectetur doloribus in sed quasi enim cupiditate molestias atque rerum harum voluptatem magni tempora.</p>
-</section>
+  <section class="data infos">
+      <h4 aria-level="4" role="heading" class="titleText"><span class="fa fa-star"></span>Akoter en chiffre ça donne quoi&nbsp;?</h4>
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsum, itaque, nemo mollitia rem corporis magnam iure consectetur doloribus in sed quasi enim cupiditate molestias atque rerum harum voluptatem magni tempora.</p>
+  </section>
+</div>
 </div>
 <div class="wrapper">
-  <h3 aria-level="3" role="heading" class="mainTitle">Que pensent-ils d'Akoter?</h3>
-  <div class="onePeople" itemscope itemtype="http://schema.org/Person">
-      <div class="vcard">
-          <div class="photo" >
-              <img itemprop="image" src="./img/photo.jpg" alt="Photo de XXX">
-          </div>
-          <div class="infos">
-              <meta itemprop="nationality" content="Belgian">
-              <span class="name" itemprop="name">Jeanne Dupont</span>
-              <div itemscope class="address" itemtype="http://schema.org/PostalAddress" itemprop="address">
-                  <span itemprop="addressRegion">de Bouge</span>
-                  <meta itemprop="postalCode" content="4000">
+    <div class="callback">
+      <h3 aria-level="3" role="heading" class="mainTitle">Que pensent-ils d'Akoter?</h3>
+      <div class="onePeople" itemscope itemtype="http://schema.org/Person">
+          <div class="vcard">
+              <div class="photo" >
+                  <img itemprop="image" src="./img/photo.jpg" alt="Photo de XXX">
+              </div>
+              <div class="infos">
+                  <meta itemprop="nationality" content="Belgian">
+                  <span class="name" itemprop="name">Jeanne Dupont</span>
+                  <div itemscope class="address" itemtype="http://schema.org/PostalAddress" itemprop="address">
+                      <span itemprop="addressRegion">de Bouge</span>
+                      <meta itemprop="postalCode" content="4000">
+                  </div>
               </div>
           </div>
-      </div>
-      <div class="text">
-          <p>
-              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repellat, eligendi, optio, assumenda quis natus nobis quod minus aliquid minima aliquam quia sapiente iste eius eos quidem odit nihil quo distinctio.
-          </p>
-      </div>
-  </div> 
-  <div class="onePeople" itemscope itemtype="http://schema.org/Person">
-      <div class="vcard">
-          <div class="photo" >
-              <img itemprop="image" src="./img/photo.jpg" alt="Photo de XXX">
+          <div class="text">
+              <p>
+                  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repellat, eligendi, optio, assumenda quis natus nobis quod minus aliquid minima aliquam quia sapiente iste eius eos quidem odit nihil quo distinctio.
+              </p>
           </div>
-          <div class="infos">
-              <meta itemprop="nationality" content="Belgian">
-              <span class="name" itemprop="name">Jeanne Dupont</span>
-              <div itemscope class="address" itemtype="http://schema.org/PostalAddress" itemprop="address">
-                  <span itemprop="addressRegion">de Bouge</span>
-                  <meta itemprop="postalCode" content="4000">
+      </div> 
+      <div class="onePeople" itemscope itemtype="http://schema.org/Person">
+          <div class="vcard">
+              <div class="photo" >
+                  <img itemprop="image" src="./img/photo.jpg" alt="Photo de XXX">
+              </div>
+              <div class="infos">
+                  <meta itemprop="nationality" content="Belgian">
+                  <span class="name" itemprop="name">Jeanne Dupont</span>
+                  <div itemscope class="address" itemtype="http://schema.org/PostalAddress" itemprop="address">
+                      <span itemprop="addressRegion">de Bouge</span>
+                      <meta itemprop="postalCode" content="4000">
+                  </div>
               </div>
           </div>
-      </div>
-      <div class="text">
-          <p>
-              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repellat, eligendi, optio, assumenda quis natus nobis quod minus aliquid minima aliquam quia sapiente iste eius eos quidem odit nihil quo distinctio.
-          </p>
-      </div>
-  </div>
-  <div class="onePeople" itemscope itemtype="http://schema.org/Person">
-      <div class="vcard">
-          <div class="photo" >
-              <img itemprop="image" src="./img/photo.jpg" alt="Photo de XXX">
+          <div class="text">
+              <p>
+                  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repellat, eligendi, optio, assumenda quis natus nobis quod minus aliquid minima aliquam quia sapiente iste eius eos quidem odit nihil quo distinctio.
+              </p>
           </div>
-          <div class="infos">
-              <meta itemprop="nationality" content="Belgian">
-              <span class="name" itemprop="name">Jeanne Dupont</span>
-              <div itemscope class="address" itemtype="http://schema.org/PostalAddress" itemprop="address">
-                  <span itemprop="addressRegion">de Bouge</span>
-                  <meta itemprop="postalCode" content="4000">
+      </div>
+      <div class="onePeople" itemscope itemtype="http://schema.org/Person">
+          <div class="vcard">
+              <div class="photo" >
+                  <img itemprop="image" src="./img/photo.jpg" alt="Photo de XXX">
+              </div>
+              <div class="infos">
+                  <meta itemprop="nationality" content="Belgian">
+                  <span class="name" itemprop="name">Jeanne Dupont</span>
+                  <div itemscope class="address" itemtype="http://schema.org/PostalAddress" itemprop="address">
+                      <span itemprop="addressRegion">de Bouge</span>
+                      <meta itemprop="postalCode" content="4000">
+                  </div>
               </div>
           </div>
-      </div>
-      <div class="text">
-          <p>
-              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repellat, eligendi, optio, assumenda quis natus nobis quod minus aliquid minima aliquam quia sapiente iste eius eos quidem odit nihil quo distinctio.
-          </p>
-      </div>
-  </div>
-  <div class="onePeople" itemscope itemtype="http://schema.org/Person">
-      <div class="vcard">
-          <div class="photo" >
-              <img itemprop="image" src="./img/photo.jpg" alt="Photo de XXX">
+          <div class="text">
+              <p>
+                  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repellat, eligendi, optio, assumenda quis natus nobis quod minus aliquid minima aliquam quia sapiente iste eius eos quidem odit nihil quo distinctio.
+              </p>
           </div>
-          <div class="infos">
-              <meta itemprop="nationality" content="Belgian">
-              <span class="name" itemprop="name">Jeanne Dupont</span>
-              <div itemscope class="address" itemtype="http://schema.org/PostalAddress" itemprop="address">
-                  <span itemprop="addressRegion">de Bouge</span>
-                  <meta itemprop="postalCode" content="4000">
+      </div>
+      <div class="onePeople" itemscope itemtype="http://schema.org/Person">
+          <div class="vcard">
+              <div class="photo" >
+                  <img itemprop="image" src="./img/photo.jpg" alt="Photo de XXX">
+              </div>
+              <div class="infos">
+                  <meta itemprop="nationality" content="Belgian">
+                  <span class="name" itemprop="name">Jeanne Dupont</span>
+                  <div itemscope class="address" itemtype="http://schema.org/PostalAddress" itemprop="address">
+                      <span itemprop="addressRegion">de Bouge</span>
+                      <meta itemprop="postalCode" content="4000">
+                  </div>
               </div>
           </div>
-      </div>
-      <div class="text">
-          <p>
-              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repellat, eligendi, optio, assumenda quis natus nobis quod minus aliquid minima aliquam quia sapiente iste eius eos quidem odit nihil quo distinctio.
-          </p>
+          <div class="text">
+              <p>
+                  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repellat, eligendi, optio, assumenda quis natus nobis quod minus aliquid minima aliquam quia sapiente iste eius eos quidem odit nihil quo distinctio.
+              </p>
+          </div>
       </div>
   </div>
 </div>
