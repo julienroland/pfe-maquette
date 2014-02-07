@@ -3,11 +3,14 @@
 	$map = $('.map'),
 	$main = $('.main'),
 	$win = $(window),
+	nMapHeight,
+	nMapPercent = 95,
 	$winHeight = $(window).height(),
 	$winWidth = $(window).width(),
 	$htmlBody = $('html,body'),
 	$addInfos = $('.addInfos'),
-	$menu = $('.banner');
+	$menu = $('.banner'),
+	$kotsHeight = $('.kots').outerHeight();
 
 
 	$(function(){
@@ -15,21 +18,36 @@
 		if($map){
 			heightMap();
 		}
+		/* KOTS + REGION */
+
+		heightOfKot();
+
 		/* TEXT-OVERFLOW */
-		$(window).resize(ellips);
+		$(window).resize(ellips,heightOfKot);
 		ellips();
 		/* BARS */
-		addInfosBar();
-		menu();
-		$win.scroll(addInfosBar, menu);
-		
-		$('.goTo').on('click',function( e ){
-			e.preventDefault();
-			goTo( $(this) );
-		})
-	});
+			//addInfosBar();
+			//menu();
+			//$win.scroll(addInfosBar, menu);
+
+			$('.goTo').on('click',function( e ){
+				e.preventDefault();
+				goTo( $(this) );
+			})
+		});
+	var heightOfKot = function(){
+		if($winWidth > 808){
+			$('.kotsByCities').css({
+				'height':$kotsHeight,
+			});
+		}
+		else{
+			$('.kotsByCities').css('height','auto');
+		}
+	};
 	var menu = function(){
-		if($htmlBody.scrollTop() > $addInfos.height()){
+
+		if($htmlBody.scrollTop() > ($addInfos.height() + $menu.outerHeight() + nMapHeight)){
 			$menu.css({
 				'position':'fixed',
 				'top':0,
@@ -56,9 +74,9 @@
 	};
 	var heightMap = function( ){
 		
-		nHeight = toPercent($winHeight , 90) -( $('.banner').height() + $('.addInfos').height());
+		nMapHeight = toPercent($winHeight , nMapPercent) -( $('.banner').height() + $('.addInfos').height());
 		$map.css({
-			'height':nHeight,
+			'height':nMapHeight,
 		});
 		$main.css({
 			'height':'auto',

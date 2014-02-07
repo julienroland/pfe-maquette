@@ -46,6 +46,7 @@ i{
   font-size: 1.272em;
   font-weight: bold;
   color:$tc;
+  text-align: center;
   line-height: 1;
   margin-right: gutter() / 2;
   margin-left: gutter() / 2;
@@ -87,6 +88,7 @@ a{
   color:$tc;
   text-align: center;
   font-size: 0.9em;
+  max-height: 20%;
   a{
     @include a(0,0,none);
     color:$tc;
@@ -130,6 +132,12 @@ a{
     @extend .topInfos;
     float:left;
     display:none;
+    li:first-child{
+      a{
+        padding-left: 0;
+        display:inline-block;
+      }
+    }
   }
   .otherLanguages{
     @include c(12);
@@ -351,8 +359,9 @@ a{
     @include c(12);
   }
   .wrapper{
-    margin-bottom: 3em;
+    margin-bottom: $gutter;
   }
+
   .callback{
    @include c(12);
    padding:$pd 1em;
@@ -406,244 +415,266 @@ a{
   .kots{
     @include c(12);
     @include boxShadow();
+    margin-bottom: $gutter;
     .kot{
       @include c(12);
-      height:450px;
-      max-width: $mw / 2 ;
-      border:2px solid $greyL2;
-      overflow:hidden;
-      margin-bottom: $gutter;
-      .goKot{
-        @include c(12);
-        display:block;
-        height:100%;
-        @include a(0,0,none);
-        background-color: lighten($greyL,5%);
-        padding:$gutter / 2;
-        &:hover,&:focus,&:active{
-          background-color: lighten($mc,50%);
-        }
+      height:auto;
+     // max-width: $mw / 2 ;
+     border:2px solid $greyL2;
+     overflow:hidden;
+     margin-bottom: $gutter;
+     .goKot{
+      @include c(12);
+      display:block;
+      height:100%;
+      @include a(0,0,none);
+      background-color: lighten($greyL,5%);
+      padding:$gutter / 2;
+      &:hover,&:focus,&:active{
+        background-color: lighten($mc,50%);
       }
-      &.prenium{
-        border:2px solid $mc;
-      }
-      .mainInfos{
-        @include c(12);
-        height:auto;
-        overflow:hidden;
-        margin-bottom: $gutter;
-        .photo{ 
-          @include c(12);
-          position:relative;
-          height: 150px;
-          margin-bottom: gutter() / 2;
-          margin-top: gutter() / 2;
-          img{
-            display:block;
-            width:100%;
-            max-height: 100%;
-          }
-          &:after{
-            content:"";
-            background-image: image-url('framework/pattern/grid.png');
-            width: 100%;
-            height: 100%!important;
-            display: block;
-            pointer-events:none;
-            position: absolute;
-            top: 0;
-            visibility: visible!important;
-            left: 0;
-            z-index: 99;
-            @include border-radius(3px);
-            @include box-shadow( black 0 0 10px 0 inset, $greyL2 0 0 1px 1px, white 0 0 1px 1px);
-          }
-        }
-        .content{
-          @include c(12);
-          max-height: 80%;
-          overflow:hidden;
-          height:150px;
-          .typeAndLocation{
-            color:$mc;
-            display: inline-block;
-            max-width: 100%;
-            font-weight: bold;
-            text-align: left;
-            font-size: 0.9em;
-            line-height: 1;
-          }
-          &:after{
-            content:"";
-            white-space: nowrap;
-          }
-          p{
-
-
-          }
-        }
-        .special{
-          @include c(12);
-          height:100%;
-          text-align: center;
-
-          .spe{
-            font-family: $ffi;
-            @include cl(6);
-            display:inline-block;
-            float:none;
-            width: 30px;
-            height:30px;
-            &:before{
-              font-size: 1.618em;
-            }
-          }
-          .wifi{
-            &:before{
-              content:"\e00e";    
-
-            }
-          }
-          .bathroom{
-            &:before{
-              content:"\e000";    
-
-            }
-          }
-          .kitchen{
-            &:before{
-              content:"\e004";    
-
-            }
-          }
-          .washbasin{
-            &:before{
-              content:"\e00c";    
-
-            }
-          }
-        }
-      }
-      .addInfos{
-        @include c(12);
-        padding:0;
-        height:auto;
-        background-color: transparent;
-        line-height: 1.5;
-        .star{
-          @include cl(6);
-          text-align: center;
-          height:100%;
-          position:relative;
-          &:after{
-            content:"";
-            height:100%;
-            width:1px;
-            background-color: $greyL2;
-            @include abs-right();
-            visibility:visible;
-          }
-          .icons{
-            @include c(12);
-            .icon{
-              font-family: $ffi;
-              &:before{
-                margin:0;
-                font-size: $fs;
-                min-width: $fs;
-
-
-                color:$mc;
-              } 
-            }
-            .one{
-              &:before{
-                content:"\e001";
-
-              }
-            }
-            .half-one{
-              &:before{
-                content:"\e008";
-
-              }
-            }
-            .no-one{
-              &:before{
-                content:"";
-
-              }
-            }
-
-          }
-          .number{
-            @include c(12);
-
-          }
-        }
-        .locateBy{
-          @include cl(12);
-          position:relative;
-          height:100%;
-          border-top:1px solid $greyL2;
-          font-size: 1em;
-          line-height: 52px;
-          span{
-            vertical-align: middle;
-          }
-          &:after{
-            content:"";
-            height:100%;
-            width:1px;
-            display:none;
-            background-color: $greyL2;
-            @include abs-right();
-            visibility:visible;
-          }
-          a{
-            @include a($mc,solid);
-          }
-        }
-        .howMuch{
-          @include cl(6);
-          position:relative;
-          .icon{
-            @include c(12);
-            color:$mc;
-          }
-          .peoples{
-            @include c(12);
-          }
-        }
-      }
-
     }
+    &.prenium{
+      border:2px solid $mc;
+    }
+    .mainInfos{
+      @include c(12);
+      height:auto;
+      overflow:hidden;
+      max-height: 80%;
+      margin-bottom: $gutter;
+      padding-bottom: $pd;
+      .photo{ 
+        @include c(12);
+        position:relative;
+        height: 150px;
+        margin-bottom: gutter() / 2;
+        margin-top: gutter() / 2;
+        img{
+          display:block;
+          width:100%;
+          max-height: 100%;
+        }
+        &:after{
+          content:"";
+          background-image: image-url('framework/pattern/grid.png');
+          width: 100%;
+          height: 100%!important;
+          display: block;
+          pointer-events:none;
+          position: absolute;
+          top: 0;
+          visibility: visible!important;
+          left: 0;
+          z-index: 99;
+          @include border-radius(3px);
+          @include box-shadow( black 0 0 10px 0 inset, $greyL2 0 0 1px 1px, white 0 0 1px 1px);
+        }
+      }
+      .content{
+        @include c(12);
+        max-height: 80%;
+        max-height: 200px;
+        overflow:hidden;
+        height:100%;
+        .typeAndLocation{
+          color:$mc;
+          display: inline-block;
+          max-width: 100%;
+          font-weight: bold;
+          text-align: left;
+          font-size: 0.9em;
+          line-height: 1;
+        }
+        &:after{
+          content:"";
+          white-space: nowrap;
+        }
+        p{
+
+
+        }
+      }
+      .special{
+        @include c(12);
+        height:100%;
+        text-align: center;
+
+        .spe{
+          font-family: $ffi;
+          @include cl(6);
+          display:inline-block;
+          float:none;
+          width: 30px;
+          height:30px;
+          &:before{
+            font-size: 1.618em;
+          }
+        }
+        .wifi{
+          &:before{
+            content:"\e00e";    
+
+          }
+        }
+        .bathroom{
+          &:before{
+            content:"\e000";    
+
+          }
+        }
+        .kitchen{
+          &:before{
+            content:"\e004";    
+
+          }
+        }
+        .washbasin{
+          &:before{
+            content:"\e00c";    
+
+          }
+        }
+      }
+    }
+    .addInfos{
+      @include c(12);
+      padding:0;
+      height:auto;
+      max-height: 20%;
+      background-color: transparent;
+      line-height: 1.5;
+      .star{
+        @include cl(6);
+        text-align: center;
+        height:100%;
+        position:relative;
+        &:after{
+          content:"";
+          height:100%;
+          width:1px;
+          background-color: $greyL2;
+          @include abs-right();
+          visibility:visible;
+        }
+        .icons{
+          @include c(12);
+          .icon{
+            font-family: $ffi;
+            &:before{
+              margin:0;
+              font-size: $fs;
+              min-width: $fs;
+
+
+              color:$mc;
+            } 
+          }
+          .one{
+            &:before{
+              content:"\e001";
+
+            }
+          }
+          .half-one{
+            &:before{
+              content:"\e008";
+
+            }
+          }
+          .no-one{
+            &:before{
+              content:"";
+
+            }
+          }
+
+        }
+        .number{
+          @include c(12);
+
+        }
+      }
+      .locateBy{
+        @include cl(12);
+        position:relative;
+        height:100%;
+        border-top:1px solid $greyL2;
+        font-size: 1em;
+        line-height: 52px;
+        span{
+          vertical-align: middle;
+        }
+        &:after{
+          content:"";
+          height:100%;
+          width:1px;
+          display:none;
+          background-color: $greyL2;
+          @include abs-right();
+          visibility:visible;
+        }
+        a{
+          @include a($mc,solid);
+        }
+      }
+      .howMuch{
+        @include cl(6);
+        position:relative;
+        .icon{
+          @include c(12);
+          color:$mc;
+        }
+        .peoples{
+          @include c(12);
+        }
+      }
+    }
+
   }
+}
 /* END KOT */
 }
 /* END INFOS */
 /* CITIES */
 .kotsByCities{
-  @include cl(4);
+  @include c(12);
   @include boxShadow();
-  display:none;
+  height:100%;
   .city{
     @include c(12);
-    margin-bottom: $gutter;
+    margin-bottom: $gutter / 2;
+    margin-top: $gutter / 2;
     position:relative;
+    max-width: 512px; 
     a{
       display:block;
       width:100%;
       height:100%;
       @include a(0,0,none);
+      @include transition( all 0.3s ease);
+      &:hover,&:focus,&:active{
+        @include transition( all 0.3s ease 0.1s);
+        .photo{
+          &:after{
+            @include box-shadow( rgba($tc,0.4) 0 0 40px 3px inset);
+            border:1px solid $tc;
+            @include transition( all 0.3s ease 0.1s);
+          }
+        }
+        img{
+          @include scale(1.1);
+          @include transition( all 0.5s ease-in-out 0.1s);
+        }
+      }
     }
     .photo{
-      max-height:180px;
+      max-height:200px;
       position:relative;
       overflow:hidden;
       img{
         max-width: 100%;
-        height:100%;
+        @include transition( all 0.5s ease-in-out);
       }
       &:after{
         content:"";
@@ -652,6 +683,7 @@ a{
         height:100%;
         width:100%;
         visibility:visible!important;
+        @include transition( all 0.3s ease);
         @include box-shadow( $greyD 0 0 5px 0 inset);
       }
     }

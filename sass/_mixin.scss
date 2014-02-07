@@ -177,8 +177,6 @@
  padding:1em;
  @include border-radius(5px);
  border:1px solid $greyL2;
- margin-top:$pd;
- margin-bottom:$pd;
  @include box-shadow( rgba($greyL2,0.7) 2px 2px 6px 0);
 }
 @mixin mb(){
@@ -383,7 +381,20 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#35a0c6', end
   width: colf($nNumber);
   float: left;
   margin-left:0;
-  margin-right: gutter();
+  margin-right: gutter() / 2;
+  display: block;
+  @include box-sizing(border-box);
+  //margin-top:0; 
+  &:after {
+    @include clear();
+  }
+}
+@mixin cll($nNumber) {
+
+  width: colf($nNumber);
+  float: left;
+  margin-left:gutter() / 2;
+  margin-right: 0;
   display: block;
   @include box-sizing(border-box);
   //margin-top:0; 
