@@ -57,41 +57,69 @@
   content: "\e004"; }
 
 /* line 43, ../sass/_icons.scss */
-.icon-help5:before {
+.icon-favourite1:before {
   content: "\e005"; }
 
 /* line 46, ../sass/_icons.scss */
-.icon-help7:before {
+.icon-help5:before {
   content: "\e006"; }
 
 /* line 49, ../sass/_icons.scss */
-.icon-lock24:before {
+.icon-help7:before {
   content: "\e007"; }
 
 /* line 52, ../sass/_icons.scss */
-.icon-mini9:before {
+.icon-location2:before {
   content: "\e008"; }
 
 /* line 55, ../sass/_icons.scss */
-.icon-mobile41:before {
+.icon-lock24:before {
   content: "\e009"; }
 
 /* line 58, ../sass/_icons.scss */
-.icon-shower2:before {
+.icon-map25:before {
   content: "\e00a"; }
 
 /* line 61, ../sass/_icons.scss */
-.icon-star51:before {
+.icon-map43:before {
   content: "\e00b"; }
 
 /* line 64, ../sass/_icons.scss */
-.icon-tap1:before {
+.icon-map54:before {
   content: "\e00c"; }
 
 /* line 67, ../sass/_icons.scss */
-.icon-user3:before {
+.icon-meter2:before {
   content: "\e00d"; }
 
 /* line 70, ../sass/_icons.scss */
-.icon-wifi42:before {
+.icon-mini9:before {
   content: "\e00e"; }
+
+/* line 73, ../sass/_icons.scss */
+.icon-mobile41:before {
+  content: "\e00f"; }
+
+/* line 76, ../sass/_icons.scss */
+.icon-plus12:before {
+  content: "\e010"; }
+
+/* line 79, ../sass/_icons.scss */
+.icon-shower2:before {
+  content: "\e011"; }
+
+/* line 82, ../sass/_icons.scss */
+.icon-star51:before {
+  content: "\e012"; }
+
+/* line 85, ../sass/_icons.scss */
+.icon-tap1:before {
+  content: "\e013"; }
+
+/* line 88, ../sass/_icons.scss */
+.icon-user3:before {
+  content: "\e014"; }
+
+/* line 91, ../sass/_icons.scss */
+.icon-wifi42:before {
+  content: "\e015"; }

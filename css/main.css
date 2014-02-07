@@ -117,44 +117,72 @@ article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, 
   content: "\e004"; }
 
 /* line 43, ../sass/_icons.scss */
-.icon-help5:before {
+.icon-favourite1:before {
   content: "\e005"; }
 
 /* line 46, ../sass/_icons.scss */
-.icon-help7:before {
+.icon-help5:before {
   content: "\e006"; }
 
 /* line 49, ../sass/_icons.scss */
-.icon-lock24:before {
+.icon-help7:before {
   content: "\e007"; }
 
 /* line 52, ../sass/_icons.scss */
-.icon-mini9:before {
+.icon-location2:before {
   content: "\e008"; }
 
 /* line 55, ../sass/_icons.scss */
-.icon-mobile41:before {
+.icon-lock24:before {
   content: "\e009"; }
 
 /* line 58, ../sass/_icons.scss */
-.icon-shower2:before {
+.icon-map25:before {
   content: "\e00a"; }
 
 /* line 61, ../sass/_icons.scss */
-.icon-star51:before {
+.icon-map43:before {
   content: "\e00b"; }
 
 /* line 64, ../sass/_icons.scss */
-.icon-tap1:before {
+.icon-map54:before {
   content: "\e00c"; }
 
 /* line 67, ../sass/_icons.scss */
-.icon-user3:before {
+.icon-meter2:before {
   content: "\e00d"; }
 
 /* line 70, ../sass/_icons.scss */
-.icon-wifi42:before {
+.icon-mini9:before {
   content: "\e00e"; }
+
+/* line 73, ../sass/_icons.scss */
+.icon-mobile41:before {
+  content: "\e00f"; }
+
+/* line 76, ../sass/_icons.scss */
+.icon-plus12:before {
+  content: "\e010"; }
+
+/* line 79, ../sass/_icons.scss */
+.icon-shower2:before {
+  content: "\e011"; }
+
+/* line 82, ../sass/_icons.scss */
+.icon-star51:before {
+  content: "\e012"; }
+
+/* line 85, ../sass/_icons.scss */
+.icon-tap1:before {
+  content: "\e013"; }
+
+/* line 88, ../sass/_icons.scss */
+.icon-user3:before {
+  content: "\e014"; }
+
+/* line 91, ../sass/_icons.scss */
+.icon-wifi42:before {
+  content: "\e015"; }
 
 /* CONFIG */
 /* typography */
@@ -2371,7 +2399,7 @@ a {
               font-size: 1.618em; }
           /* line 515, ../sass/screen.scss */
           .home .kots .kot .mainInfos .special .wifi:before {
-            content: "\e00e"; }
+            content: "\e015"; }
           /* line 521, ../sass/screen.scss */
           .home .kots .kot .mainInfos .special .bathroom:before {
             content: "\e000"; }
@@ -2380,7 +2408,7 @@ a {
             content: "\e004"; }
           /* line 533, ../sass/screen.scss */
           .home .kots .kot .mainInfos .special .washbasin:before {
-            content: "\e00c"; }
+            content: "\e0013"; }
       /* line 540, ../sass/screen.scss */
       .home .kots .kot .addInfos {
         width: 100%;
@@ -2464,7 +2492,7 @@ a {
               content: "\e001"; }
             /* line 580, ../sass/screen.scss */
             .home .kots .kot .addInfos .star .icons .half-one:before {
-              content: "\e008"; }
+              content: "\e00e"; }
             /* line 586, ../sass/screen.scss */
             .home .kots .kot .addInfos .star .icons .no-one:before {
               content: ""; }
@@ -2809,8 +2837,29 @@ a {
         font-weight: bold; }
 
 /* END CITIES */
-/* LOADING MAP */
+/* FOOTER */
 /* line 712, ../sass/screen.scss */
+.foot {
+  width: 100%;
+  margin: auto;
+  display: block;
+  float: none;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  background-color: #58accb;
+  min-height: 150px; }
+  /* line 328, ../sass/_mixin.scss */
+  .foot:after {
+    content: "";
+    display: block;
+    height: 0;
+    clear: both;
+    visibility: hidden; }
+
+/* END FOOTER */
+/* LOADING MAP */
+/* line 719, ../sass/screen.scss */
 .loading {
   position: absolute;
   left: 0;
@@ -2821,7 +2870,7 @@ a {
   z-index: 1;
   background-color: #58accb; }
 
-/* line 717, ../sass/screen.scss */
+/* line 724, ../sass/screen.scss */
 .item {
   position: absolute;
   left: 0;
@@ -2837,30 +2886,30 @@ a {
   animation: rotateplane 1.2s infinite ease-in-out; }
 
 @-webkit-keyframes rotateplane {
-  /* line 729, ../sass/screen.scss */
+  /* line 736, ../sass/screen.scss */
   0% {
     -webkit-transform: perspective(120px); }
 
-  /* line 730, ../sass/screen.scss */
+  /* line 737, ../sass/screen.scss */
   50% {
     -webkit-transform: perspective(120px) rotateY(180deg); }
 
-  /* line 731, ../sass/screen.scss */
+  /* line 738, ../sass/screen.scss */
   100% {
     -webkit-transform: perspective(120px) rotateY(180deg) rotateX(180deg); } }
 
 @keyframes rotateplane {
-  /* line 735, ../sass/screen.scss */
+  /* line 742, ../sass/screen.scss */
   0% {
     transform: perspective(120px) rotateX(0deg) rotateY(0deg);
     -webkit-transform: perspective(120px) rotateX(0deg) rotateY(0deg); }
 
-  /* line 738, ../sass/screen.scss */
+  /* line 745, ../sass/screen.scss */
   50% {
     transform: perspective(120px) rotateX(-180.1deg) rotateY(0deg);
     -webkit-transform: perspective(120px) rotateX(-180.1deg) rotateY(0deg); }
 
-  /* line 741, ../sass/screen.scss */
+  /* line 748, ../sass/screen.scss */
   100% {
     transform: perspective(120px) rotateX(-180deg) rotateY(-179.9deg);
     -webkit-transform: perspective(120px) rotateX(-180deg) rotateY(-179.9deg); } }

@@ -513,7 +513,7 @@ a{
         }
         .wifi{
           &:before{
-            content:"\e00e";    
+            content:"\e015";    
 
           }
         }
@@ -531,7 +531,7 @@ a{
         }
         .washbasin{
           &:before{
-            content:"\e00c";    
+            content:"\e0013";    
 
           }
         }
@@ -578,7 +578,7 @@ a{
           }
           .half-one{
             &:before{
-              content:"\e008";
+              content:"\e00e";
 
             }
           }
@@ -708,6 +708,13 @@ a{
   }
 }
 /* END CITIES */
+/* FOOTER */
+.foot{
+  @include c(12);
+  background-color: $mc;
+  min-height: 150px;
+}
+/* END FOOTER */
 /* LOADING MAP */
 .loading{
   @include abs();
