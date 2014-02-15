@@ -26,8 +26,9 @@
             .content{
               @include cl(6);
               max-height:100%;
+              text-align: left;
               .typeAndLocation{
-                text-align: left;
+                
               }
               p{
                 font-size: 0.9em;

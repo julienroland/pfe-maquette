@@ -117,7 +117,6 @@ a{
           width: 1px;
         }
         &:hover,&:focus,&:active{
-          color:$mc;
           text-decoration: underline;
         }
 
@@ -353,30 +352,73 @@ a{
   /* MAP ITEM */
   .mapItem{
     @include c(12);
-    height:400px;
-    max-height: 90%;
-    overflow-y:scroll;
-    @include abs-left();
-    z-index: 100;
+    min-height:300px;
+//    max-height: 90%;
+   // overflow-y:scroll;
+   @include abs-left();
+   z-index: 100;
+   width:220px;
+   display:none;
+   top:50px;
+   bottom:10px;
+   left:$gutter;
+   
+   .accordeon{
+    @include box-shadow($greyL2 0 0 10px 0);
     background-color: white;
-    width:250px;
-    display:none;
-    .head{
-      padding:0 1em;
-      @include mb();
+    border:1px solid $bred;
+  }
+  .head{
+      //@include mb();
+      cursor:pointer;
       height:40px;
       text-align: left;
       line-height: 35px;
+      a{
+        @include c(12);
+        padding:0 1em;
+        height:100%;
+        @include a(0,0,none);
+        background-color:lighten($bred,10%);
+        &:hover,&:focus,&:active{
+          background-color:$bred;
+        }
+      }
       .titleMap{
         vertical-align: middle;
         line-height: 1.1;
+        font-weight:bold;
         color:white;
         display:inline-block;
-        font-weight: bold;
       }
     }
+    .stuff{
+
+    }
+    .active{
+      .head{
+        a{
+          background-color:$bred;
+          border:3px solid darken($bred,5%);
+          border-left:2px solid darken($bred,5%);
+          border-right:2px solid darken($bred,5%);
+          border-top:2px solid darken($bred,5%);
+          &:hover,&:focus,&:active{
+            background-color: lighten($bred,5%);
+            border:3px solid $bred;
+            border-left:2px solid $bred;
+            border-right:2px solid $bred;
+            border-top:2px solid $bred;
+          }
+        }
+        
+        .titleMap{
+          color:white;
+        }
+      }   
+    }
     .content{
-      padding:1em;
+      padding:0.5em 1em;
     }
   }
   /* END MAP ITEM */
@@ -790,7 +832,11 @@ background-image: image-url('framework/pattern/noise-1.png');
   @include abs();
   width: auto;
   height: auto;
-  margin: 200px auto;
+  margin: auto;
+  top:50%;
+  font-weight: bold;
+  font-size: 1.318em;
+  height:50px;
   text-align: center;
 }
 .item {
@@ -799,7 +845,7 @@ background-image: image-url('framework/pattern/noise-1.png');
   height: 80px;
   background-color: $bblack;
 
-  margin: 100px auto;
+  margin: auto;
   -webkit-animation: rotateplane 1.2s infinite ease-in-out;
   animation: rotateplane 1.2s infinite ease-in-out;
 }

@@ -34,7 +34,7 @@
       -webkit-box-sizing: border-box;
       -moz-box-sizing: border-box;
       box-sizing: border-box; }
-      /* line 405, ../sass/_mixin.scss */
+      /* line 408, ../sass/_mixin.scss */
       .home .onePeople:after {
         content: "";
         display: block;
@@ -59,7 +59,7 @@
           -moz-box-sizing: border-box;
           box-sizing: border-box;
           height: auto; }
-          /* line 405, ../sass/_mixin.scss */
+          /* line 408, ../sass/_mixin.scss */
           .home .kots .kot .mainInfos .photo:after {
             content: "";
             display: block;
@@ -76,21 +76,19 @@
           -webkit-box-sizing: border-box;
           -moz-box-sizing: border-box;
           box-sizing: border-box;
-          max-height: 100%; }
-          /* line 405, ../sass/_mixin.scss */
+          max-height: 100%;
+          text-align: left; }
+          /* line 408, ../sass/_mixin.scss */
           .home .kots .kot .mainInfos .content:after {
             content: "";
             display: block;
             height: 0;
             clear: both;
             visibility: hidden; }
-          /* line 29, ../sass/_responsive.scss */
-          .home .kots .kot .mainInfos .content .typeAndLocation {
-            text-align: left; }
-          /* line 32, ../sass/_responsive.scss */
+          /* line 33, ../sass/_responsive.scss */
           .home .kots .kot .mainInfos .content p {
             font-size: 0.9em; }
-        /* line 36, ../sass/_responsive.scss */
+        /* line 37, ../sass/_responsive.scss */
         .home .kots .kot .mainInfos .special {
           width: 14.32292%;
           margin-left: 1.17188%;
@@ -100,21 +98,21 @@
           -webkit-box-sizing: border-box;
           -moz-box-sizing: border-box;
           box-sizing: border-box; }
-          /* line 405, ../sass/_mixin.scss */
+          /* line 408, ../sass/_mixin.scss */
           .home .kots .kot .mainInfos .special:after {
             content: "";
             display: block;
             height: 0;
             clear: both;
             visibility: hidden; }
-          /* line 38, ../sass/_responsive.scss */
+          /* line 39, ../sass/_responsive.scss */
           .home .kots .kot .mainInfos .special .spe {
             float: left;
             margin: 0; }
-            /* line 41, ../sass/_responsive.scss */
+            /* line 42, ../sass/_responsive.scss */
             .home .kots .kot .mainInfos .special .spe:before {
               font-size: 1.435em; }
-      /* line 48, ../sass/_responsive.scss */
+      /* line 49, ../sass/_responsive.scss */
       .home .kots .kot .addInfos .star {
         width: 22.65625%;
         margin-left: 1.17188%;
@@ -124,19 +122,19 @@
         -webkit-box-sizing: border-box;
         -moz-box-sizing: border-box;
         box-sizing: border-box; }
-        /* line 405, ../sass/_mixin.scss */
+        /* line 408, ../sass/_mixin.scss */
         .home .kots .kot .addInfos .star:after {
           content: "";
           display: block;
           height: 0;
           clear: both;
           visibility: hidden; }
-        /* line 50, ../sass/_responsive.scss */
+        /* line 51, ../sass/_responsive.scss */
         .home .kots .kot .addInfos .star:after {
           display: block;
           height: 100%;
           visibility: visible; }
-      /* line 56, ../sass/_responsive.scss */
+      /* line 57, ../sass/_responsive.scss */
       .home .kots .kot .addInfos .howMuch {
         width: 22.65625%;
         margin-left: 1.17188%;
@@ -146,14 +144,14 @@
         -webkit-box-sizing: border-box;
         -moz-box-sizing: border-box;
         box-sizing: border-box; }
-        /* line 405, ../sass/_mixin.scss */
+        /* line 408, ../sass/_mixin.scss */
         .home .kots .kot .addInfos .howMuch:after {
           content: "";
           display: block;
           height: 0;
           clear: both;
           visibility: hidden; }
-        /* line 58, ../sass/_responsive.scss */
+        /* line 59, ../sass/_responsive.scss */
         .home .kots .kot .addInfos .howMuch:after {
           content: "";
           height: 100%;
@@ -165,7 +163,7 @@
           bottom: 0;
           margin: auto;
           visibility: visible; }
-      /* line 67, ../sass/_responsive.scss */
+      /* line 68, ../sass/_responsive.scss */
       .home .kots .kot .addInfos .locateBy {
         width: 47.65625%;
         margin-left: 1.17188%;
@@ -176,7 +174,7 @@
         -moz-box-sizing: border-box;
         box-sizing: border-box;
         border-top: 0; }
-        /* line 405, ../sass/_mixin.scss */
+        /* line 408, ../sass/_mixin.scss */
         .home .kots .kot .addInfos .locateBy:after {
           content: "";
           display: block;
@@ -188,19 +186,19 @@
 @media screen and (min-width: 47.05882em) {
   /* HOME */
   /* BANNER */
-  /* line 85, ../sass/_responsive.scss */
+  /* line 86, ../sass/_responsive.scss */
   .addInfos .topInfos {
     float: right; }
-  /* line 88, ../sass/_responsive.scss */
+  /* line 89, ../sass/_responsive.scss */
   .addInfos .topLinks {
     display: block;
     float: left; }
 
-  /* line 93, ../sass/_responsive.scss */
+  /* line 94, ../sass/_responsive.scss */
   .logo {
     float: left; }
 
-  /* line 96, ../sass/_responsive.scss */
+  /* line 97, ../sass/_responsive.scss */
   .nav {
     width: 100%;
     margin: auto;
@@ -211,7 +209,7 @@
     box-sizing: border-box;
     padding-top: 20px;
     padding-bottom: 12px; }
-    /* line 380, ../sass/_mixin.scss */
+    /* line 383, ../sass/_mixin.scss */
     .nav:after {
       content: "";
       display: block;
@@ -219,7 +217,7 @@
       clear: both;
       visibility: hidden; }
 
-  /* line 101, ../sass/_responsive.scss */
+  /* line 102, ../sass/_responsive.scss */
   .whatWeDo {
     line-height: 1;
     display: inline-block;
@@ -231,14 +229,14 @@
     margin: 0 12px;
     float: left; }
 
-  /* line 113, ../sass/_responsive.scss */
+  /* line 114, ../sass/_responsive.scss */
   .profilItem {
     width: auto;
     float: right; }
 
   /* END BANNER */
   /* INFOS */
-  /* line 120, ../sass/_responsive.scss */
+  /* line 121, ../sass/_responsive.scss */
   .home .infos {
     width: 30.98958%;
     margin-left: 1.17188%;
@@ -248,7 +246,7 @@
     -webkit-box-sizing: border-box;
     -moz-box-sizing: border-box;
     box-sizing: border-box; }
-    /* line 405, ../sass/_mixin.scss */
+    /* line 408, ../sass/_mixin.scss */
     .home .infos:after {
       content: "";
       display: block;
@@ -260,13 +258,13 @@
   /* END HOME */ }
 @media screen and (min-width: 45.17647em) {
   /* GENERAL */
-  /* line 129, ../sass/_responsive.scss */
+  /* line 130, ../sass/_responsive.scss */
   .mainTitle {
     font-size: 2.618em; }
 
   /* END GENERAL */
   /* HOME */
-  /* line 136, ../sass/_responsive.scss */
+  /* line 137, ../sass/_responsive.scss */
   .home .onePeople {
     width: 30.98958%;
     margin-left: 1.17188%;
@@ -276,7 +274,7 @@
     -webkit-box-sizing: border-box;
     -moz-box-sizing: border-box;
     box-sizing: border-box; }
-    /* line 405, ../sass/_mixin.scss */
+    /* line 408, ../sass/_mixin.scss */
     .home .onePeople:after {
       content: "";
       display: block;
@@ -287,7 +285,7 @@
   /* END HOME */ }
 @media screen and (min-width: 50.58824em) {
   /* HOME */
-  /* line 146, ../sass/_responsive.scss */
+  /* line 147, ../sass/_responsive.scss */
   .home .kots {
     width: 61.32813%;
     float: left;
@@ -297,14 +295,14 @@
     -webkit-box-sizing: border-box;
     -moz-box-sizing: border-box;
     box-sizing: border-box; }
-    /* line 440, ../sass/_mixin.scss */
+    /* line 443, ../sass/_mixin.scss */
     .home .kots:after {
       content: "";
       display: block;
       height: 0;
       clear: both;
       visibility: hidden; }
-  /* line 149, ../sass/_responsive.scss */
+  /* line 150, ../sass/_responsive.scss */
   .home .kotsByCities {
     display: block;
     margin-top: 93px;
@@ -316,21 +314,21 @@
     -webkit-box-sizing: border-box;
     -moz-box-sizing: border-box;
     box-sizing: border-box; }
-    /* line 453, ../sass/_mixin.scss */
+    /* line 456, ../sass/_mixin.scss */
     .home .kotsByCities:after {
       content: "";
       display: block;
       height: 0;
       clear: both;
       visibility: hidden; }
-    /* line 153, ../sass/_responsive.scss */
+    /* line 154, ../sass/_responsive.scss */
     .home .kotsByCities .photo {
       max-height: 160px; }
 
   /* END HOME */ }
 @media screen and (min-width: 52.94118em) {
   /* HOME */
-  /* line 164, ../sass/_responsive.scss */
+  /* line 165, ../sass/_responsive.scss */
   .home .kots {
     width: 65.49479%;
     float: left;
@@ -340,14 +338,14 @@
     -webkit-box-sizing: border-box;
     -moz-box-sizing: border-box;
     box-sizing: border-box; }
-    /* line 440, ../sass/_mixin.scss */
+    /* line 443, ../sass/_mixin.scss */
     .home .kots:after {
       content: "";
       display: block;
       height: 0;
       clear: both;
       visibility: hidden; }
-  /* line 167, ../sass/_responsive.scss */
+  /* line 168, ../sass/_responsive.scss */
   .home .kotsByCities {
     display: block;
     width: 32.16146%;
@@ -358,24 +356,24 @@
     -webkit-box-sizing: border-box;
     -moz-box-sizing: border-box;
     box-sizing: border-box; }
-    /* line 453, ../sass/_mixin.scss */
+    /* line 456, ../sass/_mixin.scss */
     .home .kotsByCities:after {
       content: "";
       display: block;
       height: 0;
       clear: both;
       visibility: hidden; }
-    /* line 170, ../sass/_responsive.scss */
+    /* line 171, ../sass/_responsive.scss */
     .home .kotsByCities .photo {
       max-height: 200px; }
-      /* line 172, ../sass/_responsive.scss */
+      /* line 173, ../sass/_responsive.scss */
       .home .kotsByCities .photo img {
         min-height: 100%; }
 
   /* END HOME */ }
 @media screen and (min-width: 60.23529em) {
   /* HOME */
-  /* line 183, ../sass/_responsive.scss */
+  /* line 184, ../sass/_responsive.scss */
   .home .onePeople {
     width: 22.65625%;
     margin-left: 1.17188%;
@@ -385,7 +383,7 @@
     -webkit-box-sizing: border-box;
     -moz-box-sizing: border-box;
     box-sizing: border-box; }
-    /* line 405, ../sass/_mixin.scss */
+    /* line 408, ../sass/_mixin.scss */
     .home .onePeople:after {
       content: "";
       display: block;
@@ -393,10 +391,10 @@
       clear: both;
       visibility: hidden; }
 
-  /* line 187, ../sass/_responsive.scss */
+  /* line 188, ../sass/_responsive.scss */
   .kotsByCities {
     display: block; }
-    /* line 190, ../sass/_responsive.scss */
+    /* line 191, ../sass/_responsive.scss */
     .kotsByCities .city .photo {
       max-height: 200px; }
 

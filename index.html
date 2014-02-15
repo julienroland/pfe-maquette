@@ -102,16 +102,23 @@
              <span class="loadingText">Chargement...</span>
            </div>
            <div class="mapItem">
-             <div class="search stuff">
-              <div class="head">
-                <h4 aria-level="4" role="heading" class="titleMap">Recherche rapide</h4>
+            <div class="accordeon">
+             <div class="search stuff active">
+              <div class="head fastSearch ">
+                <a href="javascript:void(0)" title="Fermer l'onglet recherche rapide">
+                  <h4 aria-level="4" role="heading" class="titleMap"><span class="icon icon-search"></span>Recherche rapide</h4>
+                </a>
               </div>
               <div class="content">
                 <form action="" class="mainType">
-                  <label for="city">Ville:</label>
-                  <input type="text" id="city" class="form-city" name="city" placeholder="Ex: Namur" value="">
-                  <label for="range" class="label-range">Distance (m):</label>
-                  <input type="text" id="form-range" class="form-range" name="range" placeholder="Ex: 1000" value="">
+                  <div class="field">
+                    <label for="city">Ville:</label>
+                    <input type="text" id="city" class="form-city" name="city" placeholder="Ex: Namur" value="">
+                  </div>
+                  <div class="field">
+                    <label for="range" class="label-range">Distance (m):</label>
+                    <input type="text" id="form-range" class="form-range" name="range" placeholder="Ex: 1000" value="">
+                  </div>
                   <a href=""><span class="icon icon-plus12"></span>Plus de champ</a>
                   <div class="more">
 
@@ -121,136 +128,151 @@
               </div>
             </div>
             <div class="locate stuff">
-              <div class="head">
-                <h4 aria-level="4" role="heading" class="titleMap">Me localiser</h4>
-              </div>
-            </div>
-          </div>
-
-          <div id="gmap"></div>
-        </section>
-        <div class="home">
-         <a href="#informations" class="goTo" title="Aller à la suite du contenu"><span class="icon icon-chevron11"></span></a>
-         <div class="residence">
-           <div class="wrapper">
-             <section class="kots" id="informations">
-              <h3 aria-level="3" role="heading" class="mainTitle">Les dernières annonces</h3>
-              <div class="prenium">
-                <div class="kot prenium" itemscope itemtype="http://schema.org/Residence">
-
-                  <div itemscope itemprop="geo" itemtype="GeoCoordinates">
-                    <meta content="40" itemprop="latitude">
-                    <meta content="54" itemprop="longitude">
-                  </div>
-                  <a class="goKot" itemprop="url" href="#">
-                    <div class="mainInfos">
-                      <div class="photo">
-                        <img itemprop="image" src="./img/photo2.png" alt="Photo du logement de XXX">
-                      </div>
-                      <div class="content">
-                        <h4 aria-level="4" itemprop="name" role="heading" class="titleKot">Titre de l'annonce qui peut être long ou court
-                        </h4>
-                        <span class="typeAndLocation">Studio | <span itemprop="address" itemscope itemtype="PostalAddress"><span itemprop="addressRegion">Namur</span><span class="section" itemprop="streetAddress">Rue marchal le grand méchant loup</span>
-                        <meta content="4000" itemprop="postal">
-                        <meta content="BE" itemprop="addressCountry">
-                      </span></span>
-
-                      <p itemprop="description">
-                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Velit, nulla quia quas dolorum fugiat odio illum quo quae vero necessitatibus placeat recusandae pariatur veritatis voluptas labore est aliquid sed nobis Lorem ipsum dolor sit amet, consectetur adipisicing elit. Incidunt, libero, esse, iusto, consectetur nulla dolore vitae accusantium impedit possimus modi quo facere adipisci ipsa quae explicabo quibusdam fuga minus repellendus.
-                      </p>
-
-                    </div>
-                    <div class="special">
-                      <div class="wifi spe" title="Wifi disponible"></div>
-                      <div class="bathroom spe" title="Salle de bain privée"></div>
-                      <div class="kitchen spe" title="Cuisine privée"></div>
-                      <div class="washbasin spe" title="Lavabo dans la chambre"></div>
-                    </div>
-                  </div>
-                  <div class="addInfos">
-                    <div class="star">
-                      <div class="icons">
-                        <span class="section">5 étoiles</span>
-                        <span class="icon one"></span>
-                        <span class="icon one"></span>
-                        <span class="icon one"></span>
-                        <span class="icon half-one"></span>
-                        <span class="icon no-one"></span>
-                      </div>
-                      <span class="number"><b>4000</b> votes</span>
-                    </div>
-                    <div class="howMuch">
-                     <span class="icon icon-user3"></span>
-                     <span class="peoples"><b>1000</b> places</span>
-                   </div>
-                   <div class="locateBy">
-                    <span>
-                      Louez par <i>Jean-Marc</i>
-                    </span>
-                  </div>
-                </div>
+              <div class="head locate">
+               <a href="javascript:void(0)" title="Ouvrir l'onglet me localiser">
+                <h4 aria-level="4" role="heading" class="titleMap"><span class="icon icon-location2"></span>Me localiser</h4>
               </a>
             </div>
           </div>
-          <div class="kot" itemscope itemtype="http://schema.org/Residence">
-
-            <div itemscope itemprop="geo" itemtype="GeoCoordinates">
-              <meta content="40" itemprop="latitude">
-              <meta content="54" itemprop="longitude">
-            </div>
-            <a class="goKot" itemprop="url" href="#">
-              <div class="mainInfos">
-                <div class="photo">
-                  <img itemprop="image" src="./img/photo2.png" alt="Photo du logement de XXX">
-                </div>
-                <div class="content">
-                  <h4 aria-level="4" itemprop="name" role="heading" class="titleKot">Titre de l'annonce qui peut être long ou court
-                  </h4>
-                  <span class="typeAndLocation">Studio | <span itemprop="address" itemscope itemtype="PostalAddress"><span itemprop="addressRegion">Namur</span>, <span itemprop="streetAddress">Rue marchal le grand méchant loup</span>
-                  <meta content="4000" itemprop="postal">
-                  <meta content="BE" itemprop="addressCountry">
-                </span></span>
-
-                <p itemprop="description">
-                  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Velit, nulla quia quas dolorum fugiat odio illum quo quae vero necessitatibus placeat recusandae pariatur veritatis voluptas labore est aliquid sed nobis Lorem ipsum dolor sit amet, consectetur adipisicing elit. Incidunt, libero, esse, iusto, consectetur nulla dolore vitae accusantium impedit possimus modi quo facere adipisci ipsa quae explicabo quibusdam fuga minus repellendus.
-                </p>
-
-              </div>
-              <div class="special">
-                <div class="wifi spe" title="Wifi disponible"></div>
-                <div class="bathroom spe" title="Salle de bain privée"></div>
-                <div class="kitchen spe" title="Cuisine privée"></div>
-                <div class="washbasin spe" title="Lavabo dans la chambre"></div>
-              </div>
-            </div>
-            <div class="addInfos">
-              <div class="star">
-                <div class="icons">
-                  <span class="section">5 étoiles</span>
-                  <span class="icon one"></span>
-                  <span class="icon one"></span>
-                  <span class="icon one"></span>
-                  <span class="icon half-one"></span>
-                  <span class="icon no-one"></span>
-                </div>
-                <span class="number"><b>4000</b> votes</span>
-              </div>
-              <div class="howMuch">
-               <span class="icon icon-user3"></span>
-               <span class="peoples"><b>1000</b> places</span>
-             </div>
-             <div class="locateBy">
-              <span>
-                Louez par <i>Jean-Marc</i>
-              </span>
-            </div>
-          </div>
-        </a>
+        </div>
       </div>
+
+      <div id="gmap"></div>
     </section>
-    <section class="services">
-      
-    </section>
+    <div class="home">
+     <a href="#informations" class="goTo" title="Aller à la suite du contenu"><span class="icon icon-chevron11"></span></a>
+     <div class="residence">
+       <div class="wrapper">
+         <section class="kots" id="informations">
+          <h3 aria-level="3" role="heading" class="mainTitle">Les dernières annonces</h3>
+          <div class="prenium">
+            <div class="kot prenium" itemscope itemtype="http://schema.org/Residence">
+
+              <div itemscope itemprop="geo" itemtype="GeoCoordinates">
+                <meta content="40" itemprop="latitude">
+                <meta content="54" itemprop="longitude">
+              </div>
+              <a class="goKot" itemprop="url" href="#">
+                <div class="mainInfos">
+                  <div class="photo">
+                    <img itemprop="image" src="./img/photo2.png" alt="Photo du logement de XXX">
+                  </div>
+                  <div class="content">
+                    <h4 aria-level="4" itemprop="name" role="heading" class="titleKot">Titre de l'annonce qui peut être long ou court
+                    </h4>
+                    <span class="typeAndLocation">Studio | <span itemprop="address" itemscope itemtype="PostalAddress"><span itemprop="addressRegion">Namur</span><span class="section" itemprop="streetAddress">Rue marchal le grand méchant loup</span>
+                    <meta content="4000" itemprop="postal">
+                    <meta content="BE" itemprop="addressCountry">
+                  </span></span>
+
+                  <p itemprop="description">
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Velit, nulla quia quas dolorum fugiat odio illum quo quae vero necessitatibus placeat recusandae pariatur veritatis voluptas labore est aliquid sed nobis Lorem ipsum dolor sit amet, consectetur adipisicing elit. Incidunt, libero, esse, iusto, consectetur nulla dolore vitae accusantium impedit possimus modi quo facere adipisci ipsa quae explicabo quibusdam fuga minus repellendus.
+                  </p>
+
+                </div>
+                <div class="special">
+                  <div class="wifi spe" title="Wifi disponible"></div>
+                  <div class="bathroom spe" title="Salle de bain privée"></div>
+                  <div class="kitchen spe" title="Cuisine privée"></div>
+                  <div class="washbasin spe" title="Lavabo dans la chambre"></div>
+                </div>
+              </div>
+              <div class="addInfos">
+                <div class="star">
+                  <div class="icons">
+                    <span class="section">5 étoiles</span>
+                    <span class="icon one"></span>
+                    <span class="icon one"></span>
+                    <span class="icon one"></span>
+                    <span class="icon half-one"></span>
+                    <span class="icon no-one"></span>
+                  </div>
+                  <span class="number"><b>4000</b> votes</span>
+                </div>
+                <div class="howMuch">
+                 <span class="icon icon-user3"></span>
+                 <span class="peoples"><b>1000</b> places</span>
+               </div>
+               <div class="locateBy">
+                <span>
+                  Louez par <i>Jean-Marc</i>
+                </span>
+              </div>
+            </div>
+          </a>
+        </div>
+      </div>
+      <div class="kot" itemscope itemtype="http://schema.org/Residence">
+
+        <div itemscope itemprop="geo" itemtype="GeoCoordinates">
+          <meta content="40" itemprop="latitude">
+          <meta content="54" itemprop="longitude">
+        </div>
+        <a class="goKot" itemprop="url" href="#">
+          <div class="mainInfos">
+            <div class="photo">
+              <img itemprop="image" src="./img/photo2.png" alt="Photo du logement de XXX">
+            </div>
+            <div class="content">
+              <h4 aria-level="4" itemprop="name" role="heading" class="titleKot">Titre de l'annonce qui peut être long ou court
+              </h4>
+              <span class="typeAndLocation">Studio | <span itemprop="address" itemscope itemtype="PostalAddress"><span itemprop="addressRegion">Namur</span>, <span itemprop="streetAddress">Rue marchal le grand méchant loup</span>
+              <meta content="4000" itemprop="postal">
+              <meta content="BE" itemprop="addressCountry">
+            </span></span>
+
+            <p itemprop="description">
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Velit, nulla quia quas dolorum fugiat odio illum quo quae vero necessitatibus placeat recusandae pariatur veritatis voluptas labore est aliquid sed nobis Lorem ipsum dolor sit amet, consectetur adipisicing elit. Incidunt, libero, esse, iusto, consectetur nulla dolore vitae accusantium impedit possimus modi quo facere adipisci ipsa quae explicabo quibusdam fuga minus repellendus.
+            </p>
+
+          </div>
+          <div class="special">
+            <div class="wifi spe" title="Wifi disponible"></div>
+            <div class="bathroom spe" title="Salle de bain privée"></div>
+            <div class="kitchen spe" title="Cuisine privée"></div>
+            <div class="washbasin spe" title="Lavabo dans la chambre"></div>
+          </div>
+        </div>
+        <div class="addInfos">
+          <div class="star">
+            <div class="icons">
+              <span class="section">5 étoiles</span>
+              <span class="icon one"></span>
+              <span class="icon one"></span>
+              <span class="icon one"></span>
+              <span class="icon half-one"></span>
+              <span class="icon no-one"></span>
+            </div>
+            <span class="number"><b>4000</b> votes</span>
+          </div>
+          <div class="howMuch">
+           <span class="icon icon-user3"></span>
+           <span class="peoples"><b>1000</b> places</span>
+         </div>
+         <div class="locateBy">
+          <span>
+            Louez par <i>Jean-Marc</i>
+          </span>
+        </div>
+      </div>
+    </a>
+  </div>
+</section>
+<section class="services">
+  <h3 aria-level="3" role="heading" class="mainTitle section">Nos principaux services de qualités</h3>
+  <div class="search">
+    <span class="icon"></span>
+    <h4 aria-level="4" role="heading" class="services">Recherche</h4>
+  </div>
+  <div class="free">
+   <span class="icon"></span>
+   <h4 aria-level="4" role="heading" class="services">Gratuit</h4>
+ </div>
+ <div class="allBelgium">
+   <span class="icon"></span>
+   <h4 aria-level="4" role="heading" class="services">Toute la Belgique</h4>
+ </div>
+</section>
    <!--  <section class="kotsByCities">
       <h3 aria-level="3" role="heading" class="mainTitle section">Sélection de villes aléatoire avec le nombre de logement</h3>
       <div class="city">
@@ -396,10 +418,11 @@
 <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
 <script src="//code.jquery.com/ui/1.10.4/jquery-ui.js"></script>
 <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.10.2.min.js"><\/script>')</script>
+<script src="js/ion.rangeSlider.min.js"></script>
 <script src="js/main.js"></script>
 <script src="js/map.js"></script>
 <script src="js/ellipsis.js"></script>
-<script src="js/ion.rangeSlider.min.js"></script>
+
 
 <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
 <script>

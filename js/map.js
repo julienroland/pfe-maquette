@@ -51,6 +51,12 @@
     displayGoogleMap();
    // $loading.fadeOut();
    $mapItem.css('display','block');
+   /* FORM */
+$('.label-range').on('click',function(){
+  console.log($('.irs-slider.single'));
+  $('.irs-slider.single').focus();
+})
+   /* END FORM*/
 
   };
   var eventInput = function()
