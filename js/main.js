@@ -4,7 +4,7 @@
 	$main = $('.main'),
 	$win = $(window),
 	nMapHeight,
-	nMapPercent = 95,
+	nMapPercent = 100,
 	$winHeight = $(window).height(),
 	$winWidth = $(window).width(),
 	$htmlBody = $('html,body'),
@@ -23,19 +23,19 @@
 
 		})
 		$("#form-range").ionRangeSlider({
-    min: 0,                        // min value
-    max: 10000,                       // max value
-   // from: 30,                       // overwrite default FROM setting
-    //to: 80,                         // overwrite default TO setting
-    type: "single",                 // slider type
-    //step: 10,                       // slider step
-    postfix: " mètres",             // postfix text
-    //hasGrid: true,                  // enable grid
-    //hideMinMax: true,               // hide Min and Max fields
-    //hideFromTo: true,               // hide From and To fields
-    prettify: true,                 // separate large numbers with space, eg. 10 000
-    disable: false,                 // disable the slider
-    onChange: function(obj){        // callback, is called on every change
+			min: 0,                        
+			max: 10000,                    
+   // from: 30,                    
+    //to: 80,                      
+    type: "single",                
+    //step: 10,                    
+    postfix: " mètres",            
+    //hasGrid: true,               
+    //hideMinMax: true,            
+    //hideFromTo: true,            
+    prettify: true,                
+    disable: false,                
+    onChange: function(obj){        
     	$('.label-range').html('Distance ('+obj.fromNumber+'m)');
 
     },

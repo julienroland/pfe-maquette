@@ -1,79 +1,403 @@
-/*
-Syntax error: Undefined mixin 'cl'.
-        on line 11 of /Users/jux/Sites/maquettePFE/sass/_responsive.scss, in `cl'
-        from line 11 of /Users/jux/Sites/maquettePFE/sass/_responsive.scss
+/* CONFIG */
+/* typography */
+/* END typography */
+/*media*/
+/*END MEDIA*/
+/*COLOR*/
+/* CONFIG */
+/* typography */
+/* END typography */
+/*media*/
+/*END MEDIA*/
+/*COLOR*/
+/*l * 100 / 1024*/
+/*l * 100 / 1024*/
+@media screen and (min-width: 30.11765em) {
+  /* GENERAL */
+  /* line 5, ../sass/_responsive.scss */
+  .titleKot {
+    text-align: left; }
 
-Backtrace:
-/Users/jux/Sites/maquettePFE/sass/_responsive.scss:11:in `cl'
-/Users/jux/Sites/maquettePFE/sass/_responsive.scss:11
-/Applications/CodeKit.app/Contents/Resources/engines/scss/lib/sass/tree/visitors/perform.rb:253:in `visit_mixin'
-/Applications/CodeKit.app/Contents/Resources/engines/scss/lib/sass/tree/visitors/base.rb:37:in `visit'
-/Applications/CodeKit.app/Contents/Resources/engines/scss/lib/sass/tree/visitors/perform.rb:100:in `visit'
-/Applications/CodeKit.app/Contents/Resources/engines/scss/lib/sass/tree/visitors/base.rb:53:in `block in visit_children'
-/Applications/CodeKit.app/Contents/Resources/engines/scss/lib/sass/tree/visitors/base.rb:53:in `map'
-/Applications/CodeKit.app/Contents/Resources/engines/scss/lib/sass/tree/visitors/base.rb:53:in `visit_children'
-/Applications/CodeKit.app/Contents/Resources/engines/scss/lib/sass/tree/visitors/perform.rb:109:in `block in visit_children'
-/Applications/CodeKit.app/Contents/Resources/engines/scss/lib/sass/tree/visitors/perform.rb:121:in `with_environment'
-/Applications/CodeKit.app/Contents/Resources/engines/scss/lib/sass/tree/visitors/perform.rb:108:in `visit_children'
-/Applications/CodeKit.app/Contents/Resources/engines/scss/lib/sass/tree/visitors/base.rb:37:in `block in visit'
-/Applications/CodeKit.app/Contents/Resources/engines/scss/lib/sass/tree/visitors/perform.rb:320:in `visit_rule'
-/Applications/CodeKit.app/Contents/Resources/engines/scss/lib/sass/tree/visitors/base.rb:37:in `visit'
-/Applications/CodeKit.app/Contents/Resources/engines/scss/lib/sass/tree/visitors/perform.rb:100:in `visit'
-/Applications/CodeKit.app/Contents/Resources/engines/scss/lib/sass/tree/visitors/base.rb:53:in `block in visit_children'
-/Applications/CodeKit.app/Contents/Resources/engines/scss/lib/sass/tree/visitors/base.rb:53:in `map'
-/Applications/CodeKit.app/Contents/Resources/engines/scss/lib/sass/tree/visitors/base.rb:53:in `visit_children'
-/Applications/CodeKit.app/Contents/Resources/engines/scss/lib/sass/tree/visitors/perform.rb:109:in `block in visit_children'
-/Applications/CodeKit.app/Contents/Resources/engines/scss/lib/sass/tree/visitors/perform.rb:121:in `with_environment'
-/Applications/CodeKit.app/Contents/Resources/engines/scss/lib/sass/tree/visitors/perform.rb:108:in `visit_children'
-/Applications/CodeKit.app/Contents/Resources/engines/scss/lib/sass/tree/visitors/base.rb:37:in `block in visit'
-/Applications/CodeKit.app/Contents/Resources/engines/scss/lib/sass/tree/visitors/perform.rb:320:in `visit_rule'
-/Applications/CodeKit.app/Contents/Resources/engines/scss/lib/sass/tree/visitors/base.rb:37:in `visit'
-/Applications/CodeKit.app/Contents/Resources/engines/scss/lib/sass/tree/visitors/perform.rb:100:in `visit'
-/Applications/CodeKit.app/Contents/Resources/engines/scss/lib/sass/tree/visitors/base.rb:53:in `block in visit_children'
-/Applications/CodeKit.app/Contents/Resources/engines/scss/lib/sass/tree/visitors/base.rb:53:in `map'
-/Applications/CodeKit.app/Contents/Resources/engines/scss/lib/sass/tree/visitors/base.rb:53:in `visit_children'
-/Applications/CodeKit.app/Contents/Resources/engines/scss/lib/sass/tree/visitors/perform.rb:109:in `block in visit_children'
-/Applications/CodeKit.app/Contents/Resources/engines/scss/lib/sass/tree/visitors/perform.rb:121:in `with_environment'
-/Applications/CodeKit.app/Contents/Resources/engines/scss/lib/sass/tree/visitors/perform.rb:108:in `visit_children'
-/Applications/CodeKit.app/Contents/Resources/engines/scss/lib/sass/tree/visitors/base.rb:37:in `block in visit'
-/Applications/CodeKit.app/Contents/Resources/engines/scss/lib/sass/tree/visitors/perform.rb:362:in `visit_media'
-/Applications/CodeKit.app/Contents/Resources/engines/scss/lib/sass/tree/visitors/base.rb:37:in `visit'
-/Applications/CodeKit.app/Contents/Resources/engines/scss/lib/sass/tree/visitors/perform.rb:100:in `visit'
-/Applications/CodeKit.app/Contents/Resources/engines/scss/lib/sass/tree/visitors/base.rb:53:in `block in visit_children'
-/Applications/CodeKit.app/Contents/Resources/engines/scss/lib/sass/tree/visitors/base.rb:53:in `map'
-/Applications/CodeKit.app/Contents/Resources/engines/scss/lib/sass/tree/visitors/base.rb:53:in `visit_children'
-/Applications/CodeKit.app/Contents/Resources/engines/scss/lib/sass/tree/visitors/perform.rb:109:in `block in visit_children'
-/Applications/CodeKit.app/Contents/Resources/engines/scss/lib/sass/tree/visitors/perform.rb:121:in `with_environment'
-/Applications/CodeKit.app/Contents/Resources/engines/scss/lib/sass/tree/visitors/perform.rb:108:in `visit_children'
-/Applications/CodeKit.app/Contents/Resources/engines/scss/lib/sass/tree/visitors/base.rb:37:in `block in visit'
-/Applications/CodeKit.app/Contents/Resources/engines/scss/lib/sass/tree/visitors/perform.rb:128:in `visit_root'
-/Applications/CodeKit.app/Contents/Resources/engines/scss/lib/sass/tree/visitors/base.rb:37:in `visit'
-/Applications/CodeKit.app/Contents/Resources/engines/scss/lib/sass/tree/visitors/perform.rb:100:in `visit'
-/Applications/CodeKit.app/Contents/Resources/engines/scss/lib/sass/tree/visitors/perform.rb:7:in `visit'
-/Applications/CodeKit.app/Contents/Resources/engines/scss/lib/sass/tree/root_node.rb:20:in `render'
-/Applications/CodeKit.app/Contents/Resources/engines/scss/lib/sass/engine.rb:315:in `_render'
-/Applications/CodeKit.app/Contents/Resources/engines/scss/lib/sass/engine.rb:262:in `render'
-/Applications/CodeKit.app/Contents/Resources/engines/compass/lib/compass/compiler.rb:140:in `block (2 levels) in compile'
-/Applications/CodeKit.app/Contents/Resources/engines/compass/lib/compass/compiler.rb:126:in `timed'
-/Applications/CodeKit.app/Contents/Resources/engines/compass/lib/compass/compiler.rb:139:in `block in compile'
-/Applications/CodeKit.app/Contents/Resources/engines/compass/lib/compass/logger.rb:45:in `red'
-/Applications/CodeKit.app/Contents/Resources/engines/compass/lib/compass/compiler.rb:138:in `compile'
-/Applications/CodeKit.app/Contents/Resources/engines/compass/lib/compass/compiler.rb:118:in `compile_if_required'
-/Applications/CodeKit.app/Contents/Resources/engines/compass/lib/compass/compiler.rb:103:in `block (2 levels) in run'
-/Applications/CodeKit.app/Contents/Resources/engines/compass/lib/compass/compiler.rb:101:in `each'
-/Applications/CodeKit.app/Contents/Resources/engines/compass/lib/compass/compiler.rb:101:in `block in run'
-/Applications/CodeKit.app/Contents/Resources/engines/compass/lib/compass/compiler.rb:126:in `timed'
-/Applications/CodeKit.app/Contents/Resources/engines/compass/lib/compass/compiler.rb:100:in `run'
-/Applications/CodeKit.app/Contents/Resources/engines/compass/lib/compass/commands/update_project.rb:45:in `perform'
-/Applications/CodeKit.app/Contents/Resources/engines/compass/lib/compass/commands/base.rb:18:in `execute'
-/Applications/CodeKit.app/Contents/Resources/engines/compass/lib/compass/commands/project_base.rb:19:in `execute'
-/Applications/CodeKit.app/Contents/Resources/engines/compass/lib/compass/exec/sub_command_ui.rb:43:in `perform!'
-/Applications/CodeKit.app/Contents/Resources/engines/compass/lib/compass/exec/sub_command_ui.rb:15:in `run!'
-/Applications/CodeKit.app/Contents/Resources/engines/compass/bin/compass:44:in `block in <main>'
-/Applications/CodeKit.app/Contents/Resources/engines/compass/bin/compass:58:in `call'
-/Applications/CodeKit.app/Contents/Resources/engines/compass/bin/compass:58:in `<main>'
-*/
-body:before {
-  white-space: pre;
-  font-family: monospace;
-  content: "Syntax error: Undefined mixin 'cl'.\A         on line 11 of /Users/jux/Sites/maquettePFE/sass/_responsive.scss, in `cl'\A         from line 11 of /Users/jux/Sites/maquettePFE/sass/_responsive.scss"; }
+  /* END GENERAL */
+  /* HOME */
+  /* line 10, ../sass/_responsive.scss */
+  .home {
+    /* KOTS */
+    /* END KOTS */ }
+    /* line 11, ../sass/_responsive.scss */
+    .home .onePeople {
+      width: 47.65625%;
+      margin-left: 1.17188%;
+      margin-right: 1.17188%;
+      float: left;
+      display: block;
+      -webkit-box-sizing: border-box;
+      -moz-box-sizing: border-box;
+      box-sizing: border-box; }
+      /* line 405, ../sass/_mixin.scss */
+      .home .onePeople:after {
+        content: "";
+        display: block;
+        height: 0;
+        clear: both;
+        visibility: hidden; }
+    /* line 17, ../sass/_responsive.scss */
+    .home .kots .kot {
+      height: 210px; }
+      /* line 19, ../sass/_responsive.scss */
+      .home .kots .kot .mainInfos {
+        margin-bottom: 0;
+        height: 80%; }
+        /* line 22, ../sass/_responsive.scss */
+        .home .kots .kot .mainInfos .photo {
+          width: 30.98958%;
+          margin-left: 1.17188%;
+          margin-right: 1.17188%;
+          float: left;
+          display: block;
+          -webkit-box-sizing: border-box;
+          -moz-box-sizing: border-box;
+          box-sizing: border-box;
+          height: auto; }
+          /* line 405, ../sass/_mixin.scss */
+          .home .kots .kot .mainInfos .photo:after {
+            content: "";
+            display: block;
+            height: 0;
+            clear: both;
+            visibility: hidden; }
+        /* line 26, ../sass/_responsive.scss */
+        .home .kots .kot .mainInfos .content {
+          width: 47.65625%;
+          margin-left: 1.17188%;
+          margin-right: 1.17188%;
+          float: left;
+          display: block;
+          -webkit-box-sizing: border-box;
+          -moz-box-sizing: border-box;
+          box-sizing: border-box;
+          max-height: 100%; }
+          /* line 405, ../sass/_mixin.scss */
+          .home .kots .kot .mainInfos .content:after {
+            content: "";
+            display: block;
+            height: 0;
+            clear: both;
+            visibility: hidden; }
+          /* line 29, ../sass/_responsive.scss */
+          .home .kots .kot .mainInfos .content .typeAndLocation {
+            text-align: left; }
+          /* line 32, ../sass/_responsive.scss */
+          .home .kots .kot .mainInfos .content p {
+            font-size: 0.9em; }
+        /* line 36, ../sass/_responsive.scss */
+        .home .kots .kot .mainInfos .special {
+          width: 14.32292%;
+          margin-left: 1.17188%;
+          margin-right: 1.17188%;
+          float: left;
+          display: block;
+          -webkit-box-sizing: border-box;
+          -moz-box-sizing: border-box;
+          box-sizing: border-box; }
+          /* line 405, ../sass/_mixin.scss */
+          .home .kots .kot .mainInfos .special:after {
+            content: "";
+            display: block;
+            height: 0;
+            clear: both;
+            visibility: hidden; }
+          /* line 38, ../sass/_responsive.scss */
+          .home .kots .kot .mainInfos .special .spe {
+            float: left;
+            margin: 0; }
+            /* line 41, ../sass/_responsive.scss */
+            .home .kots .kot .mainInfos .special .spe:before {
+              font-size: 1.435em; }
+      /* line 48, ../sass/_responsive.scss */
+      .home .kots .kot .addInfos .star {
+        width: 22.65625%;
+        margin-left: 1.17188%;
+        margin-right: 1.17188%;
+        float: left;
+        display: block;
+        -webkit-box-sizing: border-box;
+        -moz-box-sizing: border-box;
+        box-sizing: border-box; }
+        /* line 405, ../sass/_mixin.scss */
+        .home .kots .kot .addInfos .star:after {
+          content: "";
+          display: block;
+          height: 0;
+          clear: both;
+          visibility: hidden; }
+        /* line 50, ../sass/_responsive.scss */
+        .home .kots .kot .addInfos .star:after {
+          display: block;
+          height: 100%;
+          visibility: visible; }
+      /* line 56, ../sass/_responsive.scss */
+      .home .kots .kot .addInfos .howMuch {
+        width: 22.65625%;
+        margin-left: 1.17188%;
+        margin-right: 1.17188%;
+        float: left;
+        display: block;
+        -webkit-box-sizing: border-box;
+        -moz-box-sizing: border-box;
+        box-sizing: border-box; }
+        /* line 405, ../sass/_mixin.scss */
+        .home .kots .kot .addInfos .howMuch:after {
+          content: "";
+          display: block;
+          height: 0;
+          clear: both;
+          visibility: hidden; }
+        /* line 58, ../sass/_responsive.scss */
+        .home .kots .kot .addInfos .howMuch:after {
+          content: "";
+          height: 100%;
+          width: 1px;
+          background-color: #bfbfbf;
+          position: absolute;
+          right: 0;
+          top: 0;
+          bottom: 0;
+          margin: auto;
+          visibility: visible; }
+      /* line 67, ../sass/_responsive.scss */
+      .home .kots .kot .addInfos .locateBy {
+        width: 47.65625%;
+        margin-left: 1.17188%;
+        margin-right: 1.17188%;
+        float: left;
+        display: block;
+        -webkit-box-sizing: border-box;
+        -moz-box-sizing: border-box;
+        box-sizing: border-box;
+        border-top: 0; }
+        /* line 405, ../sass/_mixin.scss */
+        .home .kots .kot .addInfos .locateBy:after {
+          content: "";
+          display: block;
+          height: 0;
+          clear: both;
+          visibility: hidden; }
+
+  /* END HOME */ }
+@media screen and (min-width: 47.05882em) {
+  /* HOME */
+  /* BANNER */
+  /* line 85, ../sass/_responsive.scss */
+  .addInfos .topInfos {
+    float: right; }
+  /* line 88, ../sass/_responsive.scss */
+  .addInfos .topLinks {
+    display: block;
+    float: left; }
+
+  /* line 93, ../sass/_responsive.scss */
+  .logo {
+    float: left; }
+
+  /* line 96, ../sass/_responsive.scss */
+  .nav {
+    width: 100%;
+    margin: auto;
+    display: block;
+    float: none;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    padding-top: 20px;
+    padding-bottom: 12px; }
+    /* line 380, ../sass/_mixin.scss */
+    .nav:after {
+      content: "";
+      display: block;
+      height: 0;
+      clear: both;
+      visibility: hidden; }
+
+  /* line 101, ../sass/_responsive.scss */
+  .whatWeDo {
+    line-height: 1;
+    display: inline-block;
+    margin: auto;
+    height: 50px;
+    line-height: 50px;
+    font-size: 1em;
+    font-style: italic;
+    margin: 0 12px;
+    float: left; }
+
+  /* line 113, ../sass/_responsive.scss */
+  .profilItem {
+    width: auto;
+    float: right; }
+
+  /* END BANNER */
+  /* INFOS */
+  /* line 120, ../sass/_responsive.scss */
+  .home .infos {
+    width: 30.98958%;
+    margin-left: 1.17188%;
+    margin-right: 1.17188%;
+    float: left;
+    display: block;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box; }
+    /* line 405, ../sass/_mixin.scss */
+    .home .infos:after {
+      content: "";
+      display: block;
+      height: 0;
+      clear: both;
+      visibility: hidden; }
+
+  /* END INFOS */
+  /* END HOME */ }
+@media screen and (min-width: 45.17647em) {
+  /* GENERAL */
+  /* line 129, ../sass/_responsive.scss */
+  .mainTitle {
+    font-size: 2.618em; }
+
+  /* END GENERAL */
+  /* HOME */
+  /* line 136, ../sass/_responsive.scss */
+  .home .onePeople {
+    width: 30.98958%;
+    margin-left: 1.17188%;
+    margin-right: 1.17188%;
+    float: left;
+    display: block;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box; }
+    /* line 405, ../sass/_mixin.scss */
+    .home .onePeople:after {
+      content: "";
+      display: block;
+      height: 0;
+      clear: both;
+      visibility: hidden; }
+
+  /* END HOME */ }
+@media screen and (min-width: 50.58824em) {
+  /* HOME */
+  /* line 146, ../sass/_responsive.scss */
+  .home .kots {
+    width: 61.32813%;
+    float: left;
+    margin-left: 0;
+    margin-right: 1.17188%;
+    display: block;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box; }
+    /* line 440, ../sass/_mixin.scss */
+    .home .kots:after {
+      content: "";
+      display: block;
+      height: 0;
+      clear: both;
+      visibility: hidden; }
+  /* line 149, ../sass/_responsive.scss */
+  .home .kotsByCities {
+    display: block;
+    margin-top: 93px;
+    width: 36.32813%;
+    float: left;
+    margin-left: 1.17188%;
+    margin-right: 0;
+    display: block;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box; }
+    /* line 453, ../sass/_mixin.scss */
+    .home .kotsByCities:after {
+      content: "";
+      display: block;
+      height: 0;
+      clear: both;
+      visibility: hidden; }
+    /* line 153, ../sass/_responsive.scss */
+    .home .kotsByCities .photo {
+      max-height: 160px; }
+
+  /* END HOME */ }
+@media screen and (min-width: 52.94118em) {
+  /* HOME */
+  /* line 164, ../sass/_responsive.scss */
+  .home .kots {
+    width: 65.49479%;
+    float: left;
+    margin-left: 0;
+    margin-right: 1.17188%;
+    display: block;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box; }
+    /* line 440, ../sass/_mixin.scss */
+    .home .kots:after {
+      content: "";
+      display: block;
+      height: 0;
+      clear: both;
+      visibility: hidden; }
+  /* line 167, ../sass/_responsive.scss */
+  .home .kotsByCities {
+    display: block;
+    width: 32.16146%;
+    float: left;
+    margin-left: 1.17188%;
+    margin-right: 0;
+    display: block;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box; }
+    /* line 453, ../sass/_mixin.scss */
+    .home .kotsByCities:after {
+      content: "";
+      display: block;
+      height: 0;
+      clear: both;
+      visibility: hidden; }
+    /* line 170, ../sass/_responsive.scss */
+    .home .kotsByCities .photo {
+      max-height: 200px; }
+      /* line 172, ../sass/_responsive.scss */
+      .home .kotsByCities .photo img {
+        min-height: 100%; }
+
+  /* END HOME */ }
+@media screen and (min-width: 60.23529em) {
+  /* HOME */
+  /* line 183, ../sass/_responsive.scss */
+  .home .onePeople {
+    width: 22.65625%;
+    margin-left: 1.17188%;
+    margin-right: 1.17188%;
+    float: left;
+    display: block;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box; }
+    /* line 405, ../sass/_mixin.scss */
+    .home .onePeople:after {
+      content: "";
+      display: block;
+      height: 0;
+      clear: both;
+      visibility: hidden; }
+
+  /* line 187, ../sass/_responsive.scss */
+  .kotsByCities {
+    display: block; }
+    /* line 190, ../sass/_responsive.scss */
+    .kotsByCities .city .photo {
+      max-height: 200px; }
+
+  /* END HOME */ }

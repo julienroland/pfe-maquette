@@ -217,6 +217,58 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#35a0c6', end
     border:1px solid green;
     margin:1em;
   }
+  .mainType{
+    ::-webkit-input-placeholder {
+      font-size: 0.9em;
+      color:$greyD;
+      font-weight: 300;
+    }
+
+:-moz-placeholder { /* Firefox 18- */
+  font-size: 0.9em;
+  color:$greyD;
+  font-weight: 300;
+}
+
+::-moz-placeholder {  /* Firefox 19+ */
+  font-size: 0.9em;
+  color:$greyD;
+  font-weight: 300;
+}
+
+:-ms-input-placeholder {  
+  font-size: 0.9em;
+  color:$greyD;
+  font-weight: 300; 
+}
+label{
+  display:block;
+}
+input{
+  @include c(12);
+  background-color: $greyL;
+  height: 40px;
+  color:$tc;
+  font-size: 1.2em;
+  border:2px solid $greyL2;
+  padding:5px;
+  &:after{
+    font-family: $ffi;
+    content:"\e008";
+  }
+  &:hover,&:active{
+    border:2px solid $greyD;
+    background-color: white;
+  }
+  &:focus{
+    border:2px solid $mc;
+    background-color: white;
+  }
+  &.form-city{
+
+  }
+}
+}
 }
 @mixin section() {
   .section {

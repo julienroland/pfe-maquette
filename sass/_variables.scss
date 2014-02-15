@@ -10,6 +10,15 @@ $lightBlack:rgba(100,100,100,0.4);
 
 $blackMain: #333333;
 
+$bgrey: #d7d7d7;
+
+$bblue: #234c73;
+
+$bgreen:#3ece7b;
+
+$bblack: #2d363e;
+
+
 $gMain : rgb(20,200,30);
 
 $cacaA : rgba(202,202,202,0.9);
@@ -45,7 +54,7 @@ $fsn:17; //font-size
 
 $lh:1.5; //line-height
 
-$tc: rgb(68,68,68); //text-color 333333
+$tc: #3a3a3a; //text-color 333333
 
 $menu: #f7f7f4;
 
@@ -69,8 +78,8 @@ $m2:1200px;
 /*END MEDIA*/
 
 /*COLOR*/
-//$mc: #2e70ea; //main color
-$mc: #58accb;
+//$mc: #276ded; //main color
+$mc: #3270e0;
 //7661b0;
 
 $mcc: darken($mc,20%);

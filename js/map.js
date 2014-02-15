@@ -29,7 +29,8 @@
   input = document.getElementById('map'),
   gPlaceAutoComplete,
   //SELECTOR
-  $loading = $('.loading');
+  $loading = $('.loading'),
+  $mapItem = $('.mapItem');
   
   $(function(){
     
@@ -48,7 +49,8 @@
     //gPlaceAutoComplete = new google.maps.places.Autocomplete(input,options);
 
     displayGoogleMap();
-    $('.loading').fadeOut();
+   // $loading.fadeOut();
+   $mapItem.css('display','block');
 
   };
   var eventInput = function()

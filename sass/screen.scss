@@ -43,19 +43,20 @@ i{
 
 }
 .mainTitle{
-  font-size: 1.272em;
+  font-size: 2.018em;
   font-weight: bold;
-  color:$tc;
+  color:white;
   text-align: center;
   line-height: 1;
   margin-right: gutter() / 2;
   margin-left: gutter() / 2;
   margin-bottom: $gutter;
+  margin-top: $gutter;
 }
 .titleText{
-  font-size: 1.128em;
-  color:$mc;
-  margin-bottom: $pd;
+  font-size: 1.318em;
+  color:$tc;
+  margin-bottom: 1em;
   font-weight: bold;
   line-height: 1;
   .fa{
@@ -69,6 +70,7 @@ i{
   text-align: center;
   position:relative;
   @extend .titleText;
+  margin-bottom: 0;
   color:$tc;
   &:hover{
     overflow:visible;
@@ -88,7 +90,7 @@ a{
   color:$tc;
   text-align: center;
   font-size: 0.9em;
-  max-height: 20%;
+  //max-height: 20%;
   a{
     @include a(0,0,none);
     color:$tc;
@@ -152,13 +154,12 @@ a{
   min-height: $hm;
   padding:0 $pd;
   position:relative;
-  background-color: $mc;
-  @include mb();
-  border-bottom: 1px solid $greyD;
+  background-color: $bgreen;
+  //@include mb();
   margin-bottom: 0;
   color:white;
   z-index: 1000;
-  @include box-shadow(rgba(black,0.3) 0 3px 3px 0);
+  //@include box-shadow(rgba(black,0.3) 0 3px 3px 0);
   &:after{
     background-image: image-url('framework/pattern/noise-1.png');
     width: 100%;
@@ -203,13 +204,15 @@ a{
         }
       }
       a{
-        background-color: white;
-        color:$mc;
+        background-color: darken($bgreen,10%);
+        color:white;
+        border:3px solid lighten($bgreen,10%);
         height:35px;
-        @include border-radius($hm/2);
+        @include border-radius($hm/6);
         &:hover,&:focus,&:active{
-          background-color: $greyD;
-          color:white;
+          background-color: white;
+          color:$bgreen;
+          border:3px solid darken($bgreen,5%);
         }
       }
     }
@@ -295,15 +298,16 @@ a{
 /* GMAP */
 .map{
   position:relative;
-  height:70%;
+  height:80%;
+  //min-height: 600px;
   &:after{
     content:"";
-    background-image: image-url('framework/pattern/grid.png');
+    //background-image: image-url('framework/pattern/grid.png');
     @include abs();
     pointer-events:none;
     height:100%;
     width:100%;
-    z-index: 99;
+    z-index: 20;
   }
 }
 #gmap{
@@ -313,17 +317,18 @@ a{
 }
 .goTo{
   @include a(0,0,none);
-  color:$tc;
+  color:white;
   @include abs-top();
   text-align: center;
   width:90px;
   @include border-radius(50%);
   top:-30px;
-  height:70px;
+  height:80px;
   background-image: image-url('framework/pattern/noise-1.png');
-  background-color: $greyL;
+  background-color: $mc;
   font-size: 1.618em;
-  z-index: 2;
+  z-index: 21;
+  overflow:hidden;
 
   &:hover,&:focus,&:active{
     .icon:before{
@@ -331,47 +336,103 @@ a{
       @include transition(all 0.3s ease);
     }
   }
+  .icon{
+    position:relative;
+  }
   .icon:before{
     font-size: 1.618em;
+    height:32px;
+    overflow:hidden;
+    line-height: 0.9;
+    display:inline-block;
+    max-height: 100%;
+    vertical-align: top;
     @include transition(all 0.3s ease);
   }
 }
-
+  /* MAP ITEM */
+  .mapItem{
+    @include c(12);
+    height:400px;
+    max-height: 90%;
+    overflow-y:scroll;
+    @include abs-left();
+    z-index: 100;
+    background-color: white;
+    width:250px;
+    display:none;
+    .head{
+      padding:0 1em;
+      @include mb();
+      height:40px;
+      text-align: left;
+      line-height: 35px;
+      .titleMap{
+        vertical-align: middle;
+        line-height: 1.1;
+        color:white;
+        display:inline-block;
+        font-weight: bold;
+      }
+    }
+    .content{
+      padding:1em;
+    }
+  }
+  /* END MAP ITEM */
 /* END GMAP */
 /* INFOS */
 .home{
   @include c(12);
   height:80%;
-  border-top:1px solid $greyD;
-  padding:3em $pd;
-  //background-color: white;
-  position:relative;
-  margin:0 auto;
-  background-image: image-url('framework/pattern/noise-1.png');
-
-  .informationsSupp{
-    @include c(12);
-    padding:$pd 1em;
-    background-color: white;
-    @include boxShadow();
+  padding:0;
+//  background-color: $mc;
+position:relative;
+margin:0 auto;
+background-image: image-url('framework/pattern/noise-1.png');
+.residence{
+  background-color: $mc;
+  padding-top: 3em;
+  @include box-shadow(rgba(black,0.4) 0 -5px 10px -5px inset);
+}
+.informationsSupp{
+  @include c(12);
+  padding:3em 1em;
+  background-color: $bgrey;
+  @include box-shadow(rgba(black,0.4) 0 5px 10px -5px inset);
+/*     background-color: white;
+    @include boxShadow(); */
+    color:$tc;
   }
   .infos{
     @include c(12);
   }
   .wrapper{
-    margin-bottom: $gutter;
+    padding-bottom: 3em;
+    padding-left:1em;
+    padding-right:1em;
   }
 
   .callback{
    @include c(12);
    padding:$pd 1em;
-   background-color: white;
-   @include boxShadow();
+   background-color: $bblue;
+   
+   //background-color: #195996;
+   //@include boxShadow();
+   color:white;
  }
  .onePeople{
   @include c(12);
   max-width: $mw / 4;
   margin:$pd auto;
+  padding:$pd;
+  @include transition(all 0.3s ease);
+  &:hover,&:focus,&:active{
+    /* background-color: lighten($bblue,10%);
+    @include box-shadow(rgba(black,0.3) 0 0 7px 1px);
+    @include transition(all 0.2s ease); */
+  }
   .vcard{
     margin-bottom: $pd;
   }
@@ -383,9 +444,10 @@ a{
       content:"";
       background-image: image-url('framework/pattern/grid.png');
       @include abs();
-      height:100%;
-      width:100%;
+      height:150px;
+      width:150px;
       visibility:visible!important;
+      @include border-radius(50%);
     }
     img{
       @include border-radius(50%);
@@ -402,7 +464,8 @@ a{
 
     .name{
       font-weight: bold;
-      color:$mc;
+      color:$bgrey;
+      font-size: 1.318em;
     }
     .address{
       font-style: italic;
@@ -414,224 +477,226 @@ a{
   /* KOT */
   .kots{
     @include c(12);
-    @include boxShadow();
+    //@include boxShadow();
     margin-bottom: $gutter;
     .kot{
       @include c(12);
       height:auto;
      // max-width: $mw / 2 ;
-     border:2px solid $greyL2;
      overflow:hidden;
      margin-bottom: $gutter;
+
      .goKot{
       @include c(12);
       display:block;
       height:100%;
+      
       @include a(0,0,none);
-      background-color: lighten($greyL,5%);
+      background-color: lighten($bgrey,5%);
+
       padding:$gutter / 2;
       &:hover,&:focus,&:active{
-        background-color: lighten($mc,50%);
       }
     }
     &.prenium{
-      border:2px solid $mc;
-    }
-    .mainInfos{
+     border:8px solid white;
+     @include border-radius(0.5em);
+   }
+   .mainInfos{
+    @include c(12);
+    height:auto;
+    overflow:hidden;
+    max-height: 80%;
+    margin-bottom: $gutter;
+    padding-bottom: $pd;
+    .photo{ 
       @include c(12);
-      height:auto;
-      overflow:hidden;
+      position:relative;
+      height: 150px;
+      margin-bottom: gutter() / 2;
+      margin-top: gutter() / 2;
+      img{
+        display:block;
+        width:100%;
+        max-height: 100%;
+      }
+      &:after{
+        content:"";
+        background-image: image-url('framework/pattern/grid.png');
+        width: 100%;
+        height: 100%!important;
+        display: block;
+        pointer-events:none;
+        position: absolute;
+        top: 0;
+        visibility: visible!important;
+        left: 0;
+        z-index: 99;
+        @include box-shadow( black 0 0 10px 0 inset, $greyL2 0 0 1px 1px, white 0 0 1px 1px);
+      }
+    }
+    .content{
+      @include c(12);
       max-height: 80%;
-      margin-bottom: $gutter;
-      padding-bottom: $pd;
-      .photo{ 
-        @include c(12);
-        position:relative;
-        height: 150px;
-        margin-bottom: gutter() / 2;
-        margin-top: gutter() / 2;
-        img{
-          display:block;
-          width:100%;
-          max-height: 100%;
-        }
-        &:after{
-          content:"";
-          background-image: image-url('framework/pattern/grid.png');
-          width: 100%;
-          height: 100%!important;
-          display: block;
-          pointer-events:none;
-          position: absolute;
-          top: 0;
-          visibility: visible!important;
-          left: 0;
-          z-index: 99;
-          @include border-radius(3px);
-          @include box-shadow( black 0 0 10px 0 inset, $greyL2 0 0 1px 1px, white 0 0 1px 1px);
-        }
+      max-height: 200px;
+      overflow:hidden;
+      text-align: center;
+      height:100%;
+      .typeAndLocation{
+        color:$mc;
+        display: inline-block;
+        max-width: 100%;
+        font-weight: bold;
+        text-align: left;
+        font-size: 0.9em;
+        line-height: 1;
       }
-      .content{
-        @include c(12);
-        max-height: 80%;
-        max-height: 200px;
-        overflow:hidden;
-        height:100%;
-        .typeAndLocation{
-          color:$mc;
-          display: inline-block;
-          max-width: 100%;
-          font-weight: bold;
-          text-align: left;
-          font-size: 0.9em;
-          line-height: 1;
-        }
-        &:after{
-          content:"";
-          white-space: nowrap;
-        }
-        p{
-
-
-        }
+      &:after{
+        content:"";
+        white-space: nowrap;
       }
-      .special{
-        @include c(12);
-        height:100%;
-        text-align: center;
+      p{
+        text-align: left;
 
-        .spe{
-          font-family: $ffi;
-          @include cl(6);
-          display:inline-block;
-          float:none;
-          width: 30px;
-          height:30px;
-          &:before{
-            font-size: 1.618em;
-          }
-        }
-        .wifi{
-          &:before{
-            content:"\e015";    
-
-          }
-        }
-        .bathroom{
-          &:before{
-            content:"\e000";    
-
-          }
-        }
-        .kitchen{
-          &:before{
-            content:"\e004";    
-
-          }
-        }
-        .washbasin{
-          &:before{
-            content:"\e0013";    
-
-          }
-        }
       }
     }
-    .addInfos{
+    .special{
       @include c(12);
-      padding:0;
-      height:auto;
-      max-height: 20%;
-      background-color: transparent;
-      line-height: 1.5;
-      .star{
+      height:100%;
+      text-align: center;
+
+      .spe{
+        font-family: $ffi;
         @include cl(6);
-        text-align: center;
-        height:100%;
-        position:relative;
-        &:after{
-          content:"";
-          height:100%;
-          width:1px;
-          background-color: $greyL2;
-          @include abs-right();
-          visibility:visible;
+        display:inline-block;
+        float:none;
+        width: 30px;
+        height:30px;
+        &:before{
+          font-size: 1.618em;
         }
-        .icons{
-          @include c(12);
-          .icon{
-            font-family: $ffi;
-            &:before{
-              margin:0;
-              font-size: $fs;
-              min-width: $fs;
-
-
-              color:$mc;
-            } 
-          }
-          .one{
-            &:before{
-              content:"\e001";
-
-            }
-          }
-          .half-one{
-            &:before{
-              content:"\e00e";
-
-            }
-          }
-          .no-one{
-            &:before{
-              content:"";
-
-            }
-          }
-
-        }
-        .number{
-          @include c(12);
+      }
+      .wifi{
+        &:before{
+          content:"\e015";    
 
         }
       }
-      .locateBy{
-        @include cl(12);
-        position:relative;
-        height:100%;
-        border-top:1px solid $greyL2;
-        font-size: 1em;
-        line-height: 52px;
-        span{
-          vertical-align: middle;
-        }
-        &:after{
-          content:"";
-          height:100%;
-          width:1px;
-          display:none;
-          background-color: $greyL2;
-          @include abs-right();
-          visibility:visible;
-        }
-        a{
-          @include a($mc,solid);
+      .bathroom{
+        &:before{
+          content:"\e000";    
+
         }
       }
-      .howMuch{
-        @include cl(6);
-        position:relative;
-        .icon{
-          @include c(12);
-          color:$mc;
+      .kitchen{
+        &:before{
+          content:"\e004";    
+
         }
-        .peoples{
-          @include c(12);
+      }
+      .washbasin{
+        &:before{
+          content:"\e0013";    
+
         }
       }
     }
-
   }
+  .addInfos{
+    @include c(12);
+    padding:0;
+    height:auto;
+     // max-height: 20%;
+     background-color: transparent;
+     line-height: 1.5;
+     .star{
+      @include cl(6);
+      text-align: center;
+      height:100%;
+      position:relative;
+      &:after{
+        content:"";
+        height:100%;
+        width:1px;
+        background-color: $greyL2;
+        @include abs-right();
+        visibility:visible;
+      }
+      .icons{
+        @include c(12);
+        .icon{
+          font-family: $ffi;
+          &:before{
+            margin:0;
+            font-size: $fs;
+            min-width: $fs;
+
+
+            color:$mc;
+          } 
+        }
+        .one{
+          &:before{
+            content:"\e001";
+
+          }
+        }
+        .half-one{
+          &:before{
+            content:"\e00e";
+
+          }
+        }
+        .no-one{
+          &:before{
+            content:"";
+
+          }
+        }
+
+      }
+      .number{
+        @include c(12);
+
+      }
+    }
+    .locateBy{
+      @include cl(12);
+      position:relative;
+      height:100%;
+      border-top:1px solid $greyL2;
+      font-size: 1em;
+      line-height: 52px;
+      span{
+        vertical-align: middle;
+      }
+      &:after{
+        content:"";
+        height:100%;
+        width:1px;
+        display:none;
+        background-color: $greyL2;
+        @include abs-right();
+        visibility:visible;
+      }
+      a{
+        @include a($mc,solid);
+      }
+    }
+    .howMuch{
+      @include cl(6);
+      position:relative;
+      .icon{
+        @include c(12);
+        color:$mc;
+      }
+      .peoples{
+        @include c(12);
+      }
+    }
+  }
+
+}
 }
 /* END KOT */
 }
@@ -658,13 +723,11 @@ a{
         .photo{
           &:after{
             @include box-shadow( rgba($tc,0.4) 0 0 40px 3px inset);
-            border:1px solid $tc;
             @include transition( all 0.3s ease 0.1s);
           }
         }
         img{
-          @include scale(1.1);
-          @include transition( all 0.5s ease-in-out 0.1s);
+
         }
       }
     }
@@ -711,26 +774,36 @@ a{
 /* FOOTER */
 .foot{
   @include c(12);
-  background-color: $mc;
-  min-height: 150px;
+  background-color: $bblack;
+  min-height: 250px;
+  @include box-shadow(rgba(black,0.4) 0 5px 10px -5px inset);
 }
 /* END FOOTER */
 /* LOADING MAP */
 .loading{
   @include abs();
   z-index: 1;
-  background-color: $mc;
+  background-color: $bgrey;
+  @include box-shadow(rgba(black,0.2) 0 5px 100px -5px inset);
+}
+.loadingText{
+  @include abs();
+  width: auto;
+  height: auto;
+  margin: 200px auto;
+  text-align: center;
 }
 .item {
   @include abs();
   width: 80px;
   height: 80px;
-  background-color: #FFF;
+  background-color: $bblack;
 
   margin: 100px auto;
   -webkit-animation: rotateplane 1.2s infinite ease-in-out;
   animation: rotateplane 1.2s infinite ease-in-out;
 }
+
 
 @-webkit-keyframes rotateplane {
   0% { -webkit-transform: perspective(120px) }
