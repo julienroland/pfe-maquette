@@ -353,8 +353,6 @@ a{
   .mapItem{
     @include c(12);
     min-height:300px;
-//    max-height: 90%;
-   // overflow-y:scroll;
    @include abs-left();
    z-index: 100;
    width:220px;
@@ -399,26 +397,30 @@ a{
       .head{
         a{
           background-color:$bred;
-          border:3px solid darken($bred,5%);
-          border-left:2px solid darken($bred,5%);
-          border-right:2px solid darken($bred,5%);
-          border-top:2px solid darken($bred,5%);
+          border:2px solid darken($bred,5%);
+          border-left:1px solid darken($bred,5%);
+          border-right:1px solid darken($bred,5%);
+          border-top:1px solid darken($bred,5%);
           &:hover,&:focus,&:active{
             background-color: lighten($bred,5%);
-            border:3px solid $bred;
-            border-left:2px solid $bred;
-            border-right:2px solid $bred;
-            border-top:2px solid $bred;
+            border:2px solid $bred;
+            border-left:1px solid $bred;
+            border-right:1px solid $bred;
+            border-top:1px solid $bred;
           }
         }
         
         .titleMap{
           color:white;
         }
-      }   
+      } 
+      .content{
+        display:block;
+      }  
     }
     .content{
       padding:0.5em 1em;
+      display:none;
     }
   }
   /* END MAP ITEM */
@@ -825,7 +827,7 @@ background-image: image-url('framework/pattern/noise-1.png');
 .loading{
   @include abs();
   z-index: 1;
-  background-color: $bgrey;
+  background-color: $greyL2;
   @include box-shadow(rgba(black,0.2) 0 5px 100px -5px inset);
 }
 .loadingText{
