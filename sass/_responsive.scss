@@ -2,9 +2,7 @@
 @import "mixin";
 @media screen and (min-width:queries($nMw / 2)){ //512px
   /* GENERAL */
-  .titleKot{
-    text-align: left;
-  }
+
   /* END GENERAL */
   /* HOME */
   .home{
@@ -15,18 +13,14 @@
       .kots{
 
         .kot{
-          height:210px;
+          
           .mainInfos{
             margin-bottom: 0;
             height: 80%;
             .photo{
-              @include cl(4);
               height:auto;
             }
             .content{
-              @include cl(6);
-              max-height:100%;
-              text-align: left;
               .typeAndLocation{
                 
               }
@@ -35,10 +29,8 @@
               }
             }
             .special{
-              @include cl(2);
+              @include c(12);
               .spe{
-                float:left;
-                margin:0;
                 &:before{
                   font-size: 1.435em;
                 }
@@ -47,7 +39,6 @@
           }
           .addInfos{
             .star{
-              @include cl(3);
               &:after{
                 display:block;
                 height:100%;
@@ -55,19 +46,9 @@
               }
             }
             .howMuch{
-             @include cl(3);
-             &:after{
-               content:"";
-               height:100%;
-               width:1px;
-               background-color: $greyL2;
-               @include abs-right();
-               visibility:visible;
-             } 
            }
            .locateBy{
-            @include cl(6); 
-            border-top: 0;
+
           }
 
         }
@@ -145,7 +126,7 @@
   /* HOME */
   .home{
    .kots{
-    @include cfl(7.5);
+    @include c(12);
   }
   .kotsByCities{
     display:block;
@@ -163,7 +144,10 @@
  .home{
 
   .kots{
-    @include cfl(8);
+    @include c(12);
+  }
+  .kot{
+    @include cl(4);
   }
   .kotsByCities{
     display:block;

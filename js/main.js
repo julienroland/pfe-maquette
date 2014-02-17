@@ -23,7 +23,7 @@
 		/* CONNECTION AND REGISTER */
 		$('.connection,.register').css({
 
-		})
+		});
 		$("#form-range").ionRangeSlider({
 			min: 0,                        
 			max: 10000,                                        
@@ -50,7 +50,7 @@
 
 			$('.goTo').on('click',function( e ){
 				e.preventDefault();
-				goTo( $(this) );
+				goTo( $('#main') );
 			})
 		});
 	var toggleItem = function( e ){

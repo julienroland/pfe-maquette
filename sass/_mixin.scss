@@ -13,7 +13,7 @@
     }
   }
 }
-@mixin a( $color:$mc, $type: dotted, $none:"" ){
+@mixin a( $color:$mc, $type: solid, $none:"" ){
 
 
   @if($none!="none"){
@@ -24,55 +24,29 @@
     text-decoration: none;
     display: inline;
     @include transition(all 0.3s ease);
-    &:after{
-      content:"";
-      @include opacity(0);
-      @include abs-right();
-      @include box-sizing(border-box);
-      right: -2px;
-      border-right: 1px solid #{$color};
-      @include transition(all 0.3s ease);
-    }
-    &:before{
-      content:"";
-      @include abs-left();
-      @include opacity(0);
-      @include box-sizing(border-box);
-      left: -2px;
-      border-left: 1px solid #{$color};
-      @include transition(all 0.3s ease);
-    }
+
     &:hover,&:focus,&:active{
       text-decoration: none;
-      border-bottom: 1px #{$type} transparent;
-      &:after{
-        @include opacity(1);
-        @include transition(all 0.3s ease);
-      }
-      &:before{
-       @include opacity(1);
-
-       @include transition(all 0.3s ease);
-     }
-
-   }
- }@else{
-  border-bottom:0;
-  &:before{
-    border-left: 0;
-    left:auto;
-    @include opacity(1);
+      border-bottom: 0;
+      @include transition(all 0.3s ease);
+    }
+  }@else{
+    border-bottom:0;
+    &:before{
+      border-left: 0;
+      left:auto;
+      @include opacity(1);
+    }
+    &:after{
+      content:none;
+      border-right: 0;
+      right:auto;
+      @include opacity(1);
+    }
+    &:hover,&:focus,&:active{
+      border-bottom: 0;
+    }
   }
-  &:after{
-    content:none;
-    border-right: 0;
-    right:auto;
-    @include opacity(1);
-  }
-  &:hover,&:focus,&:active{
-    border-bottom: 0;
-  }
-}
 }
 @mixin body() {
   body {

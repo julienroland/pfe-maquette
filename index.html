@@ -103,7 +103,7 @@
            </div>
            <div class="mapItem">
             <div class="accordeon">
-             <div class="search stuff active">
+             <div class="search stuff">
               <div class="head fastSearch ">
                 <a href="javascript:void(0)" title="Fermer l'onglet recherche rapide">
                   <h4 aria-level="4" role="heading" class="titleMap"><span class="icon icon-search"></span>Recherche rapide</h4>
@@ -120,22 +120,17 @@
                     <input type="text" id="form-range" class="form-range" name="range" placeholder="Ex: 1000" value="">
                   </div>
                   <div class="more">
-                  <a href=""><span class="icon icon-plus12"></span>Plus de champ</a>
+                    <a href=""><span class="icon icon-plus12"></span>Plus de champ</a>
                   </div>
 
                 </form>
               </div>
             </div>
-            <div class="locate stuff">
+            <div class="locate stuff active">
               <div class="head locate">
                <a href="javascript:void(0)" title="Ouvrir l'onglet me localiser">
                 <h4 aria-level="4" role="heading" class="titleMap"><span class="icon icon-location2"></span>Me localiser</h4>
               </a>
-            </div>
-            <div class="content">
-              <div class="field">
-                <p>Ou entrer une adresse</p>
-              </div>
             </div>
           </div>
         </div>
@@ -145,26 +140,26 @@
     </section>
     <div class="home">
      <a href="#informations" class="goTo" title="Aller à la suite du contenu"><span class="icon icon-chevron11"></span></a>
-     <div class="residence">
+     <div class="residence" id="residence">
        <div class="wrapper">
-         <section class="kots" id="informations">
+         <section class="kots" id="main">
           <h3 aria-level="3" role="heading" class="mainTitle">Les dernières annonces</h3>
-          <div class="prenium">
-            <div class="kot prenium" itemscope itemtype="http://schema.org/Residence">
+          <div id="container">
+            <div class="prenium">
+              <div class="kot prenium" itemscope itemtype="http://schema.org/Residence">
 
-              <div itemscope itemprop="geo" itemtype="GeoCoordinates">
-                <meta content="40" itemprop="latitude">
-                <meta content="54" itemprop="longitude">
-              </div>
-              <a class="goKot" itemprop="url" href="#">
+                <div itemscope itemprop="geo" itemtype="GeoCoordinates">
+                  <meta content="40" itemprop="latitude">
+                  <meta content="54" itemprop="longitude">
+                </div>
                 <div class="mainInfos">
                   <div class="photo">
                     <img itemprop="image" src="./img/photo2.png" alt="Photo du logement de XXX">
                   </div>
                   <div class="content">
-                    <h4 aria-level="4" itemprop="name" role="heading" class="titleKot">Titre de l'annonce qui peut être long ou court
+                    <h4 aria-level="4" itemprop="name" role="heading" class="titleKot"><a href="" title="Aller sur l'annonce: titre de l'annonce...">Titre de l'annonce qui peut être long ou court</a>
                     </h4>
-                    <span class="typeAndLocation">Studio | <span itemprop="address" itemscope itemtype="PostalAddress"><span itemprop="addressRegion">Namur</span><span class="section" itemprop="streetAddress">Rue marchal le grand méchant loup</span>
+                    <span class="typeAndLocation"><a href="" title="Voir les studios de Namur">Studio | <span itemprop="address" itemscope itemtype="PostalAddress"><span class="city" itemprop="addressRegion">Namur</span></a><span class="section" itemprop="streetAddress">Rue marchal le grand méchant loup</span>
                     <meta content="4000" itemprop="postal">
                     <meta content="BE" itemprop="addressCountry">
                   </span></span>
@@ -182,51 +177,53 @@
                 </div>
               </div>
               <div class="addInfos">
-                <div class="star">
-                  <div class="icons">
-                    <span class="section">5 étoiles</span>
-                    <span class="icon one"></span>
-                    <span class="icon one"></span>
-                    <span class="icon one"></span>
-                    <span class="icon half-one"></span>
-                    <span class="icon no-one"></span>
+                <div class="muchRate">
+                  <div class="star">
+                    <div class="icons">
+                      <span class="section">5 étoiles</span>
+                      <span class="icon one"></span>
+                      <span class="icon one"></span>
+                      <span class="icon one"></span>
+                      <span class="icon half-one"></span>
+                      <span class="icon no-one"></span>
+                    </div>
+                    <span class="number"><b>4000</b> votes</span>
                   </div>
-                  <span class="number"><b>4000</b> votes</span>
-                </div>
-                <div class="howMuch">
-                 <span class="icon icon-user3"></span>
-                 <span class="peoples"><b>1000</b> places</span>
+                  <div class="howMuch">
+                   <span class="icon icon-user3"></span>
+                   <span class="peoples"><b>1000</b> places</span>
+                 </div>
                </div>
-               <div class="locateBy">
-                <span>
-                  Louez par <i>Jean-Marc</i>
-                </span>
+               <div class="who">
+                 <div class="locateBy">
+                  <span>
+                    Louez par <a href="" title="Voir le profil de Jean-Marc"><i>Jean-Marc</i></a>
+                  </span>
+                </div>
               </div>
             </div>
-          </a>
+          </div>
         </div>
-      </div>
-      <div class="kot" itemscope itemtype="http://schema.org/Residence">
+        <div class="kot" itemscope itemtype="http://schema.org/Residence">
 
-        <div itemscope itemprop="geo" itemtype="GeoCoordinates">
-          <meta content="40" itemprop="latitude">
-          <meta content="54" itemprop="longitude">
-        </div>
-        <a class="goKot" itemprop="url" href="#">
+          <div itemscope itemprop="geo" itemtype="GeoCoordinates">
+            <meta content="40" itemprop="latitude">
+            <meta content="54" itemprop="longitude">
+          </div>
           <div class="mainInfos">
             <div class="photo">
               <img itemprop="image" src="./img/photo2.png" alt="Photo du logement de XXX">
             </div>
             <div class="content">
-              <h4 aria-level="4" itemprop="name" role="heading" class="titleKot">Titre de l'annonce qui peut être long ou court
+              <h4 aria-level="4" itemprop="name" role="heading" class="titleKot"><a href="" title="Aller sur l'annonce: titre de l'annonce...">Titre de l'annonce qui peut être long ou court</a>
               </h4>
-              <span class="typeAndLocation">Studio | <span itemprop="address" itemscope itemtype="PostalAddress"><span itemprop="addressRegion">Namur</span>, <span itemprop="streetAddress">Rue marchal le grand méchant loup</span>
+              <span class="typeAndLocation"><a href="" title="Voir les studios de Namur">Studio | <span itemprop="address" itemscope itemtype="PostalAddress"><span class="city" itemprop="addressRegion">Namur</span></a><span class="section" itemprop="streetAddress">Rue marchal le grand méchant loup</span>
               <meta content="4000" itemprop="postal">
               <meta content="BE" itemprop="addressCountry">
             </span></span>
 
             <p itemprop="description">
-              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Velit, nulla quia quas dolorum fugiat odio illum quo quae vero necessitatibus placeat recusandae pariatur veritatis voluptas labore est aliquid sed nobis Lorem ipsum dolor sit amet, consectetur adipisicing elit. Incidunt, libero, esse, iusto, consectetur nulla dolore vitae accusantium impedit possimus modi quo facere adipisci ipsa quae explicabo quibusdam fuga minus repellendus.
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Velit, nulla quia quas dolorum fugiat odio illum
             </p>
 
           </div>
@@ -238,31 +235,35 @@
           </div>
         </div>
         <div class="addInfos">
-          <div class="star">
-            <div class="icons">
-              <span class="section">5 étoiles</span>
-              <span class="icon one"></span>
-              <span class="icon one"></span>
-              <span class="icon one"></span>
-              <span class="icon half-one"></span>
-              <span class="icon no-one"></span>
+          <div class="muchRate">
+            <div class="star">
+              <div class="icons">
+                <span class="section">5 étoiles</span>
+                <span class="icon one"></span>
+                <span class="icon one"></span>
+                <span class="icon one"></span>
+                <span class="icon half-one"></span>
+                <span class="icon no-one"></span>
+              </div>
+              <span class="number"><b>4000</b> votes</span>
             </div>
-            <span class="number"><b>4000</b> votes</span>
-          </div>
-          <div class="howMuch">
-           <span class="icon icon-user3"></span>
-           <span class="peoples"><b>1000</b> places</span>
+            <div class="howMuch">
+             <span class="icon icon-user3"></span>
+             <span class="peoples"><b>1000</b> places</span>
+           </div>
          </div>
-         <div class="locateBy">
-          <span>
-            Louez par <i>Jean-Marc</i>
-          </span>
+         <div class="who">
+           <div class="locateBy">
+            <span>
+              Louez par <a href="" title="Voir le profil de Jean-Marc"><i>Jean-Marc</i></a>
+            </span>
+          </div>
         </div>
       </div>
-    </a>
+    </div>
   </div>
 </section>
-<section class="services">
+<!--<section class="services">
   <h3 aria-level="3" role="heading" class="mainTitle section">Nos principaux services de qualités</h3>
   <div class="search">
     <span class="icon"></span>
@@ -276,7 +277,7 @@
    <span class="icon"></span>
    <h4 aria-level="4" role="heading" class="services">Toute la Belgique</h4>
  </div>
-</section>
+</section>-->
    <!--  <section class="kotsByCities">
       <h3 aria-level="3" role="heading" class="mainTitle section">Sélection de villes aléatoire avec le nombre de logement</h3>
       <div class="city">
@@ -418,7 +419,7 @@
  <a href="#main" class="reader">Remonter au contenu</a>
  <a href="#nav" class="reader">Revenir à la navigation</a>
 </footer>
-<script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCJSSKlpz3C7EwQd2kvgn1JRBd7Ojrl9dM&amp;sensor=false"></script>
+<!-- <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCJSSKlpz3C7EwQd2kvgn1JRBd7Ojrl9dM&amp;sensor=false"></script> -->
 <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
 <script src="//code.jquery.com/ui/1.10.4/jquery-ui.js"></script>
 <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.10.2.min.js"><\/script>')</script>
@@ -426,7 +427,16 @@
 <script src="js/main.js"></script>
 <script src="js/map.js"></script>
 <script src="js/ellipsis.js"></script>
-
+<script src="js/grid.js"></script>
+<script>
+  var $container = $('#container');
+// initialize
+$container.masonry({
+  columnWidth: 256,
+  itemSelector: '.kot',
+  gutter: 24,
+});
+</script>
 
 <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
 <script>
