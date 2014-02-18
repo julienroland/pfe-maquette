@@ -49,7 +49,7 @@
     //gPlaceAutoComplete = new google.maps.places.Autocomplete(input,options);
 
     displayGoogleMap();
-   // $loading.fadeOut();
+    $loading.fadeOut()
    $mapItem.css('display','block');
    /* FORM */
 $('.label-range').on('click',function(){

@@ -11,6 +11,7 @@
 	$addInfos = $('.addInfos'),
 	$menu = $('.banner'),
 	$mapItem = $('.mapItem'),
+	$body = $('body'),
 	$kotsHeight = $('.kots').outerHeight();
 
 
@@ -19,7 +20,10 @@
 		if($map){
 			heightMap();
 		}
+
+		$body.on('click',hideAllSlide);
 		$mapItem.find('.head').on('click','a',toggleItem);
+		$('.lang').on('click','a',showlanguages);
 		/* CONNECTION AND REGISTER */
 		$('.connection,.register').css({
 
@@ -41,7 +45,10 @@
 		heightOfKot();
 
 		/* TEXT-OVERFLOW */
-		$(window).resize(ellips,heightOfKot);
+		$(window).resize(function(){
+			heightMap($(window).height());
+			ellips();
+		});
 		ellips();
 		/* BARS */
 			//addInfosBar();
@@ -53,6 +60,14 @@
 				goTo( $('#main') );
 			})
 		});
+	var hideAllSlide = function( e ){
+
+//		$('.otherLanguages').slideUp();
+	};
+	var showlanguages = function( e ){
+		e.preventDefault();
+		$('.otherLanguages').slideToggle();
+	};
 	var toggleItem = function( e ){
 		e.preventDefault();
 		var $parent2 = $(this).parent().parent();
@@ -113,9 +128,12 @@
 	var ellips = function(){
 		$('.kot .content').ellipsis();
 	};
-	var heightMap = function( ){
-
-		nMapHeight = toPercent($winHeight , nMapPercent) -( $('.banner').height() + $('.addInfos').height());
+	var heightMap = function( nWinHeight ){
+		if(nWinHeight){
+			nMapHeight = toPercent(nWinHeight , nMapPercent) -( $('.banner').height() + $('.addInfos').height());
+		}else{
+			nMapHeight = toPercent($winHeight , nMapPercent) -( $('.banner').height() + $('.addInfos').height());
+		}
 		$map.css({
 			'height':nMapHeight,
 		});

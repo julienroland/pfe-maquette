@@ -106,7 +106,7 @@ a{
       float:left;
       overflow:visible;
       a{
-        padding:0 $hm - $h-m;
+        padding:0 10px;
         display:inline-block;
         &:after{
           $coe: 6;
@@ -147,6 +147,32 @@ a{
   .otherLanguages{
     @include c(12);
     display:none;
+    border-bottom: 1px solid $greyL2;
+    border-left: 1px solid  $greyL2;
+    border-right: 1px solid $greyL2;
+    border-top:1px solid white;
+    position:relative;
+    z-index: 20;
+    background-color: $greyL;
+
+    ul{
+
+    }
+    li{
+      display:block;
+      float:none;
+      a{
+        @include c(12);
+        padding-left: 0;
+        padding:0 $gutter/4;
+        &:hover,&:focus,&:active{
+          background-color: white;
+        }
+      }
+      &:last-child{
+        margin-bottom: 0;
+      }
+    }
   }
 }
 /* END TOP BAR */
@@ -157,12 +183,12 @@ a{
   min-height: $hm;
   padding:0 $pd;
   position:relative;
-  background-color: $bgreen;
+  background-color: white;
   //@include mb();
   margin-bottom: 0;
   color:white;
-  z-index: 1000;
-  //@include box-shadow(rgba(black,0.3) 0 3px 3px 0);
+  z-index: 10;
+  @include box-shadow(rgba(black,0.3) 0 3px 3px 0);
   &:after{
     background-image: image-url('framework/pattern/noise-1.png');
     width: 100%;
@@ -193,31 +219,50 @@ a{
     .elem{
       li{
 
-     /*   &:after{
-        content:"";
-        height:100%;
-        width:1px;
-        background-color: $greyL2;
-        @include abs-right();
-        visibility:visible;
-      } */
-      &:last-child{
-        &:after{
-          display:none;
+        &:last-child{
+          &:after{
+            display:none;
+          }
+        }
+        a{
+          background-color: transparent;
+          border:3px solid $mc;
+          @include border-radius(5px);
+          color:$mc;
+          &:hover,&:focus,&:active{
+            background-color: $mc;
+            border:3px solid transparent;
+            color:white;
+          }
         }
       }
-      a{
-        background-color: darken($bgreen,10%);
-        color:white;
-        border:3px solid lighten($bgreen,10%);
-        height:35px;
-        @include border-radius($hm/6);
+      .register{
+       a{
+        background-color: transparent;
+        border:2px solid $bred;
+        @include border-radius(5px);
+        color:$bred;
         &:hover,&:focus,&:active{
-          background-color: white;
-          color:$bgreen;
-          border:3px solid darken($bgreen,5%);
+          background-color: $bred;
+          border:2px solid transparent;
+          color:white;
         }
       }
+
+    }
+    .connection{
+      a{
+        background-color: transparent;
+        border:2px solid $mc;
+        @include border-radius(5px);
+        color:$mc;
+        &:hover,&:focus,&:active{
+          background-color: $mc;
+          border:2px solid transparent;
+          color:white;
+        }
+      }
+
     }
 
     a{
@@ -236,7 +281,7 @@ a{
     height:100%;
     line-height: 50px;
     li{
-      height:35px;
+      height:40px;
       display:inline-block;
       vertical-align: middle;
       @include box-sizing(border-box);
@@ -271,22 +316,27 @@ a{
   }
 }
 .logo{
-  width:115px;
-  height:$h-m; 
+  min-width:115px;
+  //height:$h-m; 
   margin: auto;
   display:block;
   a{
     @include a(0,0,none);
     background-image: image-url('logo/logo-white-smooth.png'); 
-    width:113px;
-    height:$h-m;
-    text-indent: -9999px;
-    position:absolute;
+    min-width:113px;
+    //height:$h-m;
+    color:$bblueD;  
+    display:inline-block;
+    line-height: 1;
+    font-size: 55px;
+    border-bottom: 3px solid transparent!important;
+    //text-indent: -9999px;
+    //position:absolute;
     &:hover,&:focus,&:active{
+     border-bottom: 3px solid $tc!important;
+   }
 
-    }
-
-  }
+ }
 }
 .whatWeDo{
   color:white;
@@ -323,12 +373,11 @@ a{
   color:white;
   @include abs-top();
   text-align: center;
-  width:110px;
+  width:120px;
   @include border-radius(50%);
-  top:-30px;
-  height:100px;
-  background-image: image-url('framework/pattern/noise-1.png');
-  background-color: $mc;
+  top:-40px;
+  height:120px;
+  background-color: $bblue;
   font-size: 1.618em;
   z-index: 21;
   overflow:hidden;
@@ -450,7 +499,7 @@ position:relative;
 margin:0 auto;
 background-image: image-url('framework/pattern/noise-1.png');
 .residence{
-  background-color: $mc;
+  background-color: $bblue;
   padding-top: 3em;
   @include box-shadow(rgba(black,0.4) 0 -5px 10px -5px inset);
 }
@@ -475,7 +524,7 @@ background-image: image-url('framework/pattern/noise-1.png');
   .callback{
    @include c(12);
    padding:$pd 1em;
-   background-color: $bblue;
+   background-color: $mc;
    
    //background-color: #195996;
    //@include boxShadow();
@@ -675,6 +724,7 @@ background-image: image-url('framework/pattern/noise-1.png');
     height:auto;
     background-color: transparent;
     line-height: 1.5;
+    overflow:visible;
     .muchRate{
       @include c(12);
       border-top:1px solid $greyD;
@@ -735,7 +785,7 @@ background-image: image-url('framework/pattern/noise-1.png');
     .locateBy{
       @include cl-nm(12);
       position:relative;
-      background-color: $greyL;
+      
       height:100%;
       font-size: 1em;
       line-height: 52px;
@@ -859,13 +909,14 @@ background-image: image-url('framework/pattern/noise-1.png');
 .loading{
   @include abs();
   z-index: 1;
-  background-color: $greyL;
+  background-color: $bblueD;
   @include box-shadow(rgba(black,0.2) 0 5px 100px -5px inset);
 }
 .loadingText{
   @include abs();
   width: auto;
   height: auto;
+  color:white;
   margin: auto;
   top:50%;
   font-weight: bold;
@@ -877,7 +928,7 @@ background-image: image-url('framework/pattern/noise-1.png');
   @include abs();
   width: 80px;
   height: 80px;
-  background-color: $bblack;
+  background-color: white;
 
   margin: auto;
   -webkit-animation: rotateplane 1.2s infinite ease-in-out;
