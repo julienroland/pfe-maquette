@@ -9,7 +9,8 @@
  @import "variables";  
  @import "flags";  
  @import "mixin";
- 
+ //@import "country/*.png";
+//@include all-country-sprites;
 
 
 //@import url("http://fonts.googleapis.com/css?family=Lora:400,700,400italic");
@@ -62,6 +63,11 @@ i{
   .fa{
     margin-right: $pd;
   }
+}
+.titlePopup{
+  font-size: 2.468em;
+  margin:0.5em 0 1em 0;
+  text-align: center;
 }
 .titleKot{
   text-align: center;
@@ -200,6 +206,17 @@ a{
     visibility: visible;
     left: 0;
     z-index: 99;
+  }
+  .lang{
+    @include abs-top-right();
+    color:$tc;
+    top:$gutter/4;
+    right:$gutter/4;
+    font-size: 0.8em;
+    @include a(0,0,none);
+    &:hover,&:focus,&:active{
+      text-decoration: underline;
+    }
   }
   .wrapper{
     position:relative;
@@ -377,7 +394,7 @@ a{
   @include border-radius(50%);
   top:-40px;
   height:120px;
-  background-color: $bblue;
+  background-color: $mc;
   font-size: 1.618em;
   z-index: 21;
   overflow:hidden;
@@ -426,9 +443,14 @@ a{
       visibility:visible;
     }
     .accordeon{
-      @include box-shadow($greyL2 0 0 10px 0);
+      @include box-shadow(rgba(black,0.7) 0 0 10px 0);
       background-color: white;
       border:1px solid $bred;
+      .stuff:first-child{
+        .content{
+          display:block;
+        }
+      }
     }
     .head{
       //@include mb();
@@ -499,7 +521,7 @@ position:relative;
 margin:0 auto;
 background-image: image-url('framework/pattern/noise-1.png');
 .residence{
-  background-color: $bblue;
+  background-color: $mc;
   padding-top: 3em;
   @include box-shadow(rgba(black,0.4) 0 -5px 10px -5px inset);
 }
@@ -524,7 +546,7 @@ background-image: image-url('framework/pattern/noise-1.png');
   .callback{
    @include c(12);
    padding:$pd 1em;
-   background-color: $mc;
+   background-color: $bblue;
    
    //background-color: #195996;
    //@include boxShadow();
@@ -905,6 +927,148 @@ background-image: image-url('framework/pattern/noise-1.png');
   @include box-shadow(rgba(black,0.4) 0 5px 10px -5px inset);
 }
 /* END FOOTER */
+/* POPUP */
+.popup{
+  @include abs();
+  position:fixed;
+  height:80%;
+  outline:0;
+  width:80%;
+  overflow:hidden;
+  background-color: white;
+  @include border-radius(1em);
+  border:1px solid $greyL2;
+  @include box-shadow(rgba(black,0.5) 0 0 1em 0);
+  z-index: 1000;
+  display:none;
+}
+.closePopup{
+  display:inline-block;
+  @include abs-top-right();
+  text-indent: -99999px;
+  @include a(0,0,none);
+  &:after{
+    font-family: $ffi;
+    content: "\e003";
+    @include abs-top-right();
+    right:-5px;
+    height:40px;
+    visibility:visible;
+    display:block;
+    text-indent: 0;
+    font-size: 28px;
+    width:40px;
+  }
+  &:hover,&:focus,&:active{
+    &:after{
+      @include transition(all 0.3s ease-in-out);
+      color:$bred;
+    }
+  }
+}
+/* END POPUP */
+/* OVERLAY */
+.overlay{
+  @include abs();
+  z-index: 999;
+  position:fixed;
+  background-color:rgba($tc,0.8);
+  display:none;
+}
+/* END OVERLAY */
+/* COUNTRY */
+.lang-choice{
+  @include cl(4);
+  height:100%;
+  position:relative;
+  text-align: center;
+  a{
+    @include c(12);
+    height:100%;
+    outline:0;
+    width:100%;
+    @include a(0,0,none);
+    &:hover{
+     .country-text{
+       color:$mc;
+       background-color: $greyL;
+       border:2px solid $mc;
+       @include transition(all 0.3s ease-in-out);
+     }
+     .flag{
+     }
+     &:focus,&:active{
+      .country-text{
+        color:white;
+        background-color: $mc;
+        border:2px solid $mc;
+      }
+    }
+  }
+}
+&.active{
+  .country-text{
+    color:white;
+    background-color: $mc;
+    border:2px solid $mc;
+    @include border-radius(5px); 
+  }
+  .flag{
+    @include scale(1.2);
+    @include transition(all 0.3s ease-in-out);
+  }
+}
+}
+.flag{
+  @include transition(all 0.2s ease-in-out);
+}
+.country-text{
+  @include transition(all 0.2s ease-in-out);
+  display:inline-block;
+  padding:5px 10px;
+  margin-top: $gutter;
+  @include border-radius(5px); 
+  border:2px solid transparent;
+}
+.country-french{
+  background-image: image-url('country/fr.png');
+  background-size: contain;
+  background-repeat: no-repeat;
+  height:188px;
+  width:100%;
+  max-width: 250px;
+  margin: auto;
+  display:block;
+
+}
+.country-neederlands{
+  background-image: image-url('country/nl.png');
+  background-size: contain;
+  background-repeat: no-repeat;
+  height:188px;
+  width:100%;
+  margin: auto;
+  max-width: 250px;
+  display:block;
+
+}
+.country-english{
+  background-image: image-url('country/en.png');
+  background-size: contain;
+  background-repeat: no-repeat;
+  height:188px;
+  width:100%;
+  margin: auto;
+  max-width: 250px;
+  display:block;
+
+}
+.country-sprite{
+  display:block;
+  width:300px;
+  height:140px;
+}
+/* END COUNTRY */
 /* LOADING MAP */
 .loading{
   @include abs();

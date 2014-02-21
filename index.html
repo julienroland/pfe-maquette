@@ -22,7 +22,7 @@
             <![endif]-->
 
             <h1 class="section" role="heading" aria-level="1">Accueil du site Akoter, proposant de la location et co-location de kots (logement étudiants) en Belgique.</h1>
-            <div class="addInfos">
+           <!--  <div class="addInfos">
               <div class="wrapper">
                 <ul class="topLinks">
                   <li>
@@ -60,9 +60,10 @@
               </li>
             </ul>
           </div>
-        </div>
+        </div> -->
         <section class="banner" role="banner">
           <div class="wrapper">
+            <a href="" class="lang toPopup" title="Changer de langue"><span class="flag flag-fr"></span>Français</a>
             <h1 class="section" role="heading" aria-level="1">Logo Akoter, les liens de connexion et inscription</h1> 
             <nav class="nav" id="nav" role="navigation">
               <a href="#main" class="reader">Passer directement au contenu</a>
@@ -85,7 +86,7 @@
                       <span class="icon icon-lock24"></span>Connexion
                     </a>
                   </li>
-                
+
                 </ul>
               </div>
             </nav>
@@ -105,7 +106,7 @@
            </div>
            <div class="mapItem">
             <div class="accordeon">
-             <div class="search stuff">
+             <div class="search stuff active">
               <div class="head fastSearch ">
                 <a href="javascript:void(0)" title="Fermer l'onglet recherche rapide">
                   <h4 aria-level="4" role="heading" class="titleMap"><span class="icon icon-search"></span>Recherche rapide</h4>
@@ -115,7 +116,9 @@
                 <form action="" class="mainType">
                   <div class="field">
                     <label for="city">Ville:</label>
-                    <input type="text" id="city" class="form-city" name="city" placeholder="Ex: Namur" value="">
+                    <div class="input-city">
+                      <input type="text" id="city" class="form-city" name="city" placeholder="Ex: Namur" value="">
+                    </div>
                   </div>
                   <div class="field">
                     <label for="range" class="label-range">Distance (m): </label>
@@ -128,7 +131,7 @@
                 </form>
               </div>
             </div>
-            <div class="locate stuff active">
+            <div class="locate stuff">
               <div class="head locate">
                <a href="javascript:void(0)" title="Ouvrir l'onglet me localiser">
                 <h4 aria-level="4" role="heading" class="titleMap"><span class="icon icon-location2"></span>Me localiser</h4>
@@ -421,6 +424,35 @@
  <a href="#main" class="reader">Remonter au contenu</a>
  <a href="#nav" class="reader">Revenir à la navigation</a>
 </footer>
+
+<div class="popup">
+  <a href="" class="closePopup" tabindex="4" title="Fermer la fénêtre"></a>
+  <div class="wrapper">
+    <h3 aria-level="3" role="heading" class="titlePopup">Choisissez une langue</h3>
+    <div class="lang-choice french active">
+      <a href="" title="Changer vers le Français" tabindex="1">
+        <span class="country-french flag"></span>
+        <span class="country-text">Français</span>
+      </a>
+    </div> 
+    <div class="lang-choice neederlands">
+      <a href="" title="Changer vers le Français" tabindex="2">
+        <span class="country-neederlands flag"></span>
+        <span class="country-text">Neederlands</span>
+      </a>
+    </div>
+    <div class="lang-choice english">
+      <a href="" title="Changer vers le Français" tabindex="3">
+        <span class="country-english flag"></span>
+        <span class="country-text">English</span>
+      </a>
+    </div>
+  </div>
+</div>
+<div class="overlay">
+
+</div>
+
 <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCJSSKlpz3C7EwQd2kvgn1JRBd7Ojrl9dM&amp;sensor=false"></script>
 <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
 <script src="//code.jquery.com/ui/1.10.4/jquery-ui.js"></script>

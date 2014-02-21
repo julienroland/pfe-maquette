@@ -220,6 +220,17 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#35a0c6', end
 }
 label{
   display:block;
+  &.label-city{
+    padding-left: 20px;
+    &:before{
+      font-family: $ffi;
+      content:"\e003";
+      display:block;
+      width:20px;
+      height:20px;
+      float:left;
+    }
+  }
 }
 input{
   @include c(12);
@@ -229,6 +240,7 @@ input{
   font-size: 1em;
   border:2px solid $greyL2;
   padding:5px;
+  font-family: $ffi;
   &:after{
     font-family: $ffi;
     content:"\e008";
@@ -242,6 +254,7 @@ input{
     background-color: white;
   }
   &.form-city{
+    padding-left: 30px;
 
   }
 }
@@ -353,7 +366,6 @@ input{
   display: block;
   float: none;
   @include box-sizing(border-box);
-
   &:after {
     @include clear();
   }

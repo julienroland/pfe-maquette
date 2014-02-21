@@ -11,6 +11,14 @@
 /*media*/
 /*END MEDIA*/
 /*COLOR*/
+/* CONFIG */
+/* typography */
+/* END typography */
+/*media*/
+/*END MEDIA*/
+/*COLOR*/
+/*l * 100 / 1024*/
+/*l * 100 / 1024*/
 @font-face {
   font-family: "Flaticon";
   src: url('../fonts/flaticon.eot');
@@ -19,6 +27,29 @@
   font-style: normal; }
 
 /* line 16, ../sass/_icons.scss */
+.input-city {
+  position: relative; }
+  /* line 18, ../sass/_icons.scss */
+  .input-city:before {
+    content: "\e001";
+    font-family: "Flaticon";
+    vertical-align: middle;
+    line-height: 35px;
+    width: 20px;
+    border-right: 1px solid #bfbfbf;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    padding: 0 5px 0 5px;
+    text-align: center;
+    display: block;
+    position: absolute;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    margin: auto; }
+
+/* line 33, ../sass/_icons.scss */
 [class^="icon-"]:before, [class*=" icon-"]:before,
 [class^="icon-"]:after, [class*=" icon-"]:after {
   font-family: Flaticon;
@@ -36,90 +67,98 @@
   -o-transition: none;
   transition: none; }
 
-/* line 28, ../sass/_icons.scss */
+/* line 45, ../sass/_icons.scss */
 .icon-bath1:before {
   content: "\e000"; }
 
-/* line 31, ../sass/_icons.scss */
+/* line 48, ../sass/_icons.scss */
 .icon-bookmark:before {
   content: "\e001"; }
 
-/* line 34, ../sass/_icons.scss */
+/* line 51, ../sass/_icons.scss */
 .icon-chevron11:before {
   content: "\e002"; }
 
-/* line 37, ../sass/_icons.scss */
-.icon-create1:before {
+/* line 54, ../sass/_icons.scss */
+.icon-close3:before {
   content: "\e003"; }
 
-/* line 40, ../sass/_icons.scss */
-.icon-eating:before {
+/* line 57, ../sass/_icons.scss */
+.icon-create1:before {
   content: "\e004"; }
 
-/* line 43, ../sass/_icons.scss */
-.icon-favourite1:before {
+/* line 60, ../sass/_icons.scss */
+.icon-eating:before {
   content: "\e005"; }
 
-/* line 46, ../sass/_icons.scss */
-.icon-help5:before {
+/* line 63, ../sass/_icons.scss */
+.icon-favourite1:before {
   content: "\e006"; }
 
-/* line 49, ../sass/_icons.scss */
-.icon-help7:before {
+/* line 66, ../sass/_icons.scss */
+.icon-help5:before {
   content: "\e007"; }
 
-/* line 52, ../sass/_icons.scss */
-.icon-location2:before {
+/* line 69, ../sass/_icons.scss */
+.icon-help7:before {
   content: "\e008"; }
 
-/* line 55, ../sass/_icons.scss */
-.icon-lock24:before {
+/* line 72, ../sass/_icons.scss */
+.icon-location2:before {
   content: "\e009"; }
 
-/* line 58, ../sass/_icons.scss */
-.icon-map25:before {
+/* line 75, ../sass/_icons.scss */
+.icon-lock24:before {
   content: "\e00a"; }
 
-/* line 61, ../sass/_icons.scss */
-.icon-map43:before {
+/* line 78, ../sass/_icons.scss */
+.icon-magnifier10:before {
   content: "\e00b"; }
 
-/* line 64, ../sass/_icons.scss */
-.icon-map54:before {
+/* line 81, ../sass/_icons.scss */
+.icon-map25:before {
   content: "\e00c"; }
 
-/* line 67, ../sass/_icons.scss */
-.icon-meter2:before {
+/* line 84, ../sass/_icons.scss */
+.icon-map43:before {
   content: "\e00d"; }
 
-/* line 70, ../sass/_icons.scss */
-.icon-mini9:before {
+/* line 87, ../sass/_icons.scss */
+.icon-map54:before {
   content: "\e00e"; }
 
-/* line 73, ../sass/_icons.scss */
-.icon-mobile41:before {
+/* line 90, ../sass/_icons.scss */
+.icon-meter2:before {
   content: "\e00f"; }
 
-/* line 76, ../sass/_icons.scss */
-.icon-plus12:before {
+/* line 93, ../sass/_icons.scss */
+.icon-mini9:before {
   content: "\e010"; }
 
-/* line 79, ../sass/_icons.scss */
-.icon-shower2:before {
+/* line 96, ../sass/_icons.scss */
+.icon-mobile41:before {
   content: "\e011"; }
 
-/* line 82, ../sass/_icons.scss */
-.icon-star51:before {
+/* line 99, ../sass/_icons.scss */
+.icon-plus12:before {
   content: "\e012"; }
 
-/* line 85, ../sass/_icons.scss */
-.icon-tap1:before {
+/* line 102, ../sass/_icons.scss */
+.icon-shower2:before {
   content: "\e013"; }
 
-/* line 88, ../sass/_icons.scss */
-.icon-user3:before {
+/* line 105, ../sass/_icons.scss */
+.icon-star51:before {
   content: "\e014"; }
 
-/* line 91, ../sass/_icons.scss */
-.icon-wifi42:before {
+/* line 108, ../sass/_icons.scss */
+.icon-tap1:before {
   content: "\e015"; }
+
+/* line 111, ../sass/_icons.scss */
+.icon-user3:before {
+  content: "\e016"; }
+
+/* line 114, ../sass/_icons.scss */
+.icon-wifi42:before {
+  content: "\e017"; }
