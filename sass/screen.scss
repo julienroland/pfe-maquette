@@ -27,7 +27,7 @@ body {
   font-family: $ff;
   font-size: $fs;
   font-weight: normal;
-  line-height: 1.5;
+  line-height: 1.3;
   color: $tc;
   margin:0;
   font-smoothing: antialiased;
@@ -65,9 +65,9 @@ i{
   }
 }
 .titlePopup{
-  font-size: 2.468em;
-  margin:0.5em 0 1em 0;
+  font-size: 2.168em;
   text-align: center;
+  line-height: 1;
 }
 .titleKot{
   text-align: center;
@@ -255,14 +255,14 @@ a{
       }
       .register{
        a{
-        background-color: transparent;
-        border:2px solid $bred;
+        background-color: $bred;
+        border:2px solid transparent;
+        color:white;
         @include border-radius(5px);
-        color:$bred;
         &:hover,&:focus,&:active{
-          background-color: $bred;
-          border:2px solid transparent;
-          color:white;
+          background-color: transparent;
+          border:2px solid $bred;
+          color:$bred;
         }
       }
 
@@ -356,9 +356,11 @@ a{
  }
 }
 .whatWeDo{
-  color:white;
-  display:block;
+  color:$tc;
+  display:inline-block;
   margin: auto;
+  height:50%;
+  vertical-align: bottom;
   text-align: center;
   line-height: 0;
   margin-bottom: $pd;
@@ -411,6 +413,7 @@ a{
   .icon:before{
     font-size: 1.618em;
     height:32px;
+    margin-top: 5px;
     overflow:hidden;
     line-height: 0.9;
     display:inline-block;
@@ -610,11 +613,12 @@ background-image: image-url('framework/pattern/noise-1.png');
     margin-bottom: $gutter;
     #container{
       margin:3em auto;
+      padding:0;
     }
     .kot{
       @include c(12);
       border:1px solid $bblue;
-      width: $mw / 4;
+      width: $mw / 3.4;
       height:auto;
      // max-width: $mw / 2 ;
      overflow:hidden;
@@ -930,17 +934,147 @@ background-image: image-url('framework/pattern/noise-1.png');
 /* POPUP */
 .popup{
   @include abs();
-  position:fixed;
-  height:80%;
-  outline:0;
-  width:80%;
-  overflow:hidden;
-  background-color: white;
-  @include border-radius(1em);
-  border:1px solid $greyL2;
-  @include box-shadow(rgba(black,0.5) 0 0 1em 0);
   z-index: 1000;
   display:none;
+  height:80%;
+  width:80%;
+  .content{
+    position:relative;
+    @include c(12);
+    outline:0;
+    overflow:hidden;
+    background-color: white;
+    padding:1em 2em;
+    @include border-radius(1em);
+    border:1px solid $greyL2;
+    @include box-shadow(rgba(black,0.5) 0 0 1em 0);
+  }
+  .loginSocial{
+    margin:1em 0;
+  }
+  .email{
+    color:$greyD;
+    display:inline-block;
+    text-align: center;
+    a{
+      @include a($mc);  
+    }
+  }
+  .loginEmail{
+    display:none;
+    a{
+      @include a($mc);
+    }
+  }
+  .intro{
+    text-align: left;
+    font-weight: 700;
+    margin:1em 0;
+    line-height: 1.3em;
+    color:$greyD2;
+    font-family: sans-serif;
+  }
+  .connexion{
+  }
+  .register{
+    text-align: center;
+    .or{
+      font-weight: bold;
+      @include c(12);
+      margin-bottom: $gutter/2;
+      display:inline-block;
+      
+      float:left;
+      color:$greyD;
+      line-height:20px;
+      &:before{
+        content:"";
+        height:1px;
+        vertical-align: middle;
+        display:inline-block;
+        width:40%;
+        background-color:$greyL2;
+        visibility:visible; 
+        margin-right: $gutter/2;
+      }
+      &:after{
+        content:"";
+        height:1px;
+        vertical-align: middle;
+        display:inline-block;
+        width:40%;
+        visibility:visible;
+        background-color:$greyL2;
+        margin-left: $gutter/2;
+      }
+    }
+    .email{
+      font-weight: 500;
+    }
+  }
+  &.lang{
+    .content{
+      height:100%;
+    }
+  }
+  &.advSearch{
+    max-width:350px;
+    .facebook{
+      height:50px;
+      color:white;
+      line-height: 50px;
+      margin-bottom: 1em;
+
+      a{
+        @include c(12);
+        background-color: $facebook;
+        @include border-radius(0.5em);
+        height:100%;
+        @include a(0,0,none);
+        border:1px solid darken($facebook,10%);
+        color:white;
+        &:hover,&:focus,&:active{
+
+          border:1px solid darken($facebook,10%);
+          .text{
+
+            text-decoration: underline;
+          }
+        }
+      }
+      .logo{
+        @include cl-nm(12);
+        display:block;
+        width:50px;
+        min-width: 0;
+        height: 100%;
+        background-repeat: no-repeat;
+        background-image: image-url('reseaux/fb.jpg');
+        background-position: 50%;
+        border-right: 1px solid $bgrey;
+      }
+      .text{
+        @include cl-nm(12);
+        display:inline-block;
+        width:230px - $gutter/2;
+        padding-left: $gutter/2;
+        font-size: 0.8em;
+      }
+    }
+    .twitter{
+      @extend .facebook;
+      a{
+        background-color: $twitter;
+        border:1px solid darken($twitter,10%);
+        &:hover,&:focus,&:active{
+          border:1px solid darken($twitter,10%);
+        }
+      }
+      .logo{
+        background-image: image-url('reseaux/tw.jpg');
+      }
+    }
+  }
 }
 .closePopup{
   display:inline-block;
@@ -966,13 +1100,14 @@ background-image: image-url('framework/pattern/noise-1.png');
     }
   }
 }
+
 /* END POPUP */
 /* OVERLAY */
 .overlay{
   @include abs();
   z-index: 999;
   position:fixed;
-  background-color:rgba($tc,0.8);
+  background-color:rgba(black,0.7);
   display:none;
 }
 /* END OVERLAY */
@@ -982,6 +1117,7 @@ background-image: image-url('framework/pattern/noise-1.png');
   height:100%;
   position:relative;
   text-align: center;
+  margin-top: 1em;
   a{
     @include c(12);
     height:100%;

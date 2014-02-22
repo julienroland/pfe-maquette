@@ -10,6 +10,7 @@
 	$htmlBody = $('html,body'),
 	$addInfos = $('.addInfos'),
 	$menu = $('.banner'),
+	$nav = $('.nav'),
 	$mapItem = $('.mapItem'),
 	$body = $('body'),
 	$kotsHeight = $('.kots').outerHeight(),
@@ -17,7 +18,13 @@
 	$overlay = $('.overlay'),
 	//POPUP
 	$popup = $('.popup'),
+	$popupLang = $('.popup.lang'),
+	$popupAdvSearch = $('.popup.advSearch'),
 	$closePopup = $('.closePopup'),
+	$toSocialLogin = $('.toSocialLogin'),
+	$toEmailLogin = $('.toEmailLogin'),
+	$loginEmail = $('.loginEmail'),
+	$loginSocial = $('.loginSocial'),
 	$toPopup = $('.toPopup');
 
 
@@ -43,9 +50,11 @@
 		$mapItem.find('.head').on('click','a',toggleItem);
 		$('.lang').on('click','a',showlanguages);
 		/* CONNECTION AND REGISTER */
-		$('.connection,.register').css({
+		$nav.find('.connection').on('click','a',openPopup);
+		$toSocialLogin.on('click',showSocialLogin);
 
-		});
+		$toEmailLogin.on('click',showEmailLogin);
+
 		$("#form-range").ionRangeSlider({
 			min: 0,                        
 			max: 10000,                                        
@@ -74,13 +83,36 @@
 				e.preventDefault();
 				goTo( $('#main') );
 			})
-		});
+		});	
+var showSocialLogin = function( e ){
+	e.preventDefault();
+	$loginEmail.slideUp(function(){
+		$loginSocial.slideDown();
+	});
+
+};
+var showEmailLogin = function( e ){
+	e.preventDefault();
+	$loginSocial.slideUp(function(){
+		$loginEmail.slideDown();
+	});
+
+};
 var openPopup = function( e ){
 	e.preventDefault();
 	e.stopPropagation();
-	$overlay.css('display','block');
-	$popup.fadeIn().focus();
-	$popup.drags();	
+	var sType = $(this).attr('data-type');
+	
+	if(sType === "lang"){
+		$overlay.css('display','block');
+		$popupLang.fadeIn().focus();
+
+	}
+	else if(sType === "advSearch"){
+		$overlay.css('display','block');
+		$popupAdvSearch.fadeIn().focus();
+
+	}	
 
 	
 };
@@ -158,7 +190,7 @@ var heightMap = function( nWinHeight ){
 	if(nWinHeight){
 
 		nMapHeight = toPercent(nWinHeight , nMapPercent) -( $('.banner').height());
-		
+
 	}else{
 
 		nMapHeight = toPercent($winHeight , nMapPercent) -( $('.banner').height());

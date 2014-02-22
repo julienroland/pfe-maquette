@@ -83,6 +83,7 @@
     text-decoration: none;
     @include border-radius(5% 5%);
 
+
     &:hover,&:focus,&:active{
       @include box-shadow(rgba(0,0,0,0.2)0 0 6px 2px);
       .no-boxshadow &{
@@ -92,6 +93,34 @@
     }
   }
 
+  .btn1{
+    background-color: $mc;
+    border:2px solid transparent;
+    color:white;
+    @include border-radius(5px);
+    @include transition(all 0.3s ease);
+    &:hover,&:focus,&:active{
+      background-color: transparent;
+      border:2px solid $mc;
+      color:$mc;
+      @include transition(all 0.3s ease);
+    }
+
+  }
+
+}
+@mixin btn1(){
+ background-color: $mc;
+ border:2px solid transparent;
+ color:white;
+ @include border-radius(5px);
+ @include transition(all 0.3s ease);
+ &:hover,&:focus,&:active{
+  background-color: transparent;
+  border:2px solid $mc;
+  color:$mc;
+  @include transition(all 0.3s ease);
+}
 }
 @mixin mhb-p($height, $item) {
   background-color: $grey;
@@ -219,7 +248,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#35a0c6', end
   margin-bottom: $gutter/3;
 }
 label{
-  display:block;
+  display:inline-block;
   &.label-city{
     padding-left: 20px;
     &:before{
@@ -232,31 +261,44 @@ label{
     }
   }
 }
+input:-webkit-autofill,textarea:-webkit-autofill{
+  -webkit-box-shadow: 0 0 0px 1000px $greyL inset;
+  color:$tc!important;
+}
 input{
   @include c(12);
   background-color: $greyL;
   height: 35px;
   color:$tc;
   font-size: 1em;
-  border:2px solid $greyL2;
+  border:1px solid $greyL2;
   padding:5px;
-  font-family: $ffi;
   &:after{
     font-family: $ffi;
     content:"\e008";
   }
   &:hover,&:active{
-    border:2px solid $greyD;
+    border:1px solid $greyD;
     background-color: white;
   }
   &:focus{
-    border:2px solid $mc;
+    border:1px solid $mc;
     background-color: white;
   }
-  &.form-city{
-    padding-left: 30px;
+  &.form-icon{
+    padding-right: 30px;
 
   }
+}
+input[type="checkbox"]{
+  display:inline-block;
+  width:auto;
+  vertical-align: middle;
+  height: auto;
+}
+input[type="submit"]{
+  cursor:pointer;
+  @include btn1();
 }
 }
 }

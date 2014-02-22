@@ -27,29 +27,61 @@
   font-style: normal; }
 
 /* line 16, ../sass/_icons.scss */
-.input-city {
+.input-city, .input-email, .input-password {
   position: relative; }
   /* line 18, ../sass/_icons.scss */
-  .input-city:before {
-    content: "\e001";
+  .input-city:before, .input-email:before, .input-password:before {
+    content: "\e009";
     font-family: "Flaticon";
     vertical-align: middle;
     line-height: 35px;
-    width: 20px;
-    border-right: 1px solid #bfbfbf;
+    width: 25px;
     -webkit-box-sizing: border-box;
     -moz-box-sizing: border-box;
     box-sizing: border-box;
     padding: 0 5px 0 5px;
     text-align: center;
+    color: #737373;
     display: block;
     position: absolute;
-    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+    right: 12px; }
+
+/* line 35, ../sass/_icons.scss */
+.input-email:before {
+  content: "\e010"; }
+
+/* line 41, ../sass/_icons.scss */
+.input-password:before {
+  content: "\e011"; }
+
+/* line 45, ../sass/_icons.scss */
+.input-range {
+  position: relative; }
+  /* line 47, ../sass/_icons.scss */
+  .input-range:before {
+    content: "\e00f";
+    font-family: "Flaticon";
+    vertical-align: middle;
+    line-height: 35px;
+    width: 25px;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    padding: 0 5px 0 5px;
+    text-align: center;
+    color: #737373;
+    display: block;
+    position: absolute;
+    right: 0;
     top: 0;
     bottom: 0;
     margin: auto; }
 
-/* line 33, ../sass/_icons.scss */
+/* line 62, ../sass/_icons.scss */
 [class^="icon-"]:before, [class*=" icon-"]:before,
 [class^="icon-"]:after, [class*=" icon-"]:after {
   font-family: Flaticon;
@@ -67,98 +99,98 @@
   -o-transition: none;
   transition: none; }
 
-/* line 45, ../sass/_icons.scss */
+/* line 74, ../sass/_icons.scss */
 .icon-bath1:before {
   content: "\e000"; }
 
-/* line 48, ../sass/_icons.scss */
+/* line 77, ../sass/_icons.scss */
 .icon-bookmark:before {
   content: "\e001"; }
 
-/* line 51, ../sass/_icons.scss */
+/* line 80, ../sass/_icons.scss */
 .icon-chevron11:before {
   content: "\e002"; }
 
-/* line 54, ../sass/_icons.scss */
+/* line 83, ../sass/_icons.scss */
 .icon-close3:before {
   content: "\e003"; }
 
-/* line 57, ../sass/_icons.scss */
+/* line 86, ../sass/_icons.scss */
 .icon-create1:before {
   content: "\e004"; }
 
-/* line 60, ../sass/_icons.scss */
+/* line 89, ../sass/_icons.scss */
 .icon-eating:before {
   content: "\e005"; }
 
-/* line 63, ../sass/_icons.scss */
+/* line 92, ../sass/_icons.scss */
 .icon-favourite1:before {
   content: "\e006"; }
 
-/* line 66, ../sass/_icons.scss */
+/* line 95, ../sass/_icons.scss */
 .icon-help5:before {
   content: "\e007"; }
 
-/* line 69, ../sass/_icons.scss */
+/* line 98, ../sass/_icons.scss */
 .icon-help7:before {
   content: "\e008"; }
 
-/* line 72, ../sass/_icons.scss */
+/* line 101, ../sass/_icons.scss */
 .icon-location2:before {
   content: "\e009"; }
 
-/* line 75, ../sass/_icons.scss */
+/* line 104, ../sass/_icons.scss */
 .icon-lock24:before {
   content: "\e00a"; }
 
-/* line 78, ../sass/_icons.scss */
+/* line 107, ../sass/_icons.scss */
 .icon-magnifier10:before {
   content: "\e00b"; }
 
-/* line 81, ../sass/_icons.scss */
+/* line 110, ../sass/_icons.scss */
 .icon-map25:before {
   content: "\e00c"; }
 
-/* line 84, ../sass/_icons.scss */
+/* line 113, ../sass/_icons.scss */
 .icon-map43:before {
   content: "\e00d"; }
 
-/* line 87, ../sass/_icons.scss */
+/* line 116, ../sass/_icons.scss */
 .icon-map54:before {
   content: "\e00e"; }
 
-/* line 90, ../sass/_icons.scss */
+/* line 119, ../sass/_icons.scss */
 .icon-meter2:before {
   content: "\e00f"; }
 
-/* line 93, ../sass/_icons.scss */
+/* line 122, ../sass/_icons.scss */
 .icon-mini9:before {
   content: "\e010"; }
 
-/* line 96, ../sass/_icons.scss */
+/* line 125, ../sass/_icons.scss */
 .icon-mobile41:before {
   content: "\e011"; }
 
-/* line 99, ../sass/_icons.scss */
+/* line 128, ../sass/_icons.scss */
 .icon-plus12:before {
   content: "\e012"; }
 
-/* line 102, ../sass/_icons.scss */
+/* line 131, ../sass/_icons.scss */
 .icon-shower2:before {
   content: "\e013"; }
 
-/* line 105, ../sass/_icons.scss */
+/* line 134, ../sass/_icons.scss */
 .icon-star51:before {
   content: "\e014"; }
 
-/* line 108, ../sass/_icons.scss */
+/* line 137, ../sass/_icons.scss */
 .icon-tap1:before {
   content: "\e015"; }
 
-/* line 111, ../sass/_icons.scss */
+/* line 140, ../sass/_icons.scss */
 .icon-user3:before {
   content: "\e016"; }
 
-/* line 114, ../sass/_icons.scss */
+/* line 143, ../sass/_icons.scss */
 .icon-wifi42:before {
   content: "\e017"; }

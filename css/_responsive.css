@@ -30,7 +30,7 @@
       -webkit-box-sizing: border-box;
       -moz-box-sizing: border-box;
       box-sizing: border-box; }
-      /* line 394, ../sass/_mixin.scss */
+      /* line 436, ../sass/_mixin.scss */
       .home .onePeople:after {
         content: "";
         display: block;
@@ -56,7 +56,7 @@
         -webkit-box-sizing: border-box;
         -moz-box-sizing: border-box;
         box-sizing: border-box; }
-        /* line 369, ../sass/_mixin.scss */
+        /* line 411, ../sass/_mixin.scss */
         .home .kots .kot .mainInfos .special:after {
           content: "";
           display: block;
@@ -99,7 +99,7 @@
     box-sizing: border-box;
     padding-top: 40px;
     padding-bottom: 12px; }
-    /* line 369, ../sass/_mixin.scss */
+    /* line 411, ../sass/_mixin.scss */
     .nav:after {
       content: "";
       display: block;
@@ -136,7 +136,7 @@
     -webkit-box-sizing: border-box;
     -moz-box-sizing: border-box;
     box-sizing: border-box; }
-    /* line 394, ../sass/_mixin.scss */
+    /* line 436, ../sass/_mixin.scss */
     .home .infos:after {
       content: "";
       display: block;
@@ -164,7 +164,7 @@
     -webkit-box-sizing: border-box;
     -moz-box-sizing: border-box;
     box-sizing: border-box; }
-    /* line 394, ../sass/_mixin.scss */
+    /* line 436, ../sass/_mixin.scss */
     .home .onePeople:after {
       content: "";
       display: block;
@@ -184,7 +184,7 @@
     -webkit-box-sizing: border-box;
     -moz-box-sizing: border-box;
     box-sizing: border-box; }
-    /* line 369, ../sass/_mixin.scss */
+    /* line 411, ../sass/_mixin.scss */
     .home .kots:after {
       content: "";
       display: block;
@@ -203,7 +203,7 @@
     -webkit-box-sizing: border-box;
     -moz-box-sizing: border-box;
     box-sizing: border-box; }
-    /* line 442, ../sass/_mixin.scss */
+    /* line 484, ../sass/_mixin.scss */
     .home .kotsByCities:after {
       content: "";
       display: block;
@@ -226,7 +226,7 @@
     -webkit-box-sizing: border-box;
     -moz-box-sizing: border-box;
     box-sizing: border-box; }
-    /* line 369, ../sass/_mixin.scss */
+    /* line 411, ../sass/_mixin.scss */
     .home .kots:after {
       content: "";
       display: block;
@@ -243,7 +243,7 @@
     -webkit-box-sizing: border-box;
     -moz-box-sizing: border-box;
     box-sizing: border-box; }
-    /* line 394, ../sass/_mixin.scss */
+    /* line 436, ../sass/_mixin.scss */
     .home .kot:after {
       content: "";
       display: block;
@@ -261,7 +261,7 @@
     -webkit-box-sizing: border-box;
     -moz-box-sizing: border-box;
     box-sizing: border-box; }
-    /* line 442, ../sass/_mixin.scss */
+    /* line 484, ../sass/_mixin.scss */
     .home .kotsByCities:after {
       content: "";
       display: block;
@@ -288,7 +288,7 @@
     -webkit-box-sizing: border-box;
     -moz-box-sizing: border-box;
     box-sizing: border-box; }
-    /* line 394, ../sass/_mixin.scss */
+    /* line 436, ../sass/_mixin.scss */
     .home .onePeople:after {
       content: "";
       display: block;
