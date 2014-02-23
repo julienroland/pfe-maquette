@@ -3,7 +3,9 @@
 	$map = $('.map'),
 	$main = $('.main'),
 	$win = $(window),
+	//MAP
 	nMapHeight,
+	nMapMinHeight = 400,	
 	nMapPercent = 100,
 	$winHeight = $(window).height(),
 	$winWidth = $(window).width(),
@@ -41,6 +43,7 @@
 				closePopup(e);
 			}
 		});
+
 		$closePopup.on('click',closePopup);
 
 		$overlay.on('click',function( e ){
@@ -147,9 +150,14 @@ var toggleItem = function( e ){
 
 	}
 	else{
+
 		$mapItem.find('.stuff.active .content').slideUp(function(){
 			$(this).parent().removeClass('active');
+		});	
+		$mapItem.find('.stuff.active').each(function(){
+			$(this).removeClass('active');
 		});
+
 		$parent2.addClass('active');
 		$parentNext.slideDown();
 		$mapItem.find('.stuff').not('.active');
@@ -197,6 +205,7 @@ var heightMap = function( nWinHeight ){
 	}
 	$map.css({
 		'height':nMapHeight,
+		'min-height':nMapMinHeight,
 	});
 	$main.css({
 		'height':'auto',

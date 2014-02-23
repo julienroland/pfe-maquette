@@ -4,6 +4,10 @@
   /* GENERAL */
 
   /* END GENERAL */
+  /* NAV */
+
+  /* END NAV */
+
   /* HOME */
   .home{
     .onePeople{
@@ -13,7 +17,7 @@
       .kots{
 
         .kot{
-          
+
           .mainInfos{
             margin-bottom: 0;
             height: 80%;
@@ -22,7 +26,7 @@
             }
             .content{
               .typeAndLocation{
-                
+
               }
               p{
                 font-size: 0.9em;
@@ -46,21 +50,27 @@
               }
             }
             .howMuch{
-           }
-           .locateBy{
+            }
+            .locateBy{
+
+            }
 
           }
 
         }
-
       }
-    }
   /* END KOTS */
 }
   /* END HOME */
 
 }
 @media screen and (min-width: queries(800)){
+  /* GENERAL */
+  .titlePopup{
+    font-size: 2.168em;
+
+  }
+  /* END GENERAL */
   /* HOME */
   /* BANNER */
   .addInfos{
@@ -73,28 +83,31 @@
     }
   }
   .logo{
-    float:left;
+    //float:left;
   }
-  .nav{
-    @include c(12);
-    padding-top: $hm - $h-m;  
-    padding-bottom: $pd;  
+  .banner{
+    .nav{
+      @include c(12);
+      padding-top: $hm - $h-m;  
+      padding-bottom: $pd;  
+      margin-top: 0;
+    }
   }
   .whatWeDo{
     line-height: 1;
     display:inline-block;
     margin: auto;
-    height:$h-m;
-    line-height: $h-m;
     font-size: 1em;
     font-style: italic;
     margin:0 $pd;
-    float:left;
+    line-height: 1;
+    height:auto;
+   // float:left;
 
-  }
-  .profilItem{
-    width:auto;
-    float:right;
+ }
+ .profilItem{
+  width:auto;
+    //float:left;
   }
   /* END BANNER */
   /* INFOS */
@@ -105,6 +118,25 @@
   }
   /* END INFOS */
   /* END HOME */
+  /* POPUP */
+  $country-h:188px;
+  .country-french{
+    height:$country-h;
+  }
+  .country-english{
+    height:$country-h;
+  }
+  .country-neederlands{
+    height:$country-h;
+  }
+  .country-text{
+    display:inline-block;
+  }
+  .lang-choice{
+    @include cl(4);
+    
+  }
+  /* END POPUP */
 }
 @media screen and (min-width: queries(( $nMw / 4) * 3)){ // 768
 /* GENERAL */
@@ -140,6 +172,21 @@
   /* END HOME */
 }
 @media screen and (min-width: queries(900)){
+ /* BANNER */
+ .logo{
+  float:left;
+}
+.whatWeDo{
+  float:left;
+  display:block;
+  height:$h-m;
+  line-height: $h-m;
+  vertical-align: baseline;
+}
+.menu{
+  float:right;
+}
+ /* END BANNER */
  /* HOME */
  .home{
 

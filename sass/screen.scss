@@ -65,7 +65,7 @@ i{
   }
 }
 .titlePopup{
-  font-size: 2.168em;
+  font-size: 1.618em;
   text-align: center;
   line-height: 1;
 }
@@ -233,6 +233,8 @@ a{
     @include c(12);
     min-height:$hm;
     margin-bottom: 0;
+    text-align: center;
+    margin-top: 30px;
     .elem{
       li{
 
@@ -291,8 +293,9 @@ a{
 }
 .profilItem{
   @include c(12);
-  height:$h-m;
+  min-height:$h-m;
   text-align: center;
+  margin-bottom: $gutter/2;
   ul{
     display:inline-block;
     height:100%;
@@ -335,6 +338,8 @@ a{
 .logo{
   min-width:115px;
   //height:$h-m; 
+  max-width: 180px;
+  text-align: center;
   margin: auto;
   display:block;
   a{
@@ -359,11 +364,9 @@ a{
   color:$tc;
   display:inline-block;
   margin: auto;
-  height:50%;
-  vertical-align: bottom;
+  //height:50%;
   text-align: center;
-  line-height: 0;
-  margin-bottom: $pd;
+  line-height: 1;
   font-size: 0.8em;
 }
 /* END TOOLS BAR*/
@@ -371,6 +374,7 @@ a{
 .map{
   position:relative;
   height:80%;
+  min-height: 400px;
   //min-height: 600px;
   &:after{
     content:"";
@@ -466,6 +470,7 @@ a{
         padding:0 1em;
         height:100%;
         @include a(0,0,none);
+        border-top: 1px solid darken($bred,10%);
         background-color:lighten($bred,5%);
         &:hover,&:focus,&:active{
           background-color:$bred;
@@ -486,16 +491,12 @@ a{
       .head{
         a{
           background-color:$bred;
-          border:2px solid darken($bred,5%);
-          border-left:1px solid darken($bred,5%);
-          border-right:1px solid darken($bred,5%);
-          border-top:1px solid darken($bred,5%);
+          border:1px solid darken($bred,5%);
+        
           &:hover,&:focus,&:active{
             background-color: lighten($bred,5%);
-            border:2px solid $bred;
-            border-left:1px solid $bred;
-            border-right:1px solid $bred;
-            border-top:1px solid $bred;
+            border:1px solid $bred;
+            
           }
         }
         
@@ -615,10 +616,11 @@ background-image: image-url('framework/pattern/noise-1.png');
       margin:3em auto;
       padding:0;
     }
+    //width: $mw / 3.4;
     .kot{
       @include c(12);
       border:1px solid $bblue;
-      width: $mw / 3.4;
+      width: $mw / 4.8;
       height:auto;
      // max-width: $mw / 2 ;
      overflow:hidden;
@@ -937,7 +939,7 @@ background-image: image-url('framework/pattern/noise-1.png');
   z-index: 1000;
   display:none;
   height:80%;
-  width:80%;
+  width:90%;
   .content{
     position:relative;
     @include c(12);
@@ -945,6 +947,7 @@ background-image: image-url('framework/pattern/noise-1.png');
     overflow:hidden;
     background-color: white;
     padding:1em 2em;
+    height:auto;
     @include border-radius(1em);
     border:1px solid $greyL2;
     @include box-shadow(rgba(black,0.5) 0 0 1em 0);
@@ -1014,7 +1017,7 @@ background-image: image-url('framework/pattern/noise-1.png');
   }
   &.lang{
     .content{
-      height:100%;
+      min-height:100%;
     }
   }
   &.advSearch{
@@ -1046,6 +1049,7 @@ background-image: image-url('framework/pattern/noise-1.png');
         @include cl-nm(12);
         display:block;
         width:50px;
+
         min-width: 0;
         height: 100%;
         background-repeat: no-repeat;
@@ -1113,8 +1117,8 @@ background-image: image-url('framework/pattern/noise-1.png');
 /* END OVERLAY */
 /* COUNTRY */
 .lang-choice{
-  @include cl(4);
-  height:100%;
+  @include c(12);
+  height:25%;
   position:relative;
   text-align: center;
   margin-top: 1em;
@@ -1150,7 +1154,7 @@ background-image: image-url('framework/pattern/noise-1.png');
     @include border-radius(5px); 
   }
   .flag{
-    @include scale(1.2);
+    //@include scale(1.2);
     @include transition(all 0.3s ease-in-out);
   }
 }
@@ -1165,12 +1169,16 @@ background-image: image-url('framework/pattern/noise-1.png');
   margin-top: $gutter;
   @include border-radius(5px); 
   border:2px solid transparent;
+  display:none;
 }
+
+$country-h:100px;
 .country-french{
   background-image: image-url('country/fr.png');
   background-size: contain;
   background-repeat: no-repeat;
-  height:188px;
+  background-position: center;
+  height:$country-h;
   width:100%;
   max-width: 250px;
   margin: auto;
@@ -1181,7 +1189,8 @@ background-image: image-url('framework/pattern/noise-1.png');
   background-image: image-url('country/nl.png');
   background-size: contain;
   background-repeat: no-repeat;
-  height:188px;
+  background-position: center;
+  height:$country-h;
   width:100%;
   margin: auto;
   max-width: 250px;
@@ -1192,7 +1201,8 @@ background-image: image-url('framework/pattern/noise-1.png');
   background-image: image-url('country/en.png');
   background-size: contain;
   background-repeat: no-repeat;
-  height:188px;
+  background-position: center;
+  height:$country-h;
   width:100%;
   margin: auto;
   max-width: 250px;
